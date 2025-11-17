@@ -20727,17 +20727,17 @@ http://110.177.144.19:9003/hls/31/index.m3u8
 http://116.235.57.41:4022/rtp/239.45.3.232:5140
 #EXTINF:-1  tvg-name="黑龙江卫视" tvg-logo="https://live.fanmingming.cn/tv/黑龙江卫视.png"  group-title="📡卫视频道",黑龙江卫视
 http://110.177.144.66:9003/hls/31/index.m3u8
-#EXTINF:-1 group-title="🕒更新时间",20251117 14:43:04
-https://vd3.bdstatic.com/mda-ka8qm8710ymkqdry/hd/mda-ka8qm8710ymkqdry.mp4?pd=20&vt=1#https://vd3.bdstatic.com/mda-ka8qm8710ymkqdry/hd/mda-ka8qm8710ymkqdry.mp4?pd=20&vt=1
+#EXTINF:-1 group-title="🕒更新时间",20251117 14:50:30
+https://vd3.bdstatic.com/mda-qihit1c8p2p8yumb/hd/cae_h264/1726668772226763886/mda-qihit1c8p2p8yumb.mp4?pd=19&vt=1#https://vd3.bdstatic.com/mda-qhfbbe265z33cqyp/576p/h264/1723795491050620986/mda-qhfbbe265z33cqyp.mp4?pd=19&vt=1#https://vd3.bdstatic.com/mda-qdd5d1ybi8r3wy82/hd/cae_h264/1713529013016760562/mda-qdd5d1ybi8r3wy82.mp4?pd=19&vt=1
 #EXTINF:-1 group-title="🕒更新时间",xiaoranmuze
-https://vdse.bdstatic.com/h265w2/wzab77d46f6a582cbdc06593882853534d.mp4?cd=1&hit_bd265_src=1&mpd=1&pd=19&logid=10390092499894835995&vt=-1&svt=-1&cr_max=2&s_score=-1.000000&pt=0&av=17.8&vid=15107691385944962233&mvt=-1&did=b9e4f3d31e216db4f308eb63eb2e3475&cr=2&h265_s=1&sl=122&sle=1&split=347403
+https://vd3.bdstatic.com/mda-jjm8i93paakzz8yj/hd/mda-jjm8i93paakzz8yj.mp4?pd=20&vt=1
 #EXTINF:-1 group-title="🕒更新时间",今日推荐
-http://bizcommon.alicdn.com/l2nDqpMmn6DGHnWzZQA/KbJb4OVT1yH1ZDvri5p%40%40hd.m3u8
+http://em.21dtv.com/songs/60021927.mkv
 #EXTINF:-1 group-title="🕒更新时间",🔥低调
-http://em.21dtv.com/songs/60032737.mkv
+https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240245283772.mp4
 #EXTINF:-1 group-title="🕒更新时间",🔥使用
-https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240032526123.mp4
+https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240418087243.mp4
 #EXTINF:-1 group-title="🕒更新时间",🔥禁止
-https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240478207039.mp4
+https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240175161903.mp4
 #EXTINF:-1 group-title="🕒更新时间",🔥贩卖
-https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240017737344.mp4
+http://em.21dtv.com/songs/60009639.mkv
