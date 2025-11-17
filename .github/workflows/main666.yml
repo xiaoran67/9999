@@ -51,6 +51,11 @@ on:
           - '增量'
           - '覆盖'
         default: '增量'
+      commit_message:  # 修复：正确的缩进层级
+        description: '提交信息（可用变量：{time} {date} {source} {target}）'
+        required: false
+        default: '🔄 {date} {time}'
+        type: string
 
 env:
   PYTHON_VERSION: '3.10'        # 使用的Python版本
@@ -245,6 +250,7 @@ jobs:
           TARGET_FOLDER="${{ github.event.inputs.target_folder }}"
           SYNC_MODE="${{ github.event.inputs.sync_mode }}"
           TARGET_PLATFORM="${{ github.event.inputs.target_platform }}"
+          COMMIT_MESSAGE="${{ github.event.inputs.commit_message }}"
           
           SOURCE_PATH="output/custom1"
           [ -n "$TARGET_FOLDER" ] && TARGET_PATH="$TARGET_FOLDER" || TARGET_PATH="."
@@ -253,6 +259,7 @@ jobs:
           echo "目标路径: $TARGET_PATH"
           echo "同步模式: $SYNC_MODE"
           echo "目标平台: $TARGET_PLATFORM"
+          echo "提交信息: $COMMIT_MESSAGE"
 
           # 安装必要工具
           sudo apt-get update
@@ -306,119 +313,84 @@ jobs:
                 RESPONSE_BODY="${CREATE_RESPONSE%???}"
                 ;;
               "gitcode")
-                CREATE_RESPONSE=$(curl -s -w "%{http_code}" -H "PRIVATE-TOKEN: $TARGET_TOKEN" -X POST "$API_BASE/projects" -d "{\"name\":\"$target_repo_name\",\"visibility\":\"public\"}")
+                CREATE_RESPONSE=$(curl -s -w "%{http_code}" -H "PRIVATE-TOKEN: $TARGET_TOKEN" -H "Content-Type: application/json" -X POST "$API_BASE/projects" -d "{\"name\":\"$target_repo_name\",\"visibility\":\"public\"}")
                 HTTP_CODE="${CREATE_RESPONSE: -3}"
                 RESPONSE_BODY="${CREATE_RESPONSE%???}"
                 ;;
             esac
 
             if [ "$HTTP_CODE" = "201" ] || [ "$HTTP_CODE" = "200" ]; then
-              echo "✅ 仓库创建成功: $target_user/$target_repo_name"
-              # 等待仓库创建完成
-              sleep 5
+              echo "✅ 仓库创建成功"
+              # 等待仓库完全创建
+              sleep 10
             else
-              echo "❌ 仓库创建失败: $RESPONSE_BODY"
-              echo "💡 请手动创建仓库或检查Token权限"
+              echo "❌ 仓库创建失败: $HTTP_CODE"
+              echo "响应: $RESPONSE_BODY"
               exit 1
             fi
           elif [ "$REPO_STATUS" = "200" ]; then
             echo "✅ 目标仓库已存在"
           else
-            echo "❌ 检查仓库状态失败: HTTP $REPO_STATUS"
+            echo "❌ 检查仓库状态失败: $REPO_STATUS"
             exit 1
           fi
 
           # 克隆目标仓库
           echo "=== 克隆目标仓库 ==="
-          git clone --branch $target_branch --depth=1 "$TARGET_URL" target_repo 2>/dev/null || {
-            echo "⚠️ 目标分支不存在，尝试创建新分支"
-            git clone --depth=1 "$TARGET_URL" target_repo || {
-              echo "❌ 克隆失败，请检查网络和权限"
-              exit 1
-            }
+          git clone --branch "$target_branch" --depth 1 "$TARGET_URL" target_repo || {
+            # 如果分支不存在，创建新分支
+            echo "分支不存在，创建新分支: $target_branch"
+            git clone --depth 1 "$TARGET_URL" target_repo
             cd target_repo
-            git checkout -b $target_branch
+            git checkout -b "$target_branch"
             cd ..
           }
-          
-          # 进入目标仓库目录
+
+          # 准备同步文件
+          echo "=== 准备同步文件 ==="
           cd target_repo
           
-          # 配置Git身份
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
+          # 创建目标目录
+          mkdir -p "$TARGET_PATH"
           
-          # 创建目标目录结构（如果需要）
-          if [ "$TARGET_PATH" != "." ]; then
-            echo "📁 创建目标目录: $TARGET_PATH"
-            mkdir -p "$TARGET_PATH"
-          fi
+          # 处理提交信息中的变量
+          CURRENT_TIME=$(TZ='Asia/Shanghai' date +'%H:%M:%S')
+          CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d')
+          FINAL_COMMIT_MESSAGE=$(echo "$COMMIT_MESSAGE" | sed \
+            -e "s/{time}/$CURRENT_TIME/g" \
+            -e "s/{date}/$CURRENT_DATE/g" \
+            -e "s/{source}/${{ github.repository }}/g" \
+            -e "s/{target}/$target_user\\/$target_repo_name/g")
           
+          echo "最终提交信息: $FINAL_COMMIT_MESSAGE"
+
           # 根据同步模式处理文件
-          echo "=== 执行文件同步 ==="
           if [ "$SYNC_MODE" = "覆盖" ]; then
-            echo "🔄 执行覆盖同步"
-            # 如果目标路径不是根目录，清空目标目录
-            if [ "$TARGET_PATH" != "." ]; then
-              rm -rf "$TARGET_PATH"/*
-            else
-              # 如果是根目录，删除所有文件（除了.git目录）
-              find . -maxdepth 1 -not -name '.' -not -name '.git' -exec rm -rf {} + 2>/dev/null || true
-            fi
-            # 复制文件
-            cp -r ../"$SOURCE_PATH"/* "$TARGET_PATH"/ 2>/dev/null || true
+            echo "模式: 覆盖 - 清空目标目录"
+            rm -rf "${TARGET_PATH:?}"/*
+            cp -r ../"$SOURCE_PATH"/* "$TARGET_PATH"/
           else
-            echo "🔄 执行增量同步"
-            # 确保目标目录存在
-            mkdir -p "$TARGET_PATH"
-            # 复制文件，不删除目标目录的其他文件
-            cp -r ../"$SOURCE_PATH"/* "$TARGET_PATH"/ 2>/dev/null || true
-          fi
-          
-          echo "✅ 文件同步完成"
-          echo "同步的文件列表:"
-          find "$TARGET_PATH" -type f | head -20
-          
-          # 检查是否有变化需要提交
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "🔄 检测到文件变化，需要提交"
-            
-            # 生成提交信息
-            CURRENT_TIME=$(TZ='Asia/Shanghai' date +'%H:%M:%S')
-            CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d')
-            COMMIT_MSG="🔄 同步更新 $CURRENT_DATE $CURRENT_TIME"
-            
-            # 添加所有文件并提交
-            git add -A
-            git commit -m "$COMMIT_MSG"
-            
-            # 推送到目标仓库
-            echo "=== 推送到目标仓库 ==="
-            git push origin $target_branch --force-with-lease || git push origin $target_branch --force
-            
-            echo "✅ 推送完成"
-          else
-            echo "✅ 无文件变化，无需提交"
+            echo "模式: 增量 - 合并文件"
+            cp -r ../"$SOURCE_PATH"/* "$TARGET_PATH"/
           fi
 
-          echo "=== 🔄 同步报告 ==="
-          echo "✅ 同步任务完成"
-          echo "📌 同步模式: $SYNC_MODE"
-          echo "📤 目标仓库: $target_user/$target_repo_name@$target_branch"
-          echo "📁 目标目录: $TARGET_PATH"
-          echo "⏰ 完成时间: $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+          # 检查是否有文件变化
+          if git diff --quiet; then
+            echo "没有文件变化，跳过同步"
+            exit 0
+          fi
 
-      - name: 保存生成的文件作为artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: generated-files  # Artifact名称
-          path: |  # 包含history/custom1下的归档
-            output/custom1/full.txt
-            output/custom1/full.m3u
-            output/custom1/simple.txt
-            output/custom1/simple.m3u
-            output/custom1/others.txt
-            output/custom1/sports.html
-            output/custom1/custom.txt
-            output/custom1/custom.m3u
-            ${{ env.HISTORY_DIR }}/*.zip
+          # 提交和推送
+          echo "=== 提交和推送 ==="
+          git add .
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git commit -m "$FINAL_COMMIT_MESSAGE"
+          
+          # 推送更改
+          if git push origin "$target_branch"; then
+            echo "✅ 同步成功"
+          else
+            echo "❌ 同步失败"
+            exit 1
+          fi
