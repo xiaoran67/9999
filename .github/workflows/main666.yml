@@ -26,7 +26,7 @@ on:
         required: false
         default: 'output'
         type: string
-              sync_mode:
+       sync_mode:
         description: '更新模式'
         required: true
         type: choice
