@@ -32,6 +32,22 @@ on:
         required: false
         default: 'output'
         type: string
+              sync_mode:
+        description: '更新模式'
+        required: true
+        type: choice
+        options:
+          - '增量'
+          - '覆盖'
+        default: '增量'
+      
+      commit_message:
+        description: '提交信息（可用变量：{time} {date} {source} {target}）'
+        required: false
+        default: '🔄 {date} {time}'
+        type: string
+        sync_mode:
+        
 
 env:
   PYTHON_VERSION: '3.10'
