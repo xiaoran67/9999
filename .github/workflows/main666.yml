@@ -10,7 +10,10 @@ on:
         description: '是否启用多平台同步'
         required: true
         type: boolean
-        default: true
+        options:
+          - 'true'
+          - 'false'
+        default: false
       sync_mode:
         description: '同步模式'
         required: true
