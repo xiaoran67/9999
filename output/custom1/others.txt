@@ -6602,7 +6602,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 #这个档案是由https://freetv.fun自动生成的,僅僅只是用於測試epg的準確性.
 [VGA]pasco tv (pasco county fl) (480p),https://stream1.freetv.fun/pasco-tv-1.m3u8
 [BD]cinema,https://stream1.freetv.fun/cinema-6.m3u8
-[VGA]diaspora 24,https://stream1.freetv.fun/diaspora-24-1.m3u8
+[HD]diaspora 24,https://stream1.freetv.fun/diaspora-24-1.m3u8
 [HD]gandan tv,https://stream1.freetv.fun/gandan-tv-1.m3u8
 [BD]lgtv,https://stream1.freetv.fun/lgtv-1.m3u8
 [VGA]abn africa (480p),https://stream1.freetv.fun/abn-africa-1.m3u8
@@ -6724,7 +6724,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]ช่อง sportsnet one,https://stream1.freetv.fun/ch-ng-sportsnet-one-1.m3u8
 [HD]ช่อง sportsnet,https://stream1.freetv.fun/ch-ng-sportsnet-1.m3u8
 [HD]ช่อง sportsnet 360,https://stream1.freetv.fun/ch-ng-sportsnet-360-1.m3u8
-[HD]ca sportsnet one,https://stream1.freetv.fun/ca-sportsnet-one-1.ctv
+[BD]ca sportsnet one,https://stream1.freetv.fun/ca-sportsnet-one-1.ctv
 [SD]sportsnet one--,https://stream1.freetv.fun/sportsnet-one-5.ctv
 [BD]sportsnet one ==,https://stream1.freetv.fun/sportsnet-one-3.ctv
 [BD]sportsnet one =,https://stream1.freetv.fun/sportsnet-one-6.ctv
@@ -6737,7 +6737,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]sportsnet pacific-,https://stream1.freetv.fun/sportsnet-pacific-6.ctv
 [BD]sportsnet pacific--,https://stream1.freetv.fun/sportsnet-pacific-7.ctv
 [HD]sportsnet pacific,https://stream1.freetv.fun/sportsnet-pacific-3.ctv
-[HD]sportsnet west,https://stream1.freetv.fun/sportsnet-west-4.m3u8
+[BD]sportsnet west,https://stream1.freetv.fun/sportsnet-west-4.m3u8
 [HD]sportsnet west ==,https://stream1.freetv.fun/sportsnet-west-3.ctv
 [HD]sportsnet west =,https://stream1.freetv.fun/sportsnet-west-2.ctv
 [BD]ca sportsnet world,https://stream1.freetv.fun/ca-sportsnet-world-1.ctv
@@ -6780,8 +6780,8 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]tvn 3,https://stream1.freetv.fun/tvn-3-1.m3u8
 [HD]ucv,https://stream1.freetv.fun/ucv-1.m3u8
 [HD]cctv-8,https://stream1.freetv.fun/cctv-8-14.ctv
-[BD]cctv-8,https://stream1.freetv.fun/cctv-8gao-qing-3.m3u8
 [BD]cctv-08,https://stream1.freetv.fun/cctv-08-1.ctv
+[BD]cctv-8,https://stream1.freetv.fun/cctv-8-6.ctv
 [BD]documentary plus,https://stream1.freetv.fun/documentary-plus-5.m3u8
 [BD]documentary plus,https://stream1.freetv.fun/documentary-plus-4.m3u8
 [BD]cctv1,https://stream1.freetv.fun/cctv1-31.ctv
@@ -6919,7 +6919,6 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]cctv2,https://stream1.freetv.fun/cctv2-55.m3u8
 [SD]cctv2,https://stream1.freetv.fun/cctv2-51.m3u8
 [BD]cctv3,https://stream1.freetv.fun/cctv3-15.m3u8
-[BD]cctv-3,https://stream1.freetv.fun/cctv-3gao-qing-3.m3u8
 [BD]cctv-03,https://stream1.freetv.fun/cctv-03-1.ctv
 [HD]cctv-3,https://stream1.freetv.fun/cctv-3-2.ctv
 [BD]cctv3-gq,https://stream1.freetv.fun/cctv3-gq-1.ctv
@@ -6944,7 +6943,6 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]cctv4,https://stream1.freetv.fun/cctv4-33.m3u8
 [BD]cctv4k,https://stream1.freetv.fun/cctv4k-1.ctv
 [BD]cctv4,https://stream1.freetv.fun/cctv4-6.m3u8
-[BD]cctv-4,https://stream1.freetv.fun/cctv-4gao-qing-1.m3u8
 [HD]cctv-4,https://stream1.freetv.fun/cctv-4-5.ctv
 [BD]cctv4-gq,https://stream1.freetv.fun/cctv4-gq-1.ctv
 [BD]cctv4hd,https://stream1.freetv.fun/cctv4hd-2.m3u8
@@ -6957,8 +6955,8 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]cctv5,https://stream1.freetv.fun/cctv5-92.m3u8
 [HD]cctv-5,https://stream1.freetv.fun/cctv-5-10.ctv
 [BD]cctv5,https://stream1.freetv.fun/cctv5-55.m3u8
-[BD]cctv-5,https://stream1.freetv.fun/cctv-5gao-qing-2.m3u8
 [BD]cctv5,https://stream1.freetv.fun/cctv5-17.m3u8
+[BD]cctv-5,https://stream1.freetv.fun/cctv-5-13.ctv
 [BD]cctv5-gq,https://stream1.freetv.fun/cctv5-gq-1.ctv
 [BD]cctv5 *wj,https://stream1.freetv.fun/cctv5--wj-1.m3u8
 [BD]cctv5hd,https://stream1.freetv.fun/cctv5hd-2.m3u8
@@ -6973,7 +6971,6 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]cctv6,https://stream1.freetv.fun/cctv6-74.m3u8
 [BD]cctv-6,https://stream1.freetv.fun/cctv-6-6.ctv
 [HD]cctv-6,https://stream1.freetv.fun/cctv-6-19.ctv
-[BD]cctv-6,https://stream1.freetv.fun/cctv-6gao-qing-1.m3u8
 [BD]cctv6-gq,https://stream1.freetv.fun/cctv6-gq-1.ctv
 [BD]cctv6hd,https://stream1.freetv.fun/cctv6hd-2.m3u8
 [BD]cctv6,https://stream1.freetv.fun/cctv6-71.ctv
@@ -6994,7 +6991,6 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]cctv7,https://stream1.freetv.fun/cctv7-40.m3u8
 [BD]cctv7,https://stream1.freetv.fun/cctv7-75.m3u8
 [HD]cctv-7,https://stream1.freetv.fun/cctv-7-4.ctv
-[BD]cctv-7,https://stream1.freetv.fun/cctv-7gao-qing-3.m3u8
 [BD]cctv7-gq,https://stream1.freetv.fun/cctv7-gq-1.ctv
 [BD]cctv7hd,https://stream1.freetv.fun/cctv7hd-1.m3u8
 [BD]cctv7,https://stream1.freetv.fun/cctv7-8.m3u8
@@ -7013,7 +7009,6 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]cctv8,https://stream1.freetv.fun/cctv8-57.m3u8
 [BD]cctv8,https://stream1.freetv.fun/cctv8-8.ctv
 [BD]cctv9,https://stream1.freetv.fun/cctv9-8.ctv
-[BD]cctv-9,https://stream1.freetv.fun/cctv-9gao-qing-1.m3u8
 [BD]cctv9-gq,https://stream1.freetv.fun/cctv9-gq-1.ctv
 [HD]cctv-9,https://stream1.freetv.fun/cctv-9-2.ctv
 [BD]cctv-9,https://stream1.freetv.fun/cctv-9-6.ctv
@@ -7071,6 +7066,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]浙江｜上虞新闻综合,https://stream1.freetv.fun/zhe-jiang--shang-yu-xin-wen-zong-he-1.m3u8
 [BD]上虞新闻综合,https://stream1.freetv.fun/shang-yu-xin-wen-zong-he-2.m3u8
 [BD]五星体育,https://stream1.freetv.fun/wu-xing-ti-yu-7.ctv
+[BD]五星体育,https://stream1.freetv.fun/wu-xing-ti-yu-10.m3u8
 [BD]五星体育,https://stream1.freetv.fun/wu-xing-ti-yu-11.ctv
 [BD]五星体育,https://stream1.freetv.fun/wu-xing-ti-yu-2.m3u8
 [BD]佛山公共,https://stream1.freetv.fun/fo-shan-gong-gong-13.ctv
@@ -7168,6 +7164,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [SD]吉林卫视,https://stream1.freetv.fun/ji-lin-wei-shi-38.m3u8
 [BD]吉林卫视,https://stream1.freetv.fun/ji-lin-wei-shi-27.m3u8
 [BD]吉林卫视,https://stream1.freetv.fun/ji-lin-wei-shi-64.m3u8
+[BD]体育31,https://stream1.freetv.fun/mi-gu-ti-yu-31-1.m3u8
 [BD]哈哈炫动,https://stream1.freetv.fun/ha-ha-xuan-dong-24.m3u8
 [BD]哈哈炫动,https://stream1.freetv.fun/ha-ha-xuan-dong-14.m3u8
 [SD]哈哈炫动,https://stream1.freetv.fun/ha-ha-xuan-dong-26.m3u8
@@ -7460,7 +7457,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]晋城新闻,https://stream1.freetv.fun/jin-cheng-xin-wen-4.m3u8
 [BD]郸城新闻综合,https://stream1.freetv.fun/dan-cheng-xin-wen-zong-he-4.m3u8
 [BD]郸城新闻综合,https://stream1.freetv.fun/dan-cheng-xin-wen-zong-he-1.m3u8
-[VGA]白城新闻综合,https://stream1.freetv.fun/bai-cheng-xin-wen-zong-he-3.m3u8
+[SD]白城新闻综合,https://stream1.freetv.fun/bai-cheng-xin-wen-zong-he-3.m3u8
 [SD]白城新闻综合,https://stream1.freetv.fun/bai-cheng-xin-wen-zong-he-2.m3u8
 [BD]东南卫视,https://stream1.freetv.fun/dong-nan-wei-shi-67.m3u8
 [BD]东南卫视,https://stream1.freetv.fun/dong-nan-wei-shi-38.m3u8
@@ -7973,9 +7970,8 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [SD]bfm business,https://stream1.freetv.fun/bfm-business-4.m3u8
 [SD]bfm tv,https://stream1.freetv.fun/bfm-tv-7.m3u8
 [BD]dbm tv,https://stream1.freetv.fun/dbm-tv-1.m3u8
-[SD]boomerang (fr) *s,https://stream1.freetv.fun/boomerang---s-1.m3u8
 [HD]ช่อง boomerang thai,https://stream1.freetv.fun/ch-ng-boomerang-thai-1.m3u8
-[HD]uk-boomerang,https://stream1.freetv.fun/uk-boomerang-1.ctv
+[BD]uk-boomerang,https://stream1.freetv.fun/uk-boomerang-1.ctv
 [VGA]canal savoir,https://stream1.freetv.fun/canal-savoir-1.m3u8
 [HD]canal 8,https://stream1.freetv.fun/canal-8-5.m3u8
 [HD]canal 56,https://stream1.freetv.fun/canal-56-1.m3u8
@@ -7999,7 +7995,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]euro d,https://stream1.freetv.fun/euro-d-3.m3u8
 [HD]euronews,https://stream1.freetv.fun/euronews-10.m3u8
 [HD]euronews it,https://stream1.freetv.fun/euronews-it-2.m3u8
-[SD]euronews,https://stream1.freetv.fun/euronews-12.m3u8
+[HD]euronews,https://stream1.freetv.fun/euronews-12.m3u8
 [HD]euronews de,https://stream1.freetv.fun/euronews-de-2.m3u8
 [BD]fashiontv *wj,https://stream1.freetv.fun/fashiontv--wj-1.m3u8
 [BD]fashion tv,https://stream1.freetv.fun/fashion-tv-13.m3u8
@@ -8122,7 +8118,6 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]cctv1,https://stream1.freetv.fun/cctv1-89.ctv
 [BD]cctv1,https://stream1.freetv.fun/cctv1-80.m3u8
 [BD]cctv1,https://stream1.freetv.fun/cctv1-43.m3u8
-[BD]cctv-1,https://stream1.freetv.fun/cctv-1gao-qing-1.m3u8
 [BD]cctv-01,https://stream1.freetv.fun/cctv-01-3.ctv
 [HD]cctv-1,https://stream1.freetv.fun/cctv-1-25.ctv
 [BD]cctv1-gq,https://stream1.freetv.fun/cctv1-gq-1.ctv
@@ -8131,6 +8126,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]cctv1,https://stream1.freetv.fun/cctv1-48.ctv
 [BD]cctv1,https://stream1.freetv.fun/cctv1-75.ctv
 [BD]discovery kids,https://stream1.freetv.fun/discovery-kids-5.m3u8
+[BD]kix,https://stream1.freetv.fun/kix-7.ctv
 [BD]mytime movie network,https://stream1.freetv.fun/mytime-movie-network-2.m3u8
 [BD]悬疑movie,https://stream1.freetv.fun/xuan-yi-movie-1.ctv
 [HD]paramount movie channel,https://stream1.freetv.fun/paramount-movie-channel-1.m3u8
@@ -8150,7 +8146,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]tvb plus,https://stream1.freetv.fun/tvb-plus-6.ctv
 [BD]tvb plus,https://stream1.freetv.fun/tvb-plus-4.ctv
 [BD]tvbplus,https://stream1.freetv.fun/tvbplus-3.ctv
-[VGA]etv plus,https://stream1.freetv.fun/etv-plus-2.m3u8
+[HD]etv plus,https://stream1.freetv.fun/etv-plus-2.m3u8
 [BD]tvbplus,https://stream1.freetv.fun/tvbplus-6.ctv
 [BD]tvbplus,https://stream1.freetv.fun/tvbplus-5.m3u8
 [BD]tvbs亚洲,https://stream1.freetv.fun/tvbsya-zhou-15.m3u8
@@ -8182,7 +8178,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]viutvsix,https://stream1.freetv.fun/viutvsix-1.ctv
 [HD]viutvsix,https://stream1.freetv.fun/viutvsix-2.ctv
 [HD]viutvsix *wj,https://stream1.freetv.fun/viutvsix--wj-1.m3u8
-[HD]now sports premier league 3,https://stream1.freetv.fun/now-sports-premier-league-3-1.ctv
+[BD]now sports premier league 3,https://stream1.freetv.fun/now-sports-premier-league-3-1.ctv
 [BD]nowsports,https://stream1.freetv.fun/nowsports-1.m3u8
 [BD]prime,https://stream1.freetv.fun/prime-2.m3u8
 [BD]now财经,https://stream1.freetv.fun/nowcai-jing-2.m3u8
@@ -8204,7 +8200,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]无线新闻,https://stream1.freetv.fun/wu-xian-xin-wen-7.m3u8
 [HD]无线新闻,https://stream1.freetv.fun/wu-xian-xin-wen-2.ctv
 [BD]无线新闻,rtmp://nowast.net/live/yifatv-wxxw01
-[SD]甄子丹,https://stream1.freetv.fun/zhen-zi-dan-1.m3u8
+[HD]甄子丹,https://stream1.freetv.fun/zhen-zi-dan-1.m3u8
 [SD]甄子丹,https://stream1.freetv.fun/zhen-zi-dan-2.m3u8
 [BD]翡翠,https://stream1.freetv.fun/fei-cui-8.m3u8
 [BD]翡翠,https://stream1.freetv.fun/fei-cui-20.ctv
@@ -8445,7 +8441,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]fox animation italia =,https://stream1.freetv.fun/fox-animation-italia-1.ctv
 [BD]fox animation italia ==,https://stream1.freetv.fun/fox-animation-italia-3.ctv
 [BD]pulse,https://stream1.freetv.fun/pulse-1.m3u8
-[BD]pulse,https://stream1.freetv.fun/pulse-2.m3u8
+[HD]pulse,https://stream1.freetv.fun/pulse-2.m3u8
 [BD]pulse,https://stream1.freetv.fun/pulse-3.m3u8
 [HD]onda tv,https://stream1.freetv.fun/onda-tv-2.m3u8
 [SD]radio 51 tv,https://stream1.freetv.fun/radio-51-tv-1.m3u8
@@ -8815,6 +8811,8 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]kuriakos tv,https://stream1.freetv.fun/kuriakos-tv-1.m3u8
 [BD]kuriakos kids,https://stream1.freetv.fun/kuriakos-kids-2.m3u8
 [HD]porto canal,https://stream1.freetv.fun/porto-canal-2.m3u8
+[HD]rtp 1,https://stream1.freetv.fun/rtp-1-3.m3u8
+[SD]rtp 1,https://stream1.freetv.fun/rtp-1-1.m3u8
 [SD]rtp 3,https://stream1.freetv.fun/rtp-3-4.m3u8
 [HD]rtp 3,https://stream1.freetv.fun/rtp-3-7.m3u8
 [SD]rtp 3,https://stream1.freetv.fun/rtp-3-5.m3u8
@@ -8874,7 +8872,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]kanal d drama,https://stream1.freetv.fun/kanal-d-drama-1.m3u8
 [VGA]kanal d,https://stream1.freetv.fun/kanal-d-12.m3u8
 [HD]kanal z,https://stream1.freetv.fun/kanal-z-1.m3u8
-[VGA]kanal 0,https://stream1.freetv.fun/kanal-0-1.m3u8
+[SD]kanal 0,https://stream1.freetv.fun/kanal-0-1.m3u8
 [HD]bi 1! kanal,https://stream1.freetv.fun/bi-1--kanal-1.m3u8
 [SD]kanal d,https://stream1.freetv.fun/kanal-d-7.m3u8
 [BD]kanal 15,https://stream1.freetv.fun/kanal-15-1.m3u8
@@ -8908,7 +8906,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [SD]tv1000,https://stream1.freetv.fun/tv1000-1.m3u8
 [BD]rt-doc,https://stream1.freetv.fun/rt-doc-1.m3u8
 [BD]tv 100,https://stream1.freetv.fun/tv-100-5.m3u8
-[HD]tv 100,https://stream1.freetv.fun/tv-100-1.m3u8
+[BD]tv 100,https://stream1.freetv.fun/tv-100-1.m3u8
 [BD]12 канал,https://stream1.freetv.fun/12-kanal-1.m3u8
 [BD]dw russian,https://stream1.freetv.fun/dw-russian-2.m3u8
 [BD]dw russian,https://stream1.freetv.fun/dw-russian-1.m3u8
@@ -9165,7 +9163,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [VGA]cfm tv channel 98 (360p),https://stream1.freetv.fun/cfm-tv-channel-98-1.m3u8
 [SD]tennis channel,https://stream1.freetv.fun/tennis-channel-2.m3u8
 [HD]tempe channel 11,https://stream1.freetv.fun/tempe-channel-11-1.m3u8
-[HD]fx movie channel (720p),https://stream1.freetv.fun/fx-movie-channel-1.ctv
+[VGA]fx movie channel (720p),https://stream1.freetv.fun/fx-movie-channel-1.ctv
 [BD]kartoon channel,https://stream1.freetv.fun/kartoon-channel-3.m3u8
 [BD]go-tv channel,https://stream1.freetv.fun/go-tv-channel-1.m3u8
 [SD]golf channel =,https://stream1.freetv.fun/golf-channel-2.ctv
@@ -9178,13 +9176,14 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]dazn ringside,https://stream1.freetv.fun/dazn-ringside-2.m3u8
 [BD]discovery h h,https://stream1.freetv.fun/discovery-h-h-3.ctv
 [HD]discovery(tw) *s,https://stream1.freetv.fun/discovery--s-1.m3u8
-[HD]asharq discovery,https://stream1.freetv.fun/asharq-discovery-4.m3u8
+[BD]asharq discovery,https://stream1.freetv.fun/asharq-discovery-4.m3u8
 [BD]cctv-4k,https://stream1.freetv.fun/cctv-4k-1.ctv
 [SD]elta 4 *wj,https://stream1.freetv.fun/elta-4--wj-1.m3u8
 [HD]delta tv,https://stream1.freetv.fun/delta-tv-2.m3u8
 [HD]eye tv戏剧 *wj,https://stream1.freetv.fun/eye-tvxi-ju---wj-1.m3u8
 [HD]eye tv戏剧 *wj,https://stream1.freetv.fun/eye-tvxi-ju---wj-2.m3u8
 [HD]food network,https://stream1.freetv.fun/food-network-8.m3u8
+[BD]food network(tw) *s,https://stream1.freetv.fun/food-network--s-1.m3u8
 [HD]ช่อง food network,https://stream1.freetv.fun/ch-ng-food-network-3.m3u8
 [SD]food network *m,https://stream1.freetv.fun/food-network--m-1.ctv
 [HD]global trekker *wj,https://stream1.freetv.fun/global-trekker--wj-1.m3u8
@@ -9278,7 +9277,6 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [VGA]nbt,https://stream1.freetv.fun/nbt-4.m3u8
 [BD]stadium,https://stream1.freetv.fun/stadium-2.m3u8
 [HD]cctv-2,https://stream1.freetv.fun/cctv-2-17.ctv
-[BD]cctv-2,https://stream1.freetv.fun/cctv-2gao-qing-1.m3u8
 [SD]cctv-02,https://stream1.freetv.fun/cctv-02-1.ctv
 [HD]lao-thai tv,https://stream1.freetv.fun/lao-thai-tv-1.m3u8
 [HD]habib tv,https://stream1.freetv.fun/habib-tv-1.m3u8
@@ -9309,7 +9307,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]dream türk,https://stream1.freetv.fun/dream-turk-1.m3u8
 [BD]fenerbahçe tv,https://stream1.freetv.fun/fenerbahce-tv-2.m3u8
 [HD]haber türk,https://stream1.freetv.fun/haber-turk-3.m3u8
-[VGA]haber türk,https://stream1.freetv.fun/haber-turk-2.m3u8
+[HD]haber türk,https://stream1.freetv.fun/haber-turk-2.m3u8
 [BD]haber türk,https://stream1.freetv.fun/haber-turk-1.m3u8
 [HD]türk haber,https://stream1.freetv.fun/turk-haber-1.m3u8
 [BD]24 kanal,https://stream1.freetv.fun/24-kanal-4.m3u8
@@ -9323,7 +9321,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]tjk tv,https://stream1.freetv.fun/tjk-tv-2.m3u8
 [BD]trt 1,https://stream1.freetv.fun/trt-1-9.m3u8
 [VGA]trt 1,https://stream1.freetv.fun/trt-1-2.m3u8
-[HD]trt arabi,https://stream1.freetv.fun/trt-arabi-2.m3u8
+[BD]trt arabi,https://stream1.freetv.fun/trt-arabi-2.m3u8
 [BD]ht spor,https://stream1.freetv.fun/ht-spor-2.m3u8
 [BD]tyt turk,https://stream1.freetv.fun/tyt-turk-1.m3u8
 [BD]tvri world,https://stream1.freetv.fun/tvri-world-6.m3u8
@@ -9429,12 +9427,11 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]bbc america,https://stream1.freetv.fun/bbc-america-4.m3u8
 [SD]bbc america ==,https://stream1.freetv.fun/bbc-america-3.ctv
 [SD]bbc america =,https://stream1.freetv.fun/bbc-america-2.ctv
-[BD]cbeebies uhd *m,https://stream1.freetv.fun/cbeebies-uhd--m-1.ctv
+[HD]cbeebies uhd *m,https://stream1.freetv.fun/cbeebies-uhd--m-1.ctv
 [SD]bbc cbeebies *s,https://stream1.freetv.fun/bbc-cbeebies--s-1.m3u8
 [BD]entertainment hub,https://stream1.freetv.fun/entertainment-hub-2.m3u8
 [BD]entertainment hub,https://stream1.freetv.fun/entertainment-hub-1.m3u8
 [HD]ช่อง bbc first,https://stream1.freetv.fun/ch-ng-bbc-first-1.m3u8
-[BD]bbc *s,https://stream1.freetv.fun/bbc--s-1.m3u8
 [HD]bbc,https://stream1.freetv.fun/bbc-4.m3u8
 [HD]bbc news *m,https://stream1.freetv.fun/bbc-news--m-1.ctv
 [HD]bbc news =,https://stream1.freetv.fun/bbc-news-9.ctv
@@ -9480,7 +9477,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [SD]nickelodeon,https://stream1.freetv.fun/nickelodeon-26.m3u8
 [BD]nickelodeon,https://stream1.freetv.fun/nickelodeon-15.m3u8
 [HD]ช่อง nickelodeon,https://stream1.freetv.fun/ch-ng-nickelodeon-2.m3u8
-[SD]us nickelodeon east,https://stream1.freetv.fun/us-nickelodeon-east-1.ctv
+[BD]us nickelodeon east,https://stream1.freetv.fun/us-nickelodeon-east-1.ctv
 [BD]nickelodeon (uk) ==,https://stream1.freetv.fun/nickelodeon-1.ctv
 [BD]nickelodeon (uk) =,https://stream1.freetv.fun/nickelodeon-17.ctv
 [HD]nickelodeon *wj,https://stream1.freetv.fun/nickelodeon--wj-1.m3u8
@@ -9497,7 +9494,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]ช่อง red bull tv,https://stream1.freetv.fun/ch-ng-red-bull-tv-2.m3u8
 [HD]ช่อง red bull tv,https://stream1.freetv.fun/ch-ng-red-bull-tv-1.m3u8
 [BD]red bull tv,https://stream1.freetv.fun/red-bull-tv-2.m3u8
-[BD]sky cinema select *m,https://stream1.freetv.fun/sky-cinema-select--m-1.ctv
+[HD]sky cinema select *m,https://stream1.freetv.fun/sky-cinema-select--m-1.ctv
 [BD]sky cinema select *m,https://stream1.freetv.fun/sky-cinema-select--m-2.ctv
 [SD]cinema,https://stream1.freetv.fun/cinema-7.m3u8
 [HD]sky cinema thriller *s,https://stream1.freetv.fun/sky-cinema-thriller--s-1.m3u8
@@ -9541,7 +9538,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]sky cinema sci-fi *m,https://stream1.freetv.fun/sky-cinema-sci-fi--m-2.ctv
 [BD]sky cinema sci-fi *m,https://stream1.freetv.fun/sky-cinema-sci-fi--m-1.ctv
 [BD]sky movies sci-fi horror uk=,https://stream1.freetv.fun/sky-movies-sci-fi-horror-uk-3.ctv
-[HD]24/7 horror movies,https://stream1.freetv.fun/24-7-horror-movies-1.ctv
+[BD]24/7 horror movies,https://stream1.freetv.fun/24-7-horror-movies-1.ctv
 [BD]sky cinema greats *m,https://stream1.freetv.fun/sky-cinema-greats--m-1.ctv
 [HD]sky cinema premier *m,https://stream1.freetv.fun/sky-cinema-premier--m-2.ctv
 [BD]sky movies premier *m,https://stream1.freetv.fun/sky-movies-premier--m-1.ctv
@@ -9614,7 +9611,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]animal planet =,https://stream1.freetv.fun/animal-planet-12.ctv
 [BD]animal planet,https://stream1.freetv.fun/animal-planet-18.m3u8
 [HD]animal planet ==,https://stream1.freetv.fun/animal-planet-4.ctv
-[HD]us bet,https://stream1.freetv.fun/us-bet-1.ctv
+[BD]us bet,https://stream1.freetv.fun/us-bet-1.ctv
 [SD]baby shark tv (720p),https://stream1.freetv.fun/baby-shark-tv-5.m3u8
 [HD]baby shark tv,https://stream1.freetv.fun/baby-shark-tv-4.m3u8
 [HD]ช่อง bally sports sun,https://stream1.freetv.fun/ch-ng-bally-sports-sun-1.m3u8
@@ -9652,7 +9649,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]ici television,https://stream1.freetv.fun/ici-television-1.m3u8
 [HD]long beach television,https://stream1.freetv.fun/long-beach-television-1.m3u8
 [VGA]impacto television,https://stream1.freetv.fun/impacto-television-1.m3u8
-[BD]television caribbean,https://stream1.freetv.fun/television-caribbean-1.m3u8
+[HD]television caribbean,https://stream1.freetv.fun/television-caribbean-1.m3u8
 [SD]long beach television (720p),https://stream1.freetv.fun/long-beach-television-2.m3u8
 [HD]newport beach television (720p),https://stream1.freetv.fun/newport-beach-television-2.m3u8
 [BD]monte carlo digital television (1080p),https://stream1.freetv.fun/monte-carlo-digital-television-1.m3u8
@@ -9724,7 +9721,6 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [SD]cartoonito *m,https://stream1.freetv.fun/cartoonito--m-1.ctv
 [BD]christian youth channel,https://stream1.freetv.fun/christian-youth-channel-4.m3u8
 [BD]cinemax east *v,https://stream1.freetv.fun/cinemax-east--v-1.ctv
-[BD]cinemax moviemax east *s,https://stream1.freetv.fun/cinemax-moviemax-east--s-1.m3u8
 [HD]cinemax *v,https://stream1.freetv.fun/cinemax--v-1.ctv
 [BD]cinemax(usa) ==,https://stream1.freetv.fun/cinemax-15.ctv
 [BD]cinemax(usa) =,https://stream1.freetv.fun/cinemax-2.ctv
@@ -9746,7 +9742,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]crime plus investigation,https://stream1.freetv.fun/crime-plus-investigation-2.m3u8
 [SD]discovery science *m,https://stream1.freetv.fun/discovery-science--m-2.ctv
 [SD]discovery science *m,https://stream1.freetv.fun/discovery-science--m-3.ctv
-[HD]diy network *m,https://stream1.freetv.fun/diy-network--m-1.ctv
+[SD]diy network *m,https://stream1.freetv.fun/diy-network--m-1.ctv
 [SD]diy network ==,https://stream1.freetv.fun/diy-network-1.ctv
 [SD]diy network =,https://stream1.freetv.fun/diy-network-4.ctv
 [HD]jin tv,https://stream1.freetv.fun/jin-tv-1.m3u8
@@ -9813,7 +9809,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]fox news channel,https://stream1.freetv.fun/fox-news-channel-1.m3u8
 [HD]ช่อง fox sports 1,https://stream1.freetv.fun/ch-ng-fox-sports-1-1.m3u8
 [HD]fox weather,https://stream1.freetv.fun/fox-weather-3.m3u8
-[HD]freeform (720p),https://stream1.freetv.fun/freeform-2.ctv
+[VGA]freeform (720p),https://stream1.freetv.fun/freeform-2.ctv
 [HD]futura,https://stream1.freetv.fun/futura-1.m3u8
 [SD]golf channel ==,https://stream1.freetv.fun/golf-channel-1.ctv
 [BD]golf channel,https://stream1.freetv.fun/golf-channel-6.m3u8
@@ -9821,7 +9817,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]hbo *v,https://stream1.freetv.fun/hbo--v-1.ctv
 [HD]hbo 2 west *m,https://stream1.freetv.fun/hbo-2-west--m-1.ctv
 [BD]hbo comedy *v,https://stream1.freetv.fun/hbo-comedy--v-1.ctv
-[BD]hbo comedy *m,https://stream1.freetv.fun/hbo-comedy--m-1.ctv
+[HD]hbo comedy *m,https://stream1.freetv.fun/hbo-comedy--m-1.ctv
 [SD]hbo comedy ==,https://stream1.freetv.fun/hbo-comedy-10.ctv
 [SD]hbo comedy ===,https://stream1.freetv.fun/hbo-comedy-9.ctv
 [BD]hbo east *m,https://stream1.freetv.fun/hbo-east--m-1.ctv
@@ -9841,7 +9837,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [SD]hbo ===,https://stream1.freetv.fun/hbo-14.ctv
 [BD]hbo ===,https://stream1.freetv.fun/hbo-11.ctv
 [SD]hbo usa *s,https://stream1.freetv.fun/hbo-usa--s-1.m3u8
-[BD]hbo zone *m,https://stream1.freetv.fun/hbo-zone--m-1.ctv
+[HD]hbo zone *m,https://stream1.freetv.fun/hbo-zone--m-1.ctv
 [SD]hbo zone *v,https://stream1.freetv.fun/hbo-zone--v-1.ctv
 [SD]hbo zone ==,https://stream1.freetv.fun/hbo-zone-1.ctv
 [SD]hbo zone *s,https://stream1.freetv.fun/hbo-zone--s-1.m3u8
@@ -9874,9 +9870,9 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]history hit,https://stream1.freetv.fun/history-hit-1.m3u8
 [BD]history uhd *m,https://stream1.freetv.fun/history-uhd--m-1.ctv
 [BD]history uhd *m,https://stream1.freetv.fun/history-uhd--m-2.ctv
-[VGA]history tv18,https://stream1.freetv.fun/history-tv18-1.m3u8
+[BD]history tv18,https://stream1.freetv.fun/history-tv18-1.m3u8
 [BD]history tv18,https://stream1.freetv.fun/history-tv18-2.m3u8
-[HD]us history,https://stream1.freetv.fun/us-history-1.ctv
+[SD]us history,https://stream1.freetv.fun/us-history-1.ctv
 [BD]history *m,https://stream1.freetv.fun/history--m-1.ctv
 [BD]pbs history,https://stream1.freetv.fun/pbs-history-1.m3u8
 [HD]history(usa) ===,https://stream1.freetv.fun/history-16.ctv
@@ -9885,8 +9881,8 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]history2(usa) *s,https://stream1.freetv.fun/history2--s-1.m3u8
 [HD]hollywire,https://stream1.freetv.fun/hollywire-3.m3u8
 [HD]ช่อง infowars,https://stream1.freetv.fun/ch-ng-infowars-1.m3u8
-[HD]investigation discovery *m,https://stream1.freetv.fun/investigation-discovery--m-2.ctv
-[HD]investigation discovery *m,https://stream1.freetv.fun/investigation-discovery--m-3.ctv
+[SD]investigation discovery *m,https://stream1.freetv.fun/investigation-discovery--m-2.ctv
+[SD]investigation discovery *m,https://stream1.freetv.fun/investigation-discovery--m-3.ctv
 [HD]id *m,https://stream1.freetv.fun/id--m-1.ctv
 [SD]id investigation discovery европа,https://stream1.freetv.fun/id-investigation-discovery-evropa-1.m3u8
 [BD]investigation discovery *v,https://stream1.freetv.fun/investigation-discovery--v-1.ctv
@@ -9907,7 +9903,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]msnbc =,https://stream1.freetv.fun/msnbc-1.ctv
 [HD]msnbc,https://stream1.freetv.fun/msnbc-2.m3u8
 [BD]msnbc,https://stream1.freetv.fun/msnbc-6.m3u8
-[SD]yo! mtv,https://stream1.freetv.fun/yo--mtv-1.m3u8
+[BD]yo! mtv,https://stream1.freetv.fun/yo--mtv-1.m3u8
 [HD]mdtv,https://stream1.freetv.fun/mdtv-1.m3u8
 [SD]mtv (korea)=,https://stream1.freetv.fun/mtv-15.ctv
 [SD]mtv 2=,https://stream1.freetv.fun/mtv-2-1.ctv
@@ -9916,6 +9912,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]mtv live *v,https://stream1.freetv.fun/mtv-live--v-1.ctv
 [SD]mtv live,https://stream1.freetv.fun/mtv-live-9.m3u8
 [SD]mtv live uhd *m,https://stream1.freetv.fun/mtv-live-uhd--m-1.ctv
+[SD]mtv live *s,https://stream1.freetv.fun/mtv-live--s-1.m3u8
 [BD]us motortrend,https://stream1.freetv.fun/us-motortrend-1.ctv
 [BD]motortrend ==,https://stream1.freetv.fun/motortrend-2.ctv
 [BD]motortrend =,https://stream1.freetv.fun/motortrend-3.ctv
@@ -9966,12 +9963,12 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [HD]inside outside,https://stream1.freetv.fun/inside-outside-1.m3u8
 [HD]inside outside,https://stream1.freetv.fun/inside-outside-2.m3u8
 [HD]oxygen east,https://stream1.freetv.fun/oxygen-east-2.m3u8
-[HD]us oxygen,https://stream1.freetv.fun/us-oxygen-1.ctv
+[SD]us oxygen,https://stream1.freetv.fun/us-oxygen-1.ctv
 [SD]us oxygen,https://stream1.freetv.fun/us-oxygen-2.ctv
 [HD]paramount plus picks,https://stream1.freetv.fun/paramount-plus-picks-1.m3u8
 [BD]paramount,https://stream1.freetv.fun/paramount-4.m3u8
-[HD]paramount network *m,https://stream1.freetv.fun/paramount-network--m-1.ctv
-[HD]paramount network *m,https://stream1.freetv.fun/paramount-network--m-2.ctv
+[BD]paramount network *m,https://stream1.freetv.fun/paramount-network--m-1.ctv
+[BD]paramount network *m,https://stream1.freetv.fun/paramount-network--m-2.ctv
 [SD]paramount plus picks,https://stream1.freetv.fun/paramount-plus-picks-2.m3u8
 [VGA]pbs kids,https://stream1.freetv.fun/pbs-kids-1.m3u8
 [HD]pbs kids,https://stream1.freetv.fun/pbs-kids-2.m3u8
@@ -9985,7 +9982,7 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]paramount network spain,https://stream1.freetv.fun/paramount-network-spain-1.m3u8
 [BD]paramount network ==,https://stream1.freetv.fun/paramount-network-6.ctv
 [BD]paramount network =,https://stream1.freetv.fun/paramount-network-2.ctv
-[HD]tna wrestling,https://stream1.freetv.fun/tna-wrestling-4.m3u8
+[SD]tna wrestling,https://stream1.freetv.fun/tna-wrestling-4.m3u8
 [HD]pluto tv retro kid,https://stream1.freetv.fun/pluto-tv-retro-kid-1.m3u8
 [HD]rete oro tv,https://stream1.freetv.fun/rete-oro-tv-1.m3u8
 [SD]garfield and friends,https://stream1.freetv.fun/garfield-and-friends-1.m3u8
@@ -10071,22 +10068,22 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]the design network,https://stream1.freetv.fun/the-design-network-1.m3u8
 [SD]the design network (1080p),https://stream1.freetv.fun/the-design-network-2.m3u8
 [BD]the design network,https://stream1.freetv.fun/the-design-network-3.m3u8
-[BD]show,https://stream1.freetv.fun/show-2.m3u8
+[VGA]show,https://stream1.freetv.fun/show-2.m3u8
 [BD]wbtv at the movies,https://stream1.freetv.fun/wbtv-at-the-movies-2.m3u8
 [BD]moviesphere *y,https://stream1.freetv.fun/moviesphere--y-1.m3u8
 [BD]the retro channel,https://stream1.freetv.fun/the-retro-channel-1.m3u8
 [SD]the retro channel (1080p),https://stream1.freetv.fun/the-retro-channel-2.m3u8
-[VGA]tom and jerry (720p),https://stream1.freetv.fun/tom-and-jerry-1.m3u8
+[HD]tom and jerry (720p),https://stream1.freetv.fun/tom-and-jerry-1.m3u8
 [BD]toon google,https://stream1.freetv.fun/toon-google-1.m3u8
 [HD]toongoggles,https://stream1.freetv.fun/toongoggles-1.m3u8
-[HD]travel channel *m,https://stream1.freetv.fun/travel-channel--m-1.ctv
+[BD]travel channel *m,https://stream1.freetv.fun/travel-channel--m-1.ctv
 [BD]tutv,https://stream1.freetv.fun/tutv-2.m3u8
 [BD]ufc,https://stream1.freetv.fun/ufc-2.m3u8
 [BD]ufc,https://stream1.freetv.fun/ufc-1.m3u8
 [BD]univer tv,https://stream1.freetv.fun/univer-tv-1.m3u8
 [BD]univer tv,https://stream1.freetv.fun/univer-tv-2.m3u8
 [HD]ช่อง usa network,https://stream1.freetv.fun/ch-ng-usa-network-1.m3u8
-[SD]us usa network,https://stream1.freetv.fun/us-usa-network-1.ctv
+[BD]us usa network,https://stream1.freetv.fun/us-usa-network-1.ctv
 [HD]usa network,https://stream1.freetv.fun/usa-network-2.m3u8
 [BD]usa network ==,https://stream1.freetv.fun/usa-network-3.ctv
 [SD]usa network =,https://stream1.freetv.fun/usa-network-1.ctv
@@ -10101,12 +10098,12 @@ Dreamcatcher,https://vd3.bdstatic.com/mda-mbiqgzsnfeyv74y6/v1-cae/1080p/mda-mbiq
 [BD]vevo hip-hop r b,https://stream1.freetv.fun/vevo-hip-hop-r-b-2.m3u8
 [BD]vevo latino,https://stream1.freetv.fun/vevo-latino-1.m3u8
 [BD]ช่อง vevo country,https://stream1.freetv.fun/ch-ng-vevo-country-1.m3u8
-[VGA]ช่อง vevo retro rock,https://stream1.freetv.fun/ch-ng-vevo-retro-rock-1.m3u8
+[BD]ช่อง vevo retro rock,https://stream1.freetv.fun/ch-ng-vevo-retro-rock-1.m3u8
 [BD]ช่อง vevo '80s,https://stream1.freetv.fun/ch-ng-vevo--80s-1.m3u8
 [BD]ช่อง vevo '90s,https://stream1.freetv.fun/ch-ng-vevo--90s-1.m3u8
 [BD]ช่อง vevo 2k,https://stream1.freetv.fun/ch-ng-vevo-2k-1.m3u8
 [BD]ช่อง vevo '70s,https://stream1.freetv.fun/ch-ng-vevo--70s-1.m3u8
-[BD]ช่อง vevo pop,https://stream1.freetv.fun/ch-ng-vevo-pop-1.m3u8
+[HD]ช่อง vevo pop,https://stream1.freetv.fun/ch-ng-vevo-pop-1.m3u8
 [SD]vevo '70s,https://stream1.freetv.fun/vevo--70s-1.m3u8
 [SD]vevo '90s,https://stream1.freetv.fun/vevo--90s-2.m3u8
 [SD]vevo country,https://stream1.freetv.fun/vevo-country-2.m3u8

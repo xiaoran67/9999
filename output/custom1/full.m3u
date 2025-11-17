@@ -21511,17 +21511,17 @@ http://110.177.144.19:9003/hls/31/index.m3u8
 http://116.235.57.41:4022/rtp/239.45.3.232:5140
 #EXTINF:-1  tvg-name="黑龙江卫视" tvg-logo="https://live.fanmingming.cn/tv/黑龙江卫视.png"  group-title="📡卫视频道",黑龙江卫视
 http://110.177.144.66:9003/hls/31/index.m3u8
-#EXTINF:-1 group-title="🕒更新时间",20251117 11:15:59
-https://vdse.bdstatic.com//1d83dfc2411243e5b9f44462e1e55ab3.mp4?authorization=bce-auth-v1%2F40f207e648424f47b2e3dfbb1014b1a5%2F2019-12-14T02%3A12%3A40Z%2F-1%2Fhost%2F4739737cd8b21cbdb307a5d008abe88a61afce23616c55f2a8fae768fc2b6764
-#EXTINF:-1 group-title="🕒更新时间",xiaoranmuze
+#EXTINF:-1 group-title="🕒更新时间",20251117 11:23:22
 https://vdse.bdstatic.com/363480020aaa13240bbe51121d3e2a65.mp4?authorization=bce-auth-v1%2Ffb297a5cc0fb434c971b8fa103e8dd7b%2F2017-05-11T09%3A02%3A31Z%2F-1%2F%2F092913f5016d684c2e159452cc811ca27c7e7b8d9172bcd8211c87b7cae449bd
+#EXTINF:-1 group-title="🕒更新时间",xiaoranmuze
+https://vdse.bdstatic.com//c49675968e999046add4dc4660a2b1e5.mp4?authorization=bce-auth-v1%2F40f207e648424f47b2e3dfbb1014b1a5%2F2024-10-15T13%3A02%3A59Z%2F-1%2Fhost%2F7368e742ac87e1dada56b3c1f8c5c3c1d4721127e42ca729bf5b67a4a99a6c42&vid=9376331405235901090
 #EXTINF:-1 group-title="🕒更新时间",今日推荐
-https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240350771160.mp4
+http://em.21dtv.com/songs/60054081.mkv
 #EXTINF:-1 group-title="🕒更新时间",🔥低调
-https://vd3.bdstatic.com/mda-nj0br2cz06fh2jgb/sc/cae_h264/1664612575982009744/mda-nj0br2cz06fh2jgb.mp4
+https://vd3.bdstatic.com/mda-mekfm7wu6f4rtt99/1080p/cae_h264/1621595318412084671/mda-mekfm7wu6f4rtt99.mp4
 #EXTINF:-1 group-title="🕒更新时间",🔥使用
-http://em.21dtv.com/songs/60136631.mkv
+https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240001228776.mp4
 #EXTINF:-1 group-title="🕒更新时间",🔥禁止
-http://vd3.bdstatic.com/mda-jenmbx88uk365k40/mda-jenmbx88uk365k40.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D
+https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240340899550.mp4
 #EXTINF:-1 group-title="🕒更新时间",🔥贩卖
-https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240225226897.mp4
+https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/239996664565.mp4
