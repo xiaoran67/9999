@@ -1,0 +1,419 @@
+name: 'Live Source 1 Update'
+
+on:
+  schedule:
+    # UTC时间触发定时任务（每年1月1日21:10）
+    - cron: '10 21 * * *'
+  workflow_dispatch:
+    inputs:
+      # ==================== 基础配置 ====================
+      retain_days:
+        description: 'Zip归档保留天数'
+        required: false
+        default: '7'
+        type: number
+
+      # ==================== 多平台同步配置（可选） ====================
+      enable_sync:
+        description: '启用多平台同步（可选）'
+        required: false
+        default: false
+        type: boolean
+      target_repo:
+        description: '目标仓库（格式：用户名/仓库名@分支）'
+        required: false
+        default: 'xiaoran67/update@main'
+        type: string
+      target_folder:
+        description: '目标文件夹路径（多级目录用/分隔，留空=根目录）'
+        required: false
+        default: 'output'
+        type: string
+      target_token:
+        description: '目标仓库Token的Secret名称'
+        required: false
+        default: 'XIAORAN67_GITHUB_TOKEN'
+        type: string
+      target_platform:
+        description: '目标仓库平台'
+        required: false
+        type: choice
+        options:
+          - 'github'
+          - 'gitee'
+          - 'gitcode'
+        default: 'github'
+      sync_mode:
+        description: '同步模式'
+        required: false
+        type: choice
+        options:
+          - '增量'
+          - '覆盖'
+        default: '增量'
+      commit_message:
+        description: '提交信息（可用变量：{time} {date} {source} {target}）'
+        required: false
+        default: '🔄 {date} {time}'
+        type: string
+
+env:
+  PYTHON_VERSION: '3.10'        # 使用的Python版本
+  DEFAULT_RETAIN_DAYS: 7        # 默认历史归档文件保留天数
+  HISTORY_DIR: 'history/custom1'  # 归档目录
+  FILES_TO_ARCHIVE: >-          # 需要归档的文件列表
+    output/custom1/full.txt
+    output/custom1/simple.txt
+    output/custom1/custom.txt
+    output/custom1/others.txt
+    output/custom1/sports.html
+
+jobs:
+  run_job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write          # 允许写入仓库内容
+      pull-requests: write     # 允许操作PR
+
+    steps:
+      # ==================== 初始化阶段 ====================
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+        with:
+          ref: main           # 拉取main分支代码
+          fetch-depth: 0      # 获取完整历史记录
+
+      - name: 强制同步远程代码
+        run: |
+          git fetch --prune 
+          git reset --hard origin/main  # 确保本地代码与远程一致
+          git clean -fd                 # 清理未跟踪文件
+
+      # ==================== 环境配置阶段 ====================
+      - name: 安装Python环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 缓存依赖包
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: 安装项目依赖
+        run: |
+          python -m pip install --upgrade pip
+          # 安装核心依赖，失败时重试一次
+          pip install opencc-python-reimplemented pytz || { 
+            echo "依赖安装失败，重试一次"; 
+            pip install opencc-python-reimplemented pytz; 
+          }
+
+      - name: 配置Git身份
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+
+      # ==================== 文件生成阶段 ====================
+      - name: 生成文件
+        run: |
+          # 确保输出目录存在
+          mkdir -p output/custom1
+          # 执行scripts目录下的生成脚本，失败时重试一次
+          python scripts/LiveSource1.py || { 
+            echo "首次生成失败，重试"; 
+            python scripts/LiveSource1.py || { 
+              echo "生成文件失败，终止流程"; 
+              exit 1; 
+            } 
+          }
+
+      - name: 校验文件完整性
+        run: |
+          # 定义关键文件列表
+          critical_files=("output/custom1/full.txt" "output/custom1/custom.txt")
+          
+          # 检查文件是否存在且非空
+          for file in "${critical_files[@]}"; do
+            if [ ! -s "$file" ]; then
+              echo "❌ 错误：$file 异常，终止流程"
+              exit 1
+            fi
+          done
+          
+          # 检查核心内容是否存在
+          if ! grep -q "🌐央视频道,#genre#" "output/custom1/full.txt"; then
+            echo "❌ 错误：核心内容缺失，终止流程"
+            exit 1
+          fi
+          
+          echo "✅ 文件完整性校验通过"
+
+      # ==================== 归档管理阶段 ====================
+      - name: 设置动态变量
+        run: |
+          if [ "${{ github.event.inputs.retain_days }}" != "" ]; then
+            echo "RETAIN_DAYS=${{ github.event.inputs.retain_days }}" >> $GITHUB_ENV
+          else
+            echo "RETAIN_DAYS=${{ env.DEFAULT_RETAIN_DAYS }}" >> $GITHUB_ENV
+          fi
+
+          echo "📋 配置详情："
+          echo "  保留天数: $RETAIN_DAYS"
+          echo "  同步启用: ${{ github.event.inputs.enable_sync }}"
+
+      - name: 清理历史归档（按文件名日期）
+        run: |
+          mkdir -p ${{ env.HISTORY_DIR }}
+          
+          # 计算需要保留的最早日期（格式：YYYYMMDD）
+          retain_date=$(date -d "-${{ env.RETAIN_DAYS }} days" +"%Y%m%d")
+          
+          echo "🗑️  归档清理配置："
+          echo "  保留日期：$retain_date 及之后的归档"
+          echo "  当前日期：$(date +"%Y%m%d")"
+          echo "  归档目录：${{ env.HISTORY_DIR }}"
+          echo "  保留天数：${{ env.RETAIN_DAYS }}"
+          
+          # 遍历归档目录下的zip文件，按文件名日期删除过期文件
+          for zip_file in "${{ env.HISTORY_DIR }}"/*.zip; do
+            # 跳过不存在的文件（防止目录为空时报错）
+            [ -f "$zip_file" ] || continue
+            
+            # 从文件名中提取日期部分
+            filename=$(basename "$zip_file")
+            file_date=$(echo "$filename" | grep -o '^[0-9]\{8\}')
+            
+            # 验证提取的日期是否为8位数字
+            if [ -n "$file_date" ] && [[ "$file_date" =~ ^[0-9]{8}$ ]]; then
+              # 比较文件名日期与保留日期，删除早于保留日期的文件
+              if [ "$file_date" -lt "$retain_date" ]; then
+                echo "🗑️  删除过期归档：$filename (日期: $file_date < $retain_date)"
+                rm -f "$zip_file"
+              else
+                echo "💾 保留归档：$filename (日期: $file_date >= $retain_date)"
+              fi
+            else
+              echo "⚠️  忽略非标准命名文件：$filename"
+            fi
+          done
+          
+          echo "✅ 历史归档清理完成"
+
+      - name: 生成今日归档
+        run: |
+          # 检查文件是否有修改
+          if git diff --quiet ${{ env.FILES_TO_ARCHIVE }}; then
+            echo "📝 文件未修改，不生成新归档"
+          else
+            # 归档文件保存到history/custom1
+            current_datetime=$(date +"%Y%m%d_%H%M%S")
+            zip_filename="${{ env.HISTORY_DIR }}/${current_datetime}_custom1.zip"
+            zip -j "${zip_filename}" ${{ env.FILES_TO_ARCHIVE }}
+            git add "${zip_filename}"
+            echo "📦 新归档生成：${zip_filename}"
+          fi
+
+      # ==================== 提交推送阶段 ====================
+      - name: 提交并推送更改
+        run: |
+          # 添加需要提交的文件
+          git add output/custom1/ ${{ env.HISTORY_DIR }}/
+          
+          # 检查是否有文件需要提交
+          if git diff --staged --quiet; then
+            echo "📭 没有文件需要提交"
+            exit 0
+          fi
+          
+          # 提交修改
+          git commit -m "🐉 $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+          
+          # 使用安全的方式推送，避免冲突
+          git pull origin main --rebase --autostash
+          git push origin main
+          
+          echo "✅ 代码提交推送完成"
+
+      # ==================== 多平台同步阶段 ====================
+      - name: 多平台同步推送（可选）
+        if: ${{ github.event.inputs.enable_sync == 'true' && github.event.inputs.target_repo != '' }}
+        run: |
+          echo "🚀 === 开始多平台同步 ==="
+          
+          # 解析目标仓库信息
+          TARGET_REPO="${{ github.event.inputs.target_repo }}"
+          if echo "$TARGET_REPO" | grep -qE '^[a-zA-Z0-9-]+/[a-zA-Z0-9-]+@[a-zA-Z0-9-]+$'; then
+            IFS='/@' read -r target_user target_repo_name target_branch <<< "$TARGET_REPO"
+            echo "📋 目标仓库信息："
+            echo "  目标用户: $target_user"
+            echo "  目标仓库: $target_repo_name"
+            echo "  目标分支: $target_branch"
+          else
+            echo "❌ 目标仓库格式错误，应为：用户名/仓库名@分支"
+            exit 1
+          fi
+
+          # 获取Token
+          TARGET_TOKEN_SECRET="${{ github.event.inputs.target_token }}"
+          TARGET_TOKEN="${{ secrets[github.event.inputs.target_token] }}"
+          if [ -z "$TARGET_TOKEN" ]; then
+            echo "❌ 目标仓库Token不存在: $TARGET_TOKEN_SECRET"
+            exit 1
+          fi
+
+          # 设置路径变量
+          TARGET_FOLDER="${{ github.event.inputs.target_folder }}"
+          SYNC_MODE="${{ github.event.inputs.sync_mode }}"
+          TARGET_PLATFORM="${{ github.event.inputs.target_platform }}"
+          COMMIT_MESSAGE="${{ github.event.inputs.commit_message }}"
+          
+          SOURCE_PATH="output/custom1"
+          [ -n "$TARGET_FOLDER" ] && TARGET_PATH="$TARGET_FOLDER" || TARGET_PATH="."
+          
+          echo "📁 同步配置："
+          echo "  源路径: $SOURCE_PATH"
+          echo "  目标路径: $TARGET_PATH"
+          echo "  同步模式: $SYNC_MODE"
+          echo "  目标平台: $TARGET_PLATFORM"
+          echo "  提交信息: $COMMIT_MESSAGE"
+
+          # 安装必要工具
+          sudo apt-get update
+          sudo apt-get install -y curl jq
+
+          # 构建目标仓库URL和API信息
+          case "$TARGET_PLATFORM" in
+            "github")
+              TARGET_URL="https://${TARGET_TOKEN}@github.com/$target_user/$target_repo_name.git"
+              API_BASE="https://api.github.com"
+              ;;
+            "gitee")
+              TARGET_URL="https://$target_user:${TARGET_TOKEN}@gitee.com/$target_user/$target_repo_name.git"
+              API_BASE="https://gitee.com/api/v5"
+              ;;
+            "gitcode")
+              TARGET_URL="https://$target_user:${TARGET_TOKEN}@gitcode.com/$target_user/$target_repo_name.git"
+              API_BASE="https://gitcode.com/api/v4"
+              ;;
+          esac
+          
+          echo "🌐 仓库连接信息："
+          echo "  目标仓库URL: $TARGET_URL"
+          echo "  API基础地址: $API_BASE"
+
+          # 检查仓库是否存在，不存在则自动创建
+          echo "🔍 === 检查目标仓库 ==="
+          case "$TARGET_PLATFORM" in
+            "github")
+              REPO_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token $TARGET_TOKEN" "$API_BASE/repos/$target_user/$target_repo_name")
+              ;;
+            "gitee")
+              REPO_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -X GET "$API_BASE/repos/$target_user/$target_repo_name?access_token=$TARGET_TOKEN")
+              ;;
+            "gitcode")
+              REPO_STATUS=$(curl -s -o /dev/null -w "%{http_code}" -H "PRIVATE-TOKEN: $TARGET_TOKEN" "$API_BASE/projects/$target_user%2F$target_repo_name")
+              ;;
+          esac
+
+          if [ "$REPO_STATUS" = "404" ] || [ "$REPO_STATUS" = "403" ]; then
+            echo "⚠️  目标仓库不存在，尝试自动创建..."
+            
+            case "$TARGET_PLATFORM" in
+              "github")
+                CREATE_RESPONSE=$(curl -s -w "%{http_code}" -H "Authorization: token $TARGET_TOKEN" -H "Accept: application/vnd.github.v3+json" -X POST "$API_BASE/user/repos" -d "{\"name\":\"$target_repo_name\",\"private\":false}")
+                HTTP_CODE="${CREATE_RESPONSE: -3}"
+                RESPONSE_BODY="${CREATE_RESPONSE%???}"
+                ;;
+              "gitee")
+                CREATE_RESPONSE=$(curl -s -w "%{http_code}" -X POST "$API_BASE/user/repos?access_token=$TARGET_TOKEN" -d "{\"name\":\"$target_repo_name\",\"private\":false}")
+                HTTP_CODE="${CREATE_RESPONSE: -3}"
+                RESPONSE_BODY="${CREATE_RESPONSE%???}"
+                ;;
+              "gitcode")
+                CREATE_RESPONSE=$(curl -s -w "%{http_code}" -H "PRIVATE-TOKEN: $TARGET_TOKEN" -H "Content-Type: application/json" -X POST "$API_BASE/projects" -d "{\"name\":\"$target_repo_name\",\"visibility\":\"public\"}")
+                HTTP_CODE="${CREATE_RESPONSE: -3}"
+                RESPONSE_BODY="${CREATE_RESPONSE%???}"
+                ;;
+            esac
+
+            if [ "$HTTP_CODE" = "201" ] || [ "$HTTP_CODE" = "200" ]; then
+              echo "✅ 仓库创建成功"
+              # 等待仓库完全创建
+              sleep 10
+            else
+              echo "❌ 仓库创建失败: $HTTP_CODE"
+              echo "响应: $RESPONSE_BODY"
+              exit 1
+            fi
+          elif [ "$REPO_STATUS" = "200" ]; then
+            echo "✅ 目标仓库已存在"
+          else
+            echo "❌ 检查仓库状态失败: $REPO_STATUS"
+            exit 1
+          fi
+
+          # 克隆目标仓库
+          echo "📥 === 克隆目标仓库 ==="
+          git clone --branch "$target_branch" --depth 1 "$TARGET_URL" target_repo || {
+            # 如果分支不存在，创建新分支
+            echo "🌿 分支不存在，创建新分支: $target_branch"
+            git clone --depth 1 "$TARGET_URL" target_repo
+            cd target_repo
+            git checkout -b "$target_branch"
+            cd ..
+          }
+
+          # 准备同步文件
+          echo "📂 === 准备同步文件 ==="
+          cd target_repo
+          
+          # 创建目标目录
+          mkdir -p "$TARGET_PATH"
+          
+          # 处理提交信息中的变量 - 使用 | 作为分隔符避免 / 冲突
+          CURRENT_TIME=$(TZ='Asia/Shanghai' date +'%H:%M:%S')
+          CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d')
+          FINAL_COMMIT_MESSAGE=$(echo "$COMMIT_MESSAGE" | sed \
+            -e "s|{time}|$CURRENT_TIME|g" \
+            -e "s|{date}|$CURRENT_DATE|g" \
+            -e "s|{source}|${{ github.repository }}|g" \
+            -e "s|{target}|$target_user/$target_repo_name|g")
+          
+          echo "✍️  最终提交信息: $FINAL_COMMIT_MESSAGE"
+
+          # 根据同步模式处理文件
+          if [ "$SYNC_MODE" = "覆盖" ]; then
+            echo "🔄 模式: 覆盖 - 清空目标目录"
+            rm -rf "${TARGET_PATH:?}"/*
+            cp -r ../"$SOURCE_PATH"/* "$TARGET_PATH"/
+          else
+            echo "📈 模式: 增量 - 合并文件"
+            cp -r ../"$SOURCE_PATH"/* "$TARGET_PATH"/
+          fi
+
+          # 检查是否有文件变化
+          if git diff --quiet; then
+            echo "📭 没有文件变化，跳过同步"
+            exit 0
+          fi
+
+          # 提交和推送
+          echo "🚀 === 提交和推送 ==="
+          git add .
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git commit -m "$FINAL_COMMIT_MESSAGE"
+          
+          # 推送更改
+          if git push origin "$target_branch"; then
+            echo "✅ 同步成功"
+          else
+            echo "❌ 同步失败"
+            exit 1
+          fi
+          
+          echo "🎉 多平台同步流程完成"
