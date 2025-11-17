@@ -1,0 +1,400 @@
+name: 'Live Source 1 Update with Multi-platform Sync'
+
+on:
+  schedule:
+    - cron: '10 21 * * *'  # UTC时间触发定时任务（每年1月1日21:10）
+  workflow_dispatch:
+    inputs:
+      # ==================== 同步配置 ====================
+      enable_sync:
+        description: '是否启用多平台同步'
+        required: true
+        type: boolean
+        default: true
+      sync_mode:
+        description: '同步模式'
+        required: true
+        type: choice
+        options:
+          - '增量'
+          - '覆盖'
+        default: '增量'
+      target_repo:
+        description: '目标仓库（格式：用户名/仓库名@分支）'
+        required: false
+        default: 'xiaoran37/update@main'
+        type: string
+      target_folder:
+        description: '目标文件夹路径'
+        required: false
+        default: 'output'
+        type: string
+
+env:
+  PYTHON_VERSION: '3.10'
+  RETAIN_DAYS: 7
+  HISTORY_DIR: 'history/custom1'
+  FILES_TO_ARCHIVE: >-
+    output/custom1/full.txt
+    output/custom1/simple.txt
+    output/custom1/custom.txt
+    output/custom1/others.txt
+    output/custom1/sports.html
+  # ==================== 同步默认配置 ====================
+  SYNC_ENABLED: ${{ inputs.enable_sync || true }}
+  SYNC_MODE: ${{ inputs.sync_mode || '增量' }}
+  TARGET_REPO: ${{ inputs.target_repo || 'xiaoran37/update@main' }}
+  TARGET_FOLDER: ${{ inputs.target_folder || 'output' }}
+  TARGET_TOKEN: 'XIAORAN37_GITHUB_TOKEN'
+  TARGET_PLATFORM: 'github'
+
+jobs:
+  run_job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      # ==================== 原有生成流程 ====================
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: 强制同步远程代码
+        run: git fetch --prune && git reset --hard origin/main
+
+      - name: 安装Python环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: 缓存依赖包
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: 安装项目依赖
+        run: |
+          python -m pip install --upgrade pip
+          pip install opencc-python-reimplemented pytz || { 
+            echo "依赖安装失败，重试一次"; 
+            pip install opencc-python-reimplemented pytz; 
+          }
+
+      - name: 同步代码并生成文件
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          mkdir -p output/custom1
+          git reset --hard HEAD
+          git pull origin main --rebase || { 
+            echo "变基冲突，自动用远程最新代码覆盖本地";
+            git rebase --abort;
+            git pull origin main --force;
+          }
+          python scripts/LiveSource1.py || { 
+            echo "首次生成失败，重试"; 
+            python scripts/LiveSource1.py || { exit 1; } 
+          }
+
+      - name: 校验文件完整性
+        run: |
+          critical_files=("output/custom1/full.txt" "output/custom1/custom.txt")
+          for file in "${critical_files[@]}"; do
+            if [ ! -s "$file" ]; then
+              echo "错误：$file 异常，终止流程"; exit 1;
+            fi
+          done
+          if ! grep -q "🌐央视频道,#genre#" "output/custom1/full.txt"; then
+            echo "错误：核心内容缺失，终止流程"; exit 1;
+          fi
+
+      - name: 清理历史归档（按文件名日期）
+        run: |
+          mkdir -p ${{ env.HISTORY_DIR }}
+          retain_date=$(date -d "-${{ env.RETAIN_DAYS }} days" +"%Y%m%d")
+          echo "保留日期：$retain_date 及之后的归档"
+          
+          for zip_file in "${{ env.HISTORY_DIR }}"/*.zip; do
+            [ -f "$zip_file" ] || continue
+            file_date=$(basename "$zip_file" | cut -d'_' -f1)
+            if [[ "$file_date" =~ ^[0-9]{8}$ ]]; then
+              if [ "$file_date" -lt "$retain_date" ]; then
+                echo "删除过期归档：$zip_file"
+                rm -f "$zip_file"
+              else
+                echo "保留归档：$zip_file"
+              fi
+            else
+              echo "忽略非标准命名文件：$zip_file"
+            fi
+          done
+
+      - name: 生成今日归档
+        run: |
+          if git diff --quiet ${{ env.FILES_TO_ARCHIVE }}; then
+            echo "文件未修改，不生成新归档";
+          else
+            current_datetime=$(date +"%Y%m%d_%H%M%S")
+            zip_filename="${{ env.HISTORY_DIR }}/${current_datetime}_custom1.zip"
+            zip -j "${zip_filename}" ${{ env.FILES_TO_ARCHIVE }}
+            git add "${zip_filename}"
+          fi
+
+      - name: 提交并推送更改
+        run: |
+          git add output/custom1/ ${{ env.HISTORY_DIR }}/
+          git commit -m "🐉 $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" || true
+          git push origin main
+
+      # ==================== 多平台同步功能 ====================
+      - name: 🔄 执行多平台同步
+        if: env.SYNC_ENABLED == 'true'
+        run: |
+          echo "=== 开始多平台同步 ==="
+          echo "同步模式: ${{ env.SYNC_MODE }}"
+          echo "目标仓库: ${{ env.TARGET_REPO }}"
+          echo "目标文件夹: ${{ env.TARGET_FOLDER }}"
+
+      - name: 🧩 解析同步配置
+        if: env.SYNC_ENABLED == 'true'
+        id: parse_sync_config
+        run: |
+          echo "=== 解析同步配置 ==="
+          
+          # 解析目标仓库
+          if echo "${{ env.TARGET_REPO }}" | grep -qE '^[a-zA-Z0-9-]+/[a-zA-Z0-9-]+@[a-zA-Z0-9-]+$'; then
+            IFS='/@' read -r target_user target_repo target_branch <<< "${{ env.TARGET_REPO }}"
+            echo "目标用户: $target_user"
+            echo "目标仓库: $target_repo"
+            echo "目标分支: $target_branch"
+            echo "target_user=$target_user" >> $GITHUB_ENV
+            echo "target_repo=$target_repo" >> $GITHUB_ENV
+            echo "target_branch=$target_branch" >> $GITHUB_ENV
+          else
+            echo "❌ 目标仓库格式错误，应为：用户名/仓库名@分支"
+            exit 1
+          fi
+
+      - name: 🔑 校验同步Token
+        if: env.SYNC_ENABLED == 'true'
+        run: |
+          echo "=== 校验同步Token ==="
+          if [ -z "${{ secrets[env.TARGET_TOKEN] }}" ]; then
+            echo "❌ 目标仓库Token不存在: ${{ env.TARGET_TOKEN }}"
+            exit 1
+          fi
+          echo "✅ Token校验通过"
+
+      - name: 🛠️ 安装同步工具
+        if: env.SYNC_ENABLED == 'true'
+        run: |
+          echo "=== 安装同步工具 ==="
+          sudo apt-get update
+          sudo apt-get install -y rsync tree
+          echo "✅ rsync安装完成"
+
+      - name: 📦 准备目标仓库
+        if: env.SYNC_ENABLED == 'true'
+        run: |
+          echo "=== 准备目标仓库 ==="
+          TARGET_TOKEN="${{ secrets[env.TARGET_TOKEN] }}"
+          
+          # 构建目标仓库URL
+          case "${{ env.TARGET_PLATFORM }}" in
+            "github")
+              TARGET_URL="https://${TARGET_TOKEN}@github.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+            "gitee")
+              TARGET_URL="https://${{ env.target_user }}:${TARGET_TOKEN}@gitee.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+            "gitcode")
+              TARGET_URL="https://${{ env.target_user }}:${TARGET_TOKEN}@gitcode.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+          esac
+          
+          echo "目标仓库URL: $TARGET_URL"
+          
+          # 克隆目标仓库
+          git clone --branch ${{ env.target_branch }} --depth=1 "$TARGET_URL" target_repo 2>/dev/null || {
+            echo "⚠️ 目标仓库不存在或克隆失败，尝试初始化..."
+            mkdir -p target_repo
+            cd target_repo
+            git init
+            git remote add origin "$TARGET_URL"
+            git checkout -b ${{ env.target_branch }}
+            cd ..
+          }
+          
+          # 确保目标目录存在
+          mkdir -p "target_repo/${{ env.TARGET_FOLDER }}"
+          echo "✅ 目标仓库准备完成"
+
+      - name: 🔄 执行文件同步
+        if: env.SYNC_ENABLED == 'true'
+        id: sync_files
+        run: |
+          echo "=== 执行文件同步 ==="
+          
+          # 构建源路径和目标路径
+          SOURCE_PATH="output/custom1"
+          TARGET_PATH="target_repo/${{ env.TARGET_FOLDER }}"
+          
+          echo "源路径: $SOURCE_PATH"
+          echo "目标路径: $TARGET_PATH"
+          
+          # 检查源路径是否存在
+          if [ ! -d "$SOURCE_PATH" ]; then
+            echo "❌ 源路径不存在: $SOURCE_PATH"
+            exit 1
+          fi
+          
+          # 确保目标目录存在
+          mkdir -p "$TARGET_PATH"
+          
+          # 根据同步模式执行不同的rsync命令
+          if [ "${{ env.SYNC_MODE }}" = "增量" ]; then
+            echo "🔄 执行增量同步"
+            rsync -rltvh --progress "$SOURCE_PATH"/ "$TARGET_PATH"/
+          else
+            echo "🔄 执行覆盖同步"
+            rsync -rltvh --progress --delete "$SOURCE_PATH"/ "$TARGET_PATH"/
+          fi
+          
+          echo "✅ 文件同步完成"
+          
+          # 显示同步结果
+          echo "=== 同步结果 ==="
+          echo "源目录内容:"
+          ls -la "$SOURCE_PATH" | head -10
+          echo "..."
+          echo "目标目录内容:"
+          ls -la "$TARGET_PATH" | head -10
+          echo "..."
+
+      - name: 🔍 检查同步变化
+        if: env.SYNC_ENABLED == 'true'
+        id: check_sync_changes
+        run: |
+          echo "=== 检查同步变化 ==="
+          cd target_repo
+          
+          git status --porcelain
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "🔄 检测到文件变化，需要提交"
+            echo "sync_changes_detected=true" >> $GITHUB_OUTPUT
+            
+            echo "=== 具体变化 ==="
+            git status
+            git diff --stat
+          else
+            echo "✅ 无文件变化，无需提交"
+            echo "sync_changes_detected=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 📤 提交并推送同步更改
+        if: env.SYNC_ENABLED == 'true' && steps.check_sync_changes.outputs.sync_changes_detected == 'true'
+        run: |
+          echo "=== 提交同步更改 ==="
+          cd target_repo
+          
+          # 配置Git用户
+          git config user.name "Auto Sync Bot"
+          git config user.email "sync-bot@noreply.github.com"
+          
+          # 生成提交信息
+          CURRENT_TIME=$(TZ='Asia/Shanghai' date +'%H:%M:%S')
+          CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d')
+          COMMIT_MSG="🔄 自动同步 $CURRENT_DATE $CURRENT_TIME - 来自 ${{ github.repository }}"
+          
+          echo "提交信息: $COMMIT_MSG"
+          
+          # 添加所有文件并提交
+          git add -A
+          git commit -m "$COMMIT_MSG"
+          
+          # 推送到目标仓库
+          echo "=== 推送到目标仓库 ==="
+          TARGET_TOKEN="${{ secrets[env.TARGET_TOKEN] }}"
+          
+          case "${{ env.TARGET_PLATFORM }}" in
+            "github")
+              PUSH_URL="https://${TARGET_TOKEN}@github.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+            "gitee")
+              PUSH_URL="https://${{ env.target_user }}:${TARGET_TOKEN}@gitee.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+            "gitcode")
+              PUSH_URL="https://${{ env.target_user }}:${TARGET_TOKEN}@gitcode.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+          esac
+          
+          # 根据同步模式决定是否强制推送
+          if [ "${{ env.SYNC_MODE }}" = "覆盖" ]; then
+            echo "🔄 覆盖模式，使用强制推送"
+            git push "$PUSH_URL" HEAD:${{ env.target_branch }} --force
+          else
+            echo "🔄 增量模式，使用普通推送"
+            git push "$PUSH_URL" HEAD:${{ env.target_branch }}
+          fi
+          
+          echo "✅ 同步推送完成"
+
+      # ==================== 最终报告和清理 ====================
+      - name: 📊 生成综合报告
+        run: |
+          echo "=== 🎉 综合执行报告 ==="
+          echo ""
+          echo "✅ 文件生成任务完成"
+          echo ""
+          echo "📊 生成结果:"
+          echo "   生成时间: $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')"
+          echo "   生成文件: output/custom1/ 目录下的所有文件"
+          echo "   归档文件: ${{ env.HISTORY_DIR }}/ 目录"
+          echo ""
+          
+          if [ "${{ env.SYNC_ENABLED }}" = "true" ]; then
+            echo "🔄 多平台同步:"
+            echo "   同步状态: ${{ steps.check_sync_changes.outputs.sync_changes_detected == 'true' && '已同步' || '无变化' }}"
+            echo "   同步模式: ${{ env.SYNC_MODE }}"
+            echo "   目标仓库: ${{ env.TARGET_REPO }}"
+            echo "   目标平台: ${{ env.TARGET_PLATFORM }}"
+          else
+            echo "⏸️ 多平台同步: 已禁用"
+          fi
+          
+          echo ""
+          echo "=========================================="
+
+      - name: 📦 保存生成的文件作为artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-files
+          path: |
+            output/custom1/full.txt
+            output/custom1/full.m3u
+            output/custom1/simple.txt
+            output/custom1/simple.m3u
+            output/custom1/others.txt
+            output/custom1/sports.html
+            output/custom1/custom.txt
+            output/custom1/custom.m3u
+            ${{ env.HISTORY_DIR }}/*.zip
+
+      - name: 🚨 错误处理
+        if: failure()
+        run: |
+          echo "=== ❌ 执行失败 ==="
+          echo "错误详情请查看上方日志"
+          echo ""
+          echo "常见问题排查:"
+          echo "1. 检查Python脚本执行是否正常"
+          echo "2. 检查文件生成是否完整"
+          echo "3. 检查Git操作权限"
+          echo "4. 检查同步Token权限"
+          exit 1
