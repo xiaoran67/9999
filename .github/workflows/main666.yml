@@ -51,7 +51,7 @@ on:
           - '增量'
           - '覆盖'
         default: '增量'
-      commit_message:  # 修复：正确的缩进层级
+      commit_message:
         description: '提交信息（可用变量：{time} {date} {source} {target}）'
         required: false
         default: '🔄 {date} {time}'
@@ -353,14 +353,14 @@ jobs:
           # 创建目标目录
           mkdir -p "$TARGET_PATH"
           
-          # 处理提交信息中的变量
+          # 处理提交信息中的变量 - 使用 | 作为分隔符避免 / 冲突
           CURRENT_TIME=$(TZ='Asia/Shanghai' date +'%H:%M:%S')
           CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d')
           FINAL_COMMIT_MESSAGE=$(echo "$COMMIT_MESSAGE" | sed \
-            -e "s/{time}/$CURRENT_TIME/g" \
-            -e "s/{date}/$CURRENT_DATE/g" \
-            -e "s/{source}/${{ github.repository }}/g" \
-            -e "s/{target}/$target_user\\/$target_repo_name/g")
+            -e "s|{time}|$CURRENT_TIME|g" \
+            -e "s|{date}|$CURRENT_DATE|g" \
+            -e "s|{source}|${{ github.repository }}|g" \
+            -e "s|{target}|$target_user/$target_repo_name|g")
           
           echo "最终提交信息: $FINAL_COMMIT_MESSAGE"
 
