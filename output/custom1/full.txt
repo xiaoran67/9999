@@ -10324,12 +10324,12 @@ CCTV102719305,https://migu.188766.xyz/play?migutoken=b1b017a94cee8c7f0173dd921da
 
 
 🕒更新时间,#genre#
-20251117 14:58:55,https://git.acwing.com/xiaoran67/source/-/raw/main/library/vid/about_video2.mp4
-xiaoranmuze,https://git.acwing.com/xiaoran67/source/-/raw/main/library/vid/about_video1.mp4
-今日推荐,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240070818783.mp4
-🔥低调,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240008036293.mp4
-🔥使用,http://em.21dtv.com/songs/60158229.mkv
-🔥禁止,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240225226897.mp4
-🔥贩卖,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240038428237.mp4
+20251117 15:29:42,https://ghproxy.net/https://raw.githubusercontent.com/xiaoran67/update/refs/heads/main/library/vid/about_video2.mp4
+xiaoranmuze,https://vdse.bdstatic.com/h265/bd3c7f7ecb332b346a5123b7706b23b7a7.mp4?cd=1&hit_bd265_src=1&mpd=1&pd=19&logid=10822798544838175211&vt=-1&svt=-1&cr_max=1&s_score=-1.000000&pt=0&av=17.8&vid=8848322944041941217&mvt=-1&did=b9e4f3d31e216db4f308eb63eb2e3475&cr=1&h265_s=1&sl=157&sle=1&split=419421
+今日推荐,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240418087243.mp4
+🔥低调,http://vd3.bdstatic.com/mda-jfap39wqmi2yisu6/mda-jfap39wqmi2yisu6.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D
+🔥使用,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/239755956819.mp4
+🔥禁止,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240065122134.mp4
+🔥贩卖,http://antiserver.kuwo.cn/anti.s?rid=MUSIC_40828850&response=res&format=mp4&type=convert_url
 
 
