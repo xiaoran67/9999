@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       # ==================== 同步配置 ====================
-      sync_mode1:
+      enable_sync:
         description: '是否启用多平台同步'
         required: true
         type: boolean
@@ -17,7 +17,7 @@ on:
       sync_mode:
         
       target_repo:
-        description: '目标仓库（格式：用户名/仓库名@分支）'
+        description: '用户名/仓库名@分支'
         required: false
         default: 'xiaoran37/update@main'
         type: string
@@ -26,6 +26,12 @@ on:
         required: false
         default: 'output'
         type: string
+        
+        descriptionkey: '目标仓库Token的Secret名称'
+        type: string
+        required: false
+        default: 'XIAORAN67_GITHUB_TOKEN'
+        
        sync_mode:
         description: '更新模式'
         required: true
