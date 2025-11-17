@@ -15,13 +15,7 @@ on:
           - 'false'
         default: false
       sync_mode:
-        description: '同步模式'
-        required: true
-        type: choice
-        options:
-          - '增量'
-          - '覆盖'
-        default: '增量'
+        
       target_repo:
         description: '目标仓库（格式：用户名/仓库名@分支）'
         required: false
