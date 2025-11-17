@@ -1,0 +1,159 @@
+name: 'Live Source 1 Update'
+
+on:
+  schedule:
+    - cron: '10 21 1 1 *'  # UTC时间触发定时任务（每年1月1日21:10）
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: '部署环境'
+        required: true
+        default: 'production'  # 手动触发时的默认环境
+
+env:
+  PYTHON_VERSION: '3.10'        # 使用的Python版本
+  RETAIN_DAYS: 7                # 历史归档保留天数
+  HISTORY_DIR: 'history/custom1'  # 归档目录
+  FILES_TO_ARCHIVE: >-          # 需要归档的文件列表
+    output/custom1/full.txt
+    output/custom1/simple.txt
+    output/custom1/custom.txt
+    output/custom1/others.txt
+    output/custom1/sports.html
+
+jobs:
+  run_job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write          # 允许写入仓库内容
+      pull-requests: write     # 允许操作PR
+
+    steps:
+      - name: 拉取仓库代码
+        uses: actions/checkout@v4
+        with:
+          ref: main  # 拉取main分支代码
+
+      - name: 强制同步远程代码
+        run: git fetch --prune && git reset --hard origin/main  # 确保本地代码与远程一致
+
+      - name: 安装Python环境
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}  # 使用指定Python版本
+
+      - name: 缓存依赖包
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip  # 缓存pip依赖路径
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}  # 缓存键值
+          restore-keys: |
+            ${{ runner.os }}-pip-  # 缓存恢复规则
+
+      - name: 安装项目依赖
+        run: |
+          python -m pip install --upgrade pip  # 升级pip
+          # 安装核心依赖，失败时重试一次
+          pip install opencc-python-reimplemented pytz || { 
+            echo "依赖安装失败，重试一次"; 
+            pip install opencc-python-reimplemented pytz; 
+          }
+
+      - name: 同步代码并生成文件
+        run: |
+          # 配置Git提交信息
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          mkdir -p output/custom1  # 确保输出目录存在
+          git reset --hard HEAD  # 重置本地修改
+          # 拉取远程更新，处理冲突
+          git pull origin main --rebase || { 
+            echo "变基冲突，自动用远程最新代码覆盖本地";
+            git rebase --abort;
+            git pull origin main --force;
+          }
+          # 执行生成脚本，失败时重试一次
+          python LiveSource1.py || { 
+            echo "首次生成失败，重试"; 
+            python LiveSource1.py || { exit 1; } 
+          }
+
+      - name: 校验文件完整性
+        run: |
+          # 定义关键文件列表
+          critical_files=("output/custom1/full.txt" "output/custom1/custom.txt")
+          # 检查文件是否存在且非空
+          for file in "${critical_files[@]}"; do
+            if [ ! -s "$file" ]; then
+              echo "错误：$file 异常，终止流程"; exit 1;
+            fi
+          done
+          # 检查核心内容是否存在
+          if ! grep -q "🌐央视频道,#genre#" "output/custom1/full.txt"; then
+            echo "错误：核心内容缺失，终止流程"; exit 1;
+          fi
+
+      - name: 清理历史归档（按文件名日期）
+        run: |
+          mkdir -p ${{ env.HISTORY_DIR }}  # 创建history/custom1目录
+          # 计算需要保留的最早日期（格式：YYYYMMDD）
+          retain_date=$(date -d "-${{ env.RETAIN_DAYS }} days" +"%Y%m%d")
+          echo "保留日期：$retain_date 及之后的归档"
+          
+          # 遍历归档目录下的zip文件，按文件名日期删除过期文件
+          for zip_file in "${{ env.HISTORY_DIR }}"/*.zip; do
+            # 跳过不存在的文件（防止目录为空时报错）
+            [ -f "$zip_file" ] || continue
+            
+            # 从文件名中提取日期部分（如20250824）
+            file_date=$(basename "$zip_file" | cut -d'_' -f1)
+            # 验证提取的日期是否为8位数字
+            if [[ "$file_date" =~ ^[0-9]{8}$ ]]; then
+              # 比较文件名日期与保留日期，删除早于保留日期的文件
+              if [ "$file_date" -lt "$retain_date" ]; then
+                echo "删除过期归档：$zip_file"
+                rm -f "$zip_file"
+              else
+                echo "保留归档：$zip_file"
+              fi
+            else
+              echo "忽略非标准命名文件：$zip_file"
+            fi
+          done
+
+      - name: 生成今日归档
+        run: |
+          # 检查文件是否有修改
+          if git diff --quiet ${{ env.FILES_TO_ARCHIVE }}; then
+            echo "文件未修改，不生成新归档";
+          else
+            # 归档文件保存到history/custom1
+            current_datetime=$(date +"%Y%m%d_%H%M%S")
+            zip_filename="${{ env.HISTORY_DIR }}/${current_datetime}_custom1.zip"
+            zip -j "${zip_filename}" ${{ env.FILES_TO_ARCHIVE }}
+            git add "${zip_filename}"
+          fi
+
+      - name: 提交并推送更改
+        run: |
+          # 提交output/custom1和history/custom1目录
+          git add output/custom1/ ${{ env.HISTORY_DIR }}/
+          # 提交修改（无修改时不报错）
+          git commit -m "🐉 $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')" || true  
+          # 安全推送
+          git push origin main
+
+      - name: 保存生成的文件作为artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-files  # Artifact名称
+          path: |  # 包含history/custom1下的归档
+            output/custom1/full.txt
+            output/custom1/full.m3u
+            output/custom1/simple.txt
+            output/custom1/simple.m3u
+            output/custom1/others.txt
+            output/custom1/sports.html
+            output/custom1/custom.txt
+            output/custom1/custom.m3u
+            ${{ env.HISTORY_DIR }}/*.zip
