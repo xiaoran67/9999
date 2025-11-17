@@ -10761,12 +10761,12 @@ CCTV102719305,https://migu.188766.xyz/play?migutoken=b1b017a94cee8c7f0173dd921da
 
 
 🕒更新时间,#genre#
-20251117 11:23:22,https://vdse.bdstatic.com/363480020aaa13240bbe51121d3e2a65.mp4?authorization=bce-auth-v1%2Ffb297a5cc0fb434c971b8fa103e8dd7b%2F2017-05-11T09%3A02%3A31Z%2F-1%2F%2F092913f5016d684c2e159452cc811ca27c7e7b8d9172bcd8211c87b7cae449bd
-xiaoranmuze,https://vdse.bdstatic.com//c49675968e999046add4dc4660a2b1e5.mp4?authorization=bce-auth-v1%2F40f207e648424f47b2e3dfbb1014b1a5%2F2024-10-15T13%3A02%3A59Z%2F-1%2Fhost%2F7368e742ac87e1dada56b3c1f8c5c3c1d4721127e42ca729bf5b67a4a99a6c42&vid=9376331405235901090
-今日推荐,http://em.21dtv.com/songs/60054081.mkv
-🔥低调,https://vd3.bdstatic.com/mda-mekfm7wu6f4rtt99/1080p/cae_h264/1621595318412084671/mda-mekfm7wu6f4rtt99.mp4
-🔥使用,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240001228776.mp4
-🔥禁止,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240340899550.mp4
-🔥贩卖,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/239996664565.mp4
+20251117 11:31:13,https://vdse.bdstatic.com/h265/bdf477e783267314f940652f31d69d957f.mp4?cd=1&hit_bd265_src=1&mpd=1&pd=19&logid=10388457041032837387&vt=-1&svt=-1&cr_max=1&s_score=-1.000000&pt=0&av=17.8&vid=14029721114716980496&mvt=-1&did=b9e4f3d31e216db4f308eb63eb2e3475&cr=1&h265_s=1&sl=271&sle=1&split=591051
+xiaoranmuze,https://vd3.bdstatic.com/mda-pc2anxrgm9xbxwb8/sc/cae_h264/1677913180340044737/mda-pc2anxrgm9xbxwb8.mp4?pd=19&vt=1
+今日推荐,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240355262537.mp4
+🔥低调,http://antiserver.kuwo.cn/anti.s?rid=MUSIC_40828850&response=res&format=mp4&type=convert_url
+🔥使用,https://cloud.video.taobao.com//play/u/57349687/p/1/e/6/t/1/240017737344.mp4
+🔥禁止,http://vd3.bdstatic.com/mda-imigfktdeeseud4j/mda-imigfktdeeseud4j.mp4?playlist=%5B%22hd%22%2C%22sc%22%5D
+🔥贩卖,https://vdse.bdstatic.com//cd396057d1fbcb12f0600d38a16effbc.mp4
 
 
