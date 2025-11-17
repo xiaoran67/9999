@@ -1,0 +1,119 @@
+name: 'Update FreeTV'
+
+on:
+  schedule:
+    - cron: '10 20 * * *'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment'
+        required: true
+        default: 'production'
+
+env:
+  PYTHON_VERSION: '3.10'
+  RETAIN_DAYS: 3
+  HISTORY_DIR: 'history/freetv'
+  FILES_TO_ARCHIVE: >-
+    output/freetv/freetv_output.txt
+    output/freetv/freetv_output_cctv.txt
+    output/freetv/freetv_output_ws.txt
+    output/freetv/freetv_output_other.txt
+
+jobs:
+  run_job:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: 🔄 Sync Latest Code
+        run: git fetch --prune && git reset --hard origin/main
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+        
+      - name: 📦 Install Dependencies
+        run: python -m pip install --upgrade pip
+        
+      - name: 🚀 Run Script
+        run: python assets/freetv/freetv.py
+
+      - name: 💾 Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: freetv-files
+          path: ${{ env.FILES_TO_ARCHIVE }}
+
+      - name: 🗑️ Clean Old Archives
+        run: |
+          mkdir -p ${{ env.HISTORY_DIR }}
+          retain_date=$(date -d "-${{ env.RETAIN_DAYS }} days" +"%Y%m%d")
+          echo "Retain date: $retain_date"
+          
+          for zip_file in "${{ env.HISTORY_DIR }}"/*.zip; do
+            [ -f "$zip_file" ] || continue
+            
+            file_date=$(basename "$zip_file" | cut -d'_' -f1)
+            if [[ "$file_date" =~ ^[0-9]{8}$ ]]; then
+              if [ "$file_date" -lt "$retain_date" ]; then
+                echo "Delete: $zip_file"
+                rm -f "$zip_file"
+              else
+                echo "Keep: $zip_file"
+              fi
+            else
+              echo "Ignore: $zip_file"
+            fi
+          done
+
+      - name: 🔍 Check Changes
+        id: check_changes
+        run: |
+          if git diff --quiet ${{ env.FILES_TO_ARCHIVE }}; then
+            echo "changes_detected=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
+          else
+            echo "changes_detected=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
+          fi
+
+      - name: 📁 Create Archive
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        run: |
+          current_datetime=$(date +"%Y%m%d_%H%M%S")
+          zip_filename="${{ env.HISTORY_DIR }}/${current_datetime}_freetv.zip"
+          zip -j "${zip_filename}" ${{ env.FILES_TO_ARCHIVE }}
+          git add "${zip_filename}"
+          echo "Archive created: ${zip_filename}"
+
+      - name: 💾 Commit Changes
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          
+          git add ${{ env.FILES_TO_ARCHIVE }} ${{ env.HISTORY_DIR }}/
+          
+          current_datetime=$(date +'%Y-%m-%d %H:%M:%S')
+          git commit -m "📺 $current_datetime"
+          
+          git pull origin main --rebase --autostash --allow-unrelated-histories || git pull origin main --force
+          
+          git push origin main --force-with-lease || git push origin main --force
+
+      - name: 📤 Push Changes (Backup)
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: true

@@ -1,0 +1,218 @@
+name: Cross-repository Synchronization
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Source repo (user/repo@branch)'
+        type: string
+        required: true
+        default: 'xiaoran67/update@main'
+      source_folder:
+        description: 'Source folder path'
+        type: string
+        required: false
+        default: ''
+      source_token_name:
+        description: 'Source token secret name'
+        type: string
+        required: false
+        default: 'XIAORAN67_GITHUB_TOKEN'
+      
+      target:
+        description: 'Target repo (user/repo@branch)'
+        type: string
+        required: true
+        default: 'xiaoran29/update@main'
+      target_folder:
+        description: 'Target folder path'
+        type: string
+        required: false
+        default: ''
+      target_private:
+        description: 'Target repo private'
+        type: boolean
+        required: true
+        default: false
+      target_token_name:
+        description: 'Target token secret name'
+        type: string
+        required: false
+        default: 'XIAORAN29_GITHUB_TOKEN'
+      
+      sync_strategy:
+        description: 'Sync strategy'
+        type: choice
+        required: true
+        options:
+          - 'Incremental'
+          - 'Overwrite'
+        default: 'Incremental'
+      commit_template:
+        description: 'Commit template'
+        type: choice
+        required: true
+        options:
+          - 'Time only'
+          - 'Sync details'
+          - 'Custom'
+        default: 'Time only'
+      custom_commit_msg:
+        description: 'Custom commit message'
+        type: string
+        required: false
+        default: ''
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧩 Parse Configuration
+        id: parse_config
+        run: |
+          if ! echo "${INPUT_SOURCE}" | grep -qE '^[a-zA-Z0-9-]+/[a-zA-Z0-9-]+@[a-zA-Z0-9-]+$'; then
+            echo "❌ Invalid source repo format" && exit 1
+          fi
+          IFS='/@' read -r source_user source_repo source_branch <<< "${INPUT_SOURCE}"
+          echo "source_user=${source_user}" >> $GITHUB_ENV
+          echo "source_repo=${source_repo}" >> $GITHUB_ENV
+          echo "source_branch=${source_branch}" >> $GITHUB_ENV
+          
+          if ! echo "${INPUT_TARGET}" | grep -qE '^[a-zA-Z0-9-]+/[a-zA-Z0-9-]+@[a-zA-Z0-9-]+$'; then
+            echo "❌ Invalid target repo format" && exit 1
+          fi
+          IFS='/@' read -r target_user target_repo target_branch <<< "${INPUT_TARGET}"
+          echo "target_user=${target_user}" >> $GITHUB_ENV
+          echo "target_repo=${target_repo}" >> $GITHUB_ENV
+          echo "target_branch=${target_branch}" >> $GITHUB_ENV
+          
+          echo "source_token_name=${INPUT_SOURCE_TOKEN_NAME}" >> $GITHUB_ENV
+          echo "target_token_name=${INPUT_TARGET_TOKEN_NAME}" >> $GITHUB_ENV
+        env:
+          INPUT_SOURCE: ${{ inputs.source }}
+          INPUT_TARGET: ${{ inputs.target }}
+          INPUT_SOURCE_TOKEN_NAME: ${{ inputs.source_token_name }}
+          INPUT_TARGET_TOKEN_NAME: ${{ inputs.target_token_name }}
+
+      - name: 🔑 Validate Tokens
+        run: |
+          if [ -z "${{ secrets[inputs.source_token_name] }}" ]; then
+            echo "❌ Source token missing" && exit 1
+          fi
+          if [ -z "${{ secrets[inputs.target_token_name] }}" ]; then
+            echo "❌ Target token missing" && exit 1
+          fi
+
+      - name: 📦 Check/Create Target
+        run: |
+          TARGET_TOKEN="${{ secrets[env.target_token_name] }}"
+          REPO_CHECK_URL="https://api.github.com/repos/${{ env.target_user }}/${{ env.target_repo }}"
+          REPO_EXISTS=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token $TARGET_TOKEN" "$REPO_CHECK_URL")
+          
+          if [ "$REPO_EXISTS" -eq 404 ]; then
+            CREATE_BODY=$(jq -n --arg name "${{ env.target_repo }}" --argjson private ${{ inputs.target_private }} --arg default_branch "${{ env.target_branch }}" '{
+              "name": $name, "private": $private, "auto_init": true, "default_branch": $default_branch
+            }')
+            CREATE_RESPONSE=$(curl -s -w "%{http_code}" -o create_result.json -X POST -H "Authorization: token $TARGET_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/user/repos" -d "$CREATE_BODY")
+            if [ "$CREATE_RESPONSE" -ne 201 ]; then
+              echo "❌ Target repo creation failed" && exit 1
+            fi
+          elif [ "$REPO_EXISTS" -ne 200 ]; then
+            echo "❌ Repo check failed" && exit 1
+          fi
+
+      - name: 📥 Checkout Source
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.source_user }}/${{ env.source_repo }}
+          ref: ${{ env.source_branch }}
+          path: source_repo
+          token: ${{ secrets[inputs.source_token_name] }}
+          fetch-depth: 0
+          clean: true
+
+      - name: 📥 Checkout Target
+        run: |
+          TARGET_TOKEN="${{ secrets[env.target_token_name] }}"
+          git clone --branch ${{ env.target_branch }} "https://$TARGET_TOKEN@github.com/${{ env.target_user }}/${{ env.target_repo }}.git" target_repo
+          cd target_repo && git pull origin ${{ env.target_branch }} && cd ..
+          mkdir -p "target_repo/${{ inputs.target_folder }}"
+
+      - name: 🛠️ Install Dependencies
+        run: |
+          sudo apt-get update && sudo apt-get install -y rsync jq
+
+      - name: 🔄 Execute Sync
+        run: |
+          SOURCE_PATH="source_repo/${{ inputs.source_folder }}"
+          [ -z "${{ inputs.source_folder }}" ] && SOURCE_PATH="source_repo"
+          TARGET_PATH="target_repo/${{ inputs.target_folder }}"
+          [ -z "${{ inputs.target_folder }}" ] && TARGET_PATH="target_repo"
+          mkdir -p "$TARGET_PATH"
+          
+          export TZ='Asia/Shanghai'
+          
+          if [ "${{ inputs.sync_strategy }}" = "Incremental" ]; then
+            rsync -av --times --exclude=".git/" "${SOURCE_PATH}/" "${TARGET_PATH}/"
+          else
+            rsync -av --delete --force --times --exclude=".git/" "${SOURCE_PATH}/" "${TARGET_PATH}/"
+          fi
+          
+          cd target_repo
+          if git status --porcelain | grep -q .; then
+            echo "CHANGES_DETECTED=true" >> $GITHUB_ENV
+          else
+            echo "CHANGES_DETECTED=false" >> $GITHUB_ENV
+          fi
+
+      - name: 📤 Push Updates
+        if: env.CHANGES_DETECTED == 'true'
+        run: |
+          cd target_repo
+          if ! git status --porcelain | grep -q .; then
+            echo "ℹ️ No changes detected"
+            exit 0
+          fi
+          
+          git config user.name "Sync Bot"
+          git config user.email "sync@noreply.github.com"
+          git add . --force
+          
+          CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          SRC_INFO="${{ env.source_user }}/${{ env.source_repo }}:${{ env.source_branch }}[${{ inputs.source_folder || 'root' }}]"
+          TGT_INFO="${{ env.target_user }}/${{ env.target_repo }}:${{ env.target_branch }}[${{ inputs.target_folder || 'root' }}]"
+          
+          if [ "${{ inputs.commit_template }}" = "Time only" ]; then
+            COMMIT_MSG="🚀 ${CURRENT_DATE}"
+          elif [ "${{ inputs.commit_template }}" = "Sync details" ]; then
+            COMMIT_MSG="🔄 Sync ${SRC_INFO} → ${TGT_INFO} ${CURRENT_DATE}"
+          else
+            COMMIT_MSG="${{ inputs.custom_commit_msg }}"
+            [ -z "$COMMIT_MSG" ] && COMMIT_MSG="🚀 ${CURRENT_DATE}"
+          fi
+          
+          git commit -m "$COMMIT_MSG"
+          PUSH_URL="https://${{ secrets[env.target_token_name] }}@github.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+          git push "$PUSH_URL" ${{ env.target_branch }} ${{ inputs.sync_strategy == 'Overwrite' && '--force' || '' }}
+
+      - name: 📊 Sync Report
+        run: |
+          if [ "$CHANGES_DETECTED" = "true" ]; then
+            echo "✅ Sync completed"
+            echo "📌 Source: ${{ env.source_user }}/${{ env.source_repo }}:${{ env.source_branch }}"
+            echo "📌 Target: ${{ env.target_user }}/${{ env.target_repo }}:${{ env.target_branch }}"
+            echo "📌 Path: ${{ inputs.source_folder || 'root' }} → ${{ inputs.target_folder || 'root' }}"
+          else
+            echo "ℹ️ No changes detected"
+          fi
+
+      - name: 🚨 Error Handling
+        if: failure()
+        run: |
+          if [ "$CHANGES_DETECTED" = "false" ]; then
+            echo "ℹ️ No changes, process completed"
+            exit 0
+          else
+            echo "❌ Sync failed"
+            exit 1
+          fi

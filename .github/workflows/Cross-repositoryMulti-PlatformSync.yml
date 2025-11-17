@@ -1,0 +1,259 @@
+name: Multi-platform Synchronous Update 🔄
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_repo:
+        description: 'Source repo (user/repo@branch)'
+        required: true
+        default: 'xiaoran67/update@main'
+        type: string
+      
+      source_folder:
+        description: 'Source folder path'
+        required: false
+        default: 'output'
+        type: string
+      
+      source_token:
+        description: 'Source token secret name'
+        required: true
+        default: 'XIAORAN67_GITHUB_TOKEN'
+        type: string
+
+      target_repo:
+        description: 'Target repo (user/repo@branch)'
+        required: true
+        default: 'xiaoran37/update@main'
+        type: string
+      
+      target_folder:
+        description: 'Target folder path'
+        required: false
+        default: 'output'
+        type: string
+      
+      target_token:
+        description: 'Target token secret name'
+        required: true
+        default: 'XIAORAN37_GITHUB_TOKEN'
+        type: string
+      
+      target_platform:
+        description: 'Target platform'
+        required: true
+        type: choice
+        options:
+          - 'github'
+          - 'gitee'
+          - 'gitcode'
+        default: 'github'
+
+      sync_mode:
+        description: 'Sync mode'
+        required: true
+        type: choice
+        options:
+          - 'Incremental'
+          - 'Overwrite'
+        default: 'Incremental'
+      
+      commit_message:
+        description: 'Commit message (variables: {time} {date} {source} {target})'
+        required: false
+        default: '🔄 {date} {time}'
+        type: string
+
+jobs:
+  folder-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧩 Parse Configuration
+        id: parse_config
+        run: |
+          echo "=== Configuration Parsing ==="
+          
+          if echo "${{ inputs.source_repo }}" | grep -qE '^[a-zA-Z0-9-]+/[a-zA-Z0-9-]+@[a-zA-Z0-9-]+$'; then
+            IFS='/@' read -r source_user source_repo source_branch <<< "${{ inputs.source_repo }}"
+            echo "source_user=$source_user" >> $GITHUB_ENV
+            echo "source_repo=$source_repo" >> $GITHUB_ENV
+            echo "source_branch=$source_branch" >> $GITHUB_ENV
+          else
+            echo "❌ Invalid source repo format"
+            exit 1
+          fi
+          
+          if echo "${{ inputs.target_repo }}" | grep -qE '^[a-zA-Z0-9-]+/[a-zA-Z0-9-]+@[a-zA-Z0-9-]+$'; then
+            IFS='/@' read -r target_user target_repo target_branch <<< "${{ inputs.target_repo }}"
+            echo "target_user=$target_user" >> $GITHUB_ENV
+            echo "target_repo=$target_repo" >> $GITHUB_ENV
+            echo "target_branch=$target_branch" >> $GITHUB_ENV
+          else
+            echo "❌ Invalid target repo format"
+            exit 1
+          fi
+          
+          echo "source_folder=${{ inputs.source_folder }}" >> $GITHUB_ENV
+          echo "target_folder=${{ inputs.target_folder }}" >> $GITHUB_ENV
+          echo "sync_mode=${{ inputs.sync_mode }}" >> $GITHUB_ENV
+          echo "target_platform=${{ inputs.target_platform }}" >> $GITHUB_ENV
+
+      - name: 🔑 Validate Tokens
+        run: |
+          echo "=== Token Validation ==="
+          if [ -z "${{ secrets[inputs.source_token] }}" ]; then
+            echo "❌ Source token missing: ${{ inputs.source_token }}"
+            exit 1
+          fi
+          if [ -z "${{ secrets[inputs.target_token] }}" ]; then
+            echo "❌ Target token missing: ${{ inputs.target_token }}"
+            exit 1
+          fi
+          echo "✅ Token validation passed"
+
+      - name: 🛠️ Install Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y rsync tree
+
+      - name: 📥 Checkout Source
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.source_user }}/${{ env.source_repo }}
+          ref: ${{ env.source_branch }}
+          path: source_repo
+          token: ${{ secrets[inputs.source_token] }}
+          fetch-depth: 1
+
+      - name: 📦 Prepare Target
+        run: |
+          echo "=== Target Preparation ==="
+          TARGET_TOKEN="${{ secrets[inputs.target_token] }}"
+          
+          case "${{ env.target_platform }}" in
+            "github")
+              TARGET_URL="https://${TARGET_TOKEN}@github.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+            "gitee")
+              TARGET_URL="https://${{ env.target_user }}:${TARGET_TOKEN}@gitee.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+            "gitcode")
+              TARGET_URL="https://${{ env.target_user }}:${TARGET_TOKEN}@gitcode.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+          esac
+          
+          git clone --branch ${{ env.target_branch }} --depth=1 "$TARGET_URL" target_repo 2>/dev/null || {
+            mkdir -p target_repo
+            cd target_repo
+            git init
+            git remote add origin "$TARGET_URL"
+            git checkout -b ${{ env.target_branch }}
+            cd ..
+          }
+          
+          mkdir -p "target_repo/${{ env.target_folder }}"
+
+      - name: 🔄 Sync Files
+        id: sync_files
+        run: |
+          echo "=== File Synchronization ==="
+          
+          SOURCE_PATH="source_repo"
+          TARGET_PATH="target_repo"
+          
+          [ -n "${{ env.source_folder }}" ] && SOURCE_PATH="source_repo/${{ env.source_folder }}"
+          [ -n "${{ env.target_folder }}" ] && TARGET_PATH="target_repo/${{ env.target_folder }}"
+          
+          if [ ! -d "$SOURCE_PATH" ] && [ ! -f "$SOURCE_PATH" ]; then
+            echo "❌ Source path not found: $SOURCE_PATH"
+            exit 1
+          fi
+          
+          mkdir -p "$(dirname "$TARGET_PATH")"
+          
+          if [ "${{ env.sync_mode }}" = "Incremental" ]; then
+            rsync -rltvh --progress "$SOURCE_PATH"/ "$TARGET_PATH"/
+          else
+            rsync -rltvh --progress --delete "$SOURCE_PATH"/ "$TARGET_PATH"/
+          fi
+
+      - name: 🔍 Check Changes
+        id: check_changes
+        run: |
+          cd target_repo
+          git status --porcelain
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes_detected=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes_detected=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 📤 Commit & Push
+        if: steps.check_changes.outputs.changes_detected == 'true'
+        run: |
+          cd target_repo
+          
+          git config user.name "Auto Sync Bot"
+          git config user.email "sync-bot@noreply.github.com"
+          
+          CURRENT_TIME=$(TZ='Asia/Shanghai' date +'%H:%M:%S')
+          CURRENT_DATE=$(TZ='Asia/Shanghai' date +'%Y-%m-%d')
+          COMMIT_MSG="${{ inputs.commit_message }}"
+          
+          COMMIT_MSG="${COMMIT_MSG//\{time\}/$CURRENT_TIME}"
+          COMMIT_MSG="${COMMIT_MSG//\{date\}/$CURRENT_DATE}"
+          COMMIT_MSG="${COMMIT_MSG//\{source\}/${{ env.source_user }}/${{ env.source_repo }}:${{ env.source_branch }}}"
+          COMMIT_MSG="${COMMIT_MSG//\{target\}/${{ env.target_user }}/${{ env.target_repo }}:${{ env.target_branch }}}"
+          
+          git add -A
+          git commit -m "$COMMIT_MSG"
+          
+          TARGET_TOKEN="${{ secrets[inputs.target_token] }}"
+          
+          case "${{ env.target_platform }}" in
+            "github")
+              PUSH_URL="https://${TARGET_TOKEN}@github.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+            "gitee")
+              PUSH_URL="https://${{ env.target_user }}:${TARGET_TOKEN}@gitee.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+            "gitcode")
+              PUSH_URL="https://${{ env.target_user }}:${TARGET_TOKEN}@gitcode.com/${{ env.target_user }}/${{ env.target_repo }}.git"
+              ;;
+          esac
+          
+          if [ "${{ env.sync_mode }}" = "Overwrite" ]; then
+            git push "$PUSH_URL" HEAD:${{ env.target_branch }} --force
+          else
+            git push "$PUSH_URL" HEAD:${{ env.target_branch }}
+          fi
+
+      - name: 📊 Generate Report
+        run: |
+          echo "=== 🔄 Sync Report ==="
+          echo ""
+          echo "✅ Sync completed"
+          echo ""
+          echo "📌 Mode: ${{ env.sync_mode }}"
+          echo ""
+          echo "📥 Source:"
+          echo "   ${{ env.source_user }}/${{ env.source_repo }}:${{ env.source_branch }}"
+          echo "   Folder: ${{ env.source_folder || 'root' }}"
+          echo ""
+          echo "📤 Target:"
+          echo "   ${{ env.target_platform }} - ${{ env.target_user }}/${{ env.target_repo }}:${{ env.target_branch }}"
+          echo "   Folder: ${{ env.target_folder || 'root' }}"
+          echo ""
+          
+          if [ "${{ steps.check_changes.outputs.changes_detected }}" = "true" ]; then
+            echo "🔄 Changes detected and pushed"
+          else
+            echo "ℹ️ No changes detected"
+          fi
+
+      - name: 🚨 Error Handling
+        if: failure()
+        run: |
+          echo "=== ❌ Sync Failed ==="
+          echo "Check logs above for details"
+          exit 1

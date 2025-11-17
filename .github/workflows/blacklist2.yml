@@ -1,0 +1,64 @@
+name: Whitelist Blacklist Automation v2
+on:
+  workflow_dispatch:
+
+jobs:
+  run_blacklist2:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: 🔄 Sync Latest Code
+        run: git fetch --prune && git reset --hard origin/main
+
+      - name: 🐍 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Install Dependencies
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: 📁 Create Directories
+        run: |
+          mkdir -p assets/blacklist2/
+          mkdir -p assets/blacklist2/history/blacklist
+          mkdir -p assets/blacklist2/blackhost
+
+      - name: 🔍 Execute Detection Script
+        run: python assets/blacklist2/blacklist2.py
+
+      - name: 💾 Commit Results
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions Bot"
+          
+          git add assets/blacklist2/result.txt
+          git add assets/blacklist2/whitelist_auto.txt
+          git add assets/blacklist2/whitelist_auto_tv.txt
+          git add assets/blacklist2/blacklist_auto.txt
+          git add assets/blacklist2/history/blacklist/*.txt
+          git add assets/blacklist2/blackhost/*.txt
+          git add -f assets/blacklist2/url_statistics.log
+          
+          if git diff --staged --quiet; then
+            echo "ℹ️ No changes detected"
+            exit 0
+          fi
+          
+          git commit -m "🛡️ $(date +'%Y-%m-%d %H:%M:%S')"
+          
+          git pull origin main --rebase --autostash || {
+            echo "🔄 Rebase failed, force syncing"
+            git reset --hard origin/main
+          }
+          
+          git push origin main --force-with-lease || git push origin main --force
+          echo "✅ Results pushed successfully"
