@@ -2,7 +2,7 @@ name: 'Live Source 1 Update'
 
 on:
   schedule:
-    - cron: '10 21 1 1 *'  # UTC时间触发定时任务（每年1月1日21:10）
+    - cron: '10 21 * * *'  # UTC时间触发定时任务（每年1月1日21:10）
   workflow_dispatch:
     inputs:
       environment:
@@ -72,10 +72,10 @@ jobs:
             git rebase --abort;
             git pull origin main --force;
           }
-          # 执行生成脚本，失败时重试一次
-          python LiveSource1.py || { 
+          # 执行scripts目录下的生成脚本，失败时重试一次
+          python scripts/LiveSource1.py || { 
             echo "首次生成失败，重试"; 
-            python LiveSource1.py || { exit 1; } 
+            python scripts/LiveSource1.py || { exit 1; } 
           }
 
       - name: 校验文件完整性
