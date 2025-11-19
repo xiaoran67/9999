@@ -123,7 +123,8 @@ zy_lines = [] #综艺频道
 game_lines = [] #游戏频道
 xq_lines = [] #戏曲
 jlp_lines = [] #记录片
-
+other_lines = []      # 其他频道
+other_lines_url = []  # 用于去重的URL列表
 # ======================
 # 频道名称处理函数
 # ======================
