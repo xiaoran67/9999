@@ -1,4 +1,4 @@
-◆◆◆　https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt
+◆◆◆　,https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt
 CGTN外语纪录,http://gslbmgsplive.miguvideo.com/envivo_v/2018/SD/cctv/doc/1000/index.m3u8?msisdn=2025111816003552b3c96e905b4f588439676fb39e2c3a&mdspid=&spid=699004&netType=0&sid=2200179356&pid=2028597139&timestamp=20251118160035&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609006487&ParentNodeID=-99&assertID=2200179356&client_ip=106.13.250.90&SecurityKey=20251118160035&promotionId=&mvid=2200179356&mcid=500020&playurlVersion=WX-A1-8.10.1-RELEASE&userid=&jmhm=&videocodec=h264&bean=mgspad&tid=android&conFee=0&puData=5d5557846b933c714602825318b890cd&ddCalcu=d5cde051959850b78814365b2983230c6741
 CGTN阿拉伯语,http://gslbmgsplive.miguvideo.com/envivo_v/SD/cctv/alabo/1000/index.m3u8?msisdn=202511181600355f9466455391402bbe1312eec1db33ec&mdspid=&spid=699004&netType=0&sid=2200179303&pid=2028597139&timestamp=20251118160035&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609154345&ParentNodeID=-99&assertID=2200179303&client_ip=106.13.250.90&SecurityKey=20251118160035&promotionId=&mvid=2200179303&mcid=500020&playurlVersion=WX-A1-8.10.1-RELEASE&userid=&jmhm=&videocodec=h264&bean=mgspad&tid=android&conFee=0&puData=b77ab5281de0b15320fe7494e9a4f73d&ddCalcu=db37e771fa94b0a592e8419d4e70ebf10523
 CGTN西班牙语,http://gslbmgsplive.miguvideo.com/envivo_v/2018/SD/cctv/xibanya/1000/index.m3u8?msisdn=2025111816003505b11b87be3948fb9c2007f8b52debd2&mdspid=&spid=699004&netType=0&sid=2200179337&pid=2028597139&timestamp=20251118160035&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=609006450&ParentNodeID=-99&assertID=2200179337&client_ip=106.13.250.90&SecurityKey=20251118160035&promotionId=&mvid=2200179337&mcid=500020&playurlVersion=WX-A1-8.10.1-RELEASE&userid=&jmhm=&videocodec=h264&bean=mgspad&tid=android&conFee=0&puData=f5c96a12e3f6bb84e67966a60aaa2609&ddCalcu=9f05e6c1299a60aaa1026ea36f669b7b68e4
@@ -47,7 +47,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 环球旅游,http://gslbmgsplive.miguvideo.com/migu/kailu/hqly/51/20250915/index.m3u8?msisdn=20251118160045984c7dc27ca644a18b08fcb13557e911&mdspid=&spid=600697&netType=0&sid=5910022200&pid=2028597139&timestamp=20251118160045&Channel_ID=0116_2600000900-99000-201600010010027&ProgramID=958475356&ParentNodeID=-99&assertID=5910022200&client_ip=106.13.250.90&SecurityKey=20251118160045&promotionId=&mvid=5900006723&mcid=500020&playurlVersion=WX-A1-8.10.1-RELEASE&userid=&jmhm=&videocodec=h264&bean=mgspad&tid=android&conFee=0&puData=83e31a6a692c1dd80fb7c76457f7f4b8&ddCalcu=88b3e4e1f38710fa765a466972cc71bdfd08
 
 
-◆◆◆　https://raw.githubusercontent.com/kakaxi-1/IPTV/refs/heads/main/iptv.txt
+◆◆◆　,https://raw.githubusercontent.com/kakaxi-1/IPTV/refs/heads/main/iptv.txt
 2025-11-19 06:40:55,https://kakaxi-1.asia/LOGO/Disclaimer.mp4
 兵器科技,http://27.191.202.62:19999/rtp/239.254.201.225:7249
 兵器科技,http://106.59.3.203:55555/rtp/239.200.200.91:8036
@@ -354,8 +354,8 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 华数动画,http://115.171.216.120:4000/rtp/225.1.8.240:4120
 
 
-◆◆◆　https://raw.githubusercontent.com/xiaoran67/update/refs/heads/main/output/freetv/freetv_output.txt
-◆◆◆　https://freetv.fun/test_channels_original_new.txt
+◆◆◆　,https://raw.githubusercontent.com/xiaoran67/update/refs/heads/main/output/freetv/freetv_output.txt
+◆◆◆　,https://freetv.fun/test_channels_original_new.txt
 #这个档案是由https://freetv.fun自动生成的,僅僅只是用於測試epg的準確性.
 [VGA]pasco tv (pasco county fl) (480p),https://stream1.freetv.fun/pasco-tv-1.m3u8
 [BD]cinema,https://stream1.freetv.fun/cinema-6.m3u8
