@@ -257,7 +257,7 @@ def process_channel_line(line):
         line = channel_name + "," + channel_address  # 重新组合行
         
         # 检查是否在黑名单中
-        if "CCTV" in channel_name and check_url_existence(ys_lines, channel_address) : #央视频道
+            if "CCTV" in channel_name and check_url_existence(ys_lines, channel_address) : #央视频道
                 ys_lines.append(process_name_string(line.strip()))
             elif channel_name in ws_dictionary and check_url_existence(ws_lines, channel_address): #卫视频道
                 ws_lines.append(process_name_string(line.strip()))
