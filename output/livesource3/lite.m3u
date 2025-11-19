@@ -20,6 +20,8 @@ http://180.105.201.177:9981/rtp/239.49.8.129:6000
 #EXTINF:-1 group-title="央视频道",CCTV1
 http://171.113.214.167:4022/rtp/239.254.96.96:8550
 #EXTINF:-1 group-title="央视频道",CCTV1
+http://111.162.206.238:8686/rtp/225.1.1.120:5002
+#EXTINF:-1 group-title="央视频道",CCTV1
 http://115.171.80.57:1688/rtp/225.1.8.33:8002
 #EXTINF:-1 group-title="央视频道",CCTV1
 http://1.58.246.115:4001/rtp/229.58.190.72:5000
@@ -2171,5 +2173,5 @@ http://1.58.246.115:4000/rtp/229.58.190.150:5000
 http://112.66.73.108:8188/rtp/239.253.64.205:5140
 #EXTINF:-1 group-title="卫视频道",黑龙江卫视
 http://123.181.124.143:82/rtp/239.254.200.49:8016
-#EXTINF:-1 group-title="更新时间",20251119 07:58:52
-https://vd3.bdstatic.com/mda-ph2bhu6547x50zua/720p/h264/1691050195975326073/mda-ph2bhu6547x50zua.mp4?pd=19&vt=1
+#EXTINF:-1 group-title="更新时间",20251119 08:41:09
+https://vdse.bdstatic.com//fbfea0dad309e5600630b97658cfa4d9.mp4?authorization=bce-auth-v1%2F40f207e648424f47b2e3dfbb1014b1a5%2F2024-10-18T23%3A57%3A24Z%2F-1%2Fhost%2F46f4c255c79aa09bf2a24129af5e326f464c7806eec787d8c454f556278f3e09&vid=10146326636216261800
