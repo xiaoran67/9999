@@ -520,7 +520,7 @@ def load_corrections_name(filename):
     return corrections
 
 #读取纠错文件
-corrections_name = load_corrections_name('assets/corrections_name.txt')
+corrections_name = load_corrections_name('scripts/livesource3/corrections_name.txt')
 
 #纠错频道名称
 #correct_name_data(corrections_name,xxxx)
@@ -560,7 +560,7 @@ def sort_data(order, data):
 
 
 # 定义
-urls = read_txt_to_array('assets/urls-daily.txt')
+urls = read_txt_to_array('scripts/livesource3/urls-daily.txt')
 # 处理
 for url in urls:
     if url.startswith("http"):
@@ -814,14 +814,14 @@ formatted_time = beijing_time.strftime("%Y%m%d %H:%M:%S")
 #version=formatted_time+","+about_video1
 #about="xiaoranmuze,"+about_video2
 
-version=formatted_time+","+get_random_url('assetsscripts/livesource3/今日推台.txt')
-about="xiaoranmuze,"+get_random_url('assetsscripts/livesource3/今日推台.txt')
+version=formatted_time+","+get_random_url('scripts/livesource3/今日推台.txt')
+about="xiaoranmuze,"+get_random_url('scripts/livesource3/今日推台.txt')
 
-daily_mtv="今日推荐,"+get_random_url('assetsscripts/livesource3/今日推荐.txt')
-daily_mtv1="🔥低调,"+get_random_url('assetsscripts/livesource3/今日推荐.txt')
-daily_mtv2="🔥使用,"+get_random_url('assetsscripts/livesource3/今日推荐.txt')
-daily_mtv3="🔥禁止,"+get_random_url('assetsscripts/livesource3/今日推荐.txt')
-daily_mtv4="🔥贩卖,"+get_random_url('assetsscripts/livesource3/今日推荐.txt')
+daily_mtv="今日推荐,"+get_random_url('scripts/livesource3/今日推荐.txt')
+daily_mtv1="🔥低调,"+get_random_url('scripts/livesource3/今日推荐.txt')
+daily_mtv2="🔥使用,"+get_random_url('scripts/livesource3/今日推荐.txt')
+daily_mtv3="🔥禁止,"+get_random_url('scripts/livesource3/今日推荐.txt')
+daily_mtv4="🔥贩卖,"+get_random_url('scripts/livesource3/今日推荐.txt')
 
 # 增加手工区 2025-07-20 13:14
 print(f"处理手工区...")
@@ -1048,7 +1048,7 @@ except Exception as e:
 # 报时
 #print(f"time: {datetime.now().strftime("%Y%m%d_%H_%M_%S")}")
 
-channels_logos=read_txt_to_array('assets/logo.txt') #读入logo库
+channels_logos=read_txt_to_array('scripts/livesource3/logo.txt') #读入logo库
 def get_logo_by_channel_name(channel_name):
     
     # 遍历数组查找频道名称
