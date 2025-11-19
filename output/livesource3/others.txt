@@ -48,142 +48,135 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 
 
 ◆◆◆　https://raw.githubusercontent.com/kakaxi-1/IPTV/refs/heads/main/iptv.txt
-2025-11-19 11:32:10,https://kakaxi-1.asia/LOGO/Disclaimer.mp4
-兵器科技,http://27.191.202.62:19999/rtp/239.254.201.225:7249
-兵器科技,http://106.59.3.203:55555/rtp/239.200.200.91:8036
+2025-11-19 14:49:56,https://kakaxi-1.asia/LOGO/Disclaimer.mp4
 兵器科技,http://1.58.246.115:4001/rtp/229.58.190.29:5000
+兵器科技,http://106.59.3.203:55555/rtp/239.200.200.91:8036
 兵器科技,http://111.162.206.238:8686/rtp/225.1.2.166:5002
+兵器科技,http://27.191.202.62:19999/rtp/239.254.201.225:7249
 兵器科技,http://171.113.214.167:4022/rtp/239.69.1.79:10114
-兵器科技,http://60.172.82.115:8686/rtp/238.1.79.56:4584
 兵器科技,http://61.159.135.108:18000/rtp/238.255.2.34:5999
-兵器科技,http://106.116.241.180:9999/rtp/239.254.201.225:7249
+兵器科技,http://60.172.82.115:8686/rtp/238.1.79.56:4584
 兵器科技,http://1.58.246.115:4000/rtp/229.58.190.29:5000
-风云音乐,http://27.191.202.62:19999/rtp/239.254.201.221:7259
-风云音乐,http://106.59.3.203:55555/rtp/239.200.200.86:8008
+兵器科技,http://106.116.241.180:9999/rtp/239.254.201.225:7249
 风云音乐,http://1.58.246.115:4001/rtp/229.58.190.190:5000
+风云音乐,http://106.59.3.203:55555/rtp/239.200.200.86:8008
 风云音乐,http://111.162.206.238:8686/rtp/225.1.2.176:5002
-风云音乐,http://60.172.82.115:8686/rtp/238.1.79.64:4648
+风云音乐,http://27.191.202.62:19999/rtp/239.254.201.221:7259
 风云音乐,http://61.159.135.108:18000/rtp/238.255.2.24:5999
-风云音乐,http://106.116.241.180:9999/rtp/239.254.201.221:7259
+风云音乐,http://60.172.82.115:8686/rtp/238.1.79.64:4648
 风云音乐,http://1.58.246.115:4000/rtp/229.58.190.190:5000
-风云剧场,http://27.191.202.62:19999/rtp/239.254.201.219:7257
+风云音乐,http://106.116.241.180:9999/rtp/239.254.201.221:7259
 风云剧场,http://106.59.3.203:55555/rtp/239.200.200.84:8016
 风云剧场,http://111.162.206.238:8686/rtp/225.1.2.174:5002
-风云剧场,http://60.172.82.115:8686/rtp/238.1.79.62:4632
+风云剧场,http://27.191.202.62:19999/rtp/239.254.201.219:7257
 风云剧场,http://61.159.135.108:18000/rtp/238.255.2.28:5999
+风云剧场,http://60.172.82.115:8686/rtp/238.1.79.62:4632
 风云剧场,http://106.116.241.180:9999/rtp/239.254.201.219:7257
-怀旧剧场,http://27.191.202.62:19999/rtp/239.254.201.220:7256上海
 怀旧剧场,http://106.59.3.203:55555/rtp/239.200.200.85:8032
 怀旧剧场,http://111.162.206.238:8686/rtp/225.1.2.173:5002
-怀旧剧场,http://60.172.82.115:8686/rtp/238.1.79.61:4624
+怀旧剧场,http://27.191.202.62:19999/rtp/239.254.201.220:7256上海
 怀旧剧场,http://61.159.135.108:18000/rtp/238.255.2.33:5999
+怀旧剧场,http://60.172.82.115:8686/rtp/238.1.79.61:4624
 怀旧剧场,http://106.116.241.180:9999/rtp/239.254.201.220:7256上海
-第一剧场,http://27.191.202.62:19999/rtp/239.254.201.218:7258
-第一剧场,http://106.59.3.203:55555/rtp/239.200.200.82:8004
 第一剧场,http://1.58.246.115:4001/rtp/229.58.190.21:5000
+第一剧场,http://106.59.3.203:55555/rtp/239.200.200.82:8004
 第一剧场,http://111.162.206.238:8686/rtp/225.1.2.175:5002
+第一剧场,http://27.191.202.62:19999/rtp/239.254.201.218:7258
 第一剧场,http://171.113.214.167:4022/rtp/239.69.1.74:10084
-第一剧场,http://60.172.82.115:8686/rtp/238.1.79.63:4640
 第一剧场,http://61.159.135.108:18000/rtp/238.255.2.25:5999
-第一剧场,http://106.116.241.180:9999/rtp/239.254.201.218:7258
+第一剧场,http://60.172.82.115:8686/rtp/238.1.79.63:4640
 第一剧场,http://1.58.246.115:4000/rtp/229.58.190.21:5000
-女性时尚,http://27.191.202.62:19999/rtp/239.254.201.228:7255
+第一剧场,http://106.116.241.180:9999/rtp/239.254.201.218:7258
 女性时尚,http://106.59.3.203:55555/rtp/239.200.200.100:8084
 女性时尚,http://111.162.206.238:8686/rtp/225.1.2.172:5002
-女性时尚,http://60.172.82.115:8686/rtp/238.1.79.55:4576
+女性时尚,http://27.191.202.62:19999/rtp/239.254.201.228:7255
 女性时尚,http://61.159.135.108:18000/rtp/238.255.2.27:5999
+女性时尚,http://60.172.82.115:8686/rtp/238.1.79.55:4576
 女性时尚,http://106.116.241.180:9999/rtp/239.254.201.228:7255
-高尔夫网球,http://27.191.202.62:19999/rtp/239.254.201.223:7252
 高尔夫网球,http://106.59.3.203:55555/rtp/239.200.200.89:8024
 高尔夫网球,http://111.162.206.238:8686/rtp/225.1.2.169:5002
+高尔夫网球,http://27.191.202.62:19999/rtp/239.254.201.223:7252
 高尔夫网球,http://171.113.214.167:4022/rtp/239.69.1.83:10138
-高尔夫网球,http://60.172.82.115:8686/rtp/238.1.79.58:4600
 高尔夫网球,http://61.159.135.108:18000/rtp/238.255.2.223:5999
+高尔夫网球,http://60.172.82.115:8686/rtp/238.1.79.58:4600
 高尔夫网球,http://106.116.241.180:9999/rtp/239.254.201.223:7252
-央视文化精品,http://27.191.202.62:19999/rtp/239.254.201.229:7260
-央视文化精品,http://106.59.3.203:55555/rtp/239.200.200.92:8028
 央视文化精品,http://1.58.246.115:4001/rtp/229.58.190.189:5000
+央视文化精品,http://106.59.3.203:55555/rtp/239.200.200.92:8028
 央视文化精品,http://111.162.206.238:8686/rtp/225.1.2.177:5002
-央视文化精品,http://60.172.82.115:8686/rtp/238.1.79.54:4568
+央视文化精品,http://27.191.202.62:19999/rtp/239.254.201.229:7260
 央视文化精品,http://61.159.135.108:18000/rtp/238.255.2.32:5999
-央视文化精品,http://106.116.241.180:9999/rtp/239.254.201.229:7260
+央视文化精品,http://60.172.82.115:8686/rtp/238.1.79.54:4568
 央视文化精品,http://1.58.246.115:4000/rtp/229.58.190.189:5000
-电视指南,http://27.191.202.62:19999/rtp/239.254.201.217:7250
+央视文化精品,http://106.116.241.180:9999/rtp/239.254.201.229:7260
 电视指南,http://106.59.3.203:55555/rtp/239.200.200.83:8000
 电视指南,http://111.162.206.238:8686/rtp/225.1.2.167:5002
+电视指南,http://27.191.202.62:19999/rtp/239.254.201.217:7250
 电视指南,http://60.172.82.115:8686/rtp/238.1.79.53:4560
 电视指南,http://106.116.241.180:9999/rtp/239.254.201.217:7250
 河南卫视,http://116.235.57.69:4022/rtp/239.45.0.3:5140
 河南卫视,http://223.167.245.20:8001/rtp/239.45.0.3:5140
 云南卫视,http://116.235.57.69:4022/rtp/239.45.0.4:5140
 云南卫视,http://223.167.245.20:8001/rtp/239.45.0.4:5140
+中国教育1,http://116.235.57.69:4022/rtp/239.45.1.125:5140
 中国教育1,http://223.198.242.211:4000/rtp/239.253.64.169:5140
-中国教育1,http://27.191.202.62:19999/rtp/239.254.200.225:6259
 中国教育1,http://114.254.38.200:18888/rtp/239.3.1.57:8152
 中国教育1,http://1.58.246.115:4001/rtp/229.58.190.57:5000
-中国教育1,http://111.113.88.198:2000/rtp/239.121.4.180:9064
+中国教育1,http://27.191.202.62:19999/rtp/239.254.200.225:6259
 中国教育1,http://171.113.214.167:4022/rtp/239.69.1.110:10298
-中国教育1,http://116.235.57.69:4022/rtp/239.45.1.125:5140
-中国教育1,http://223.167.245.20:8001/rtp/239.45.1.125:5140
-中国教育1,http://112.66.87.3:8188/rtp/239.253.64.169:5140
-中国教育1,http://60.172.82.115:8686/rtp/238.1.78.158:7136
+中国教育1,http://111.113.88.198:2000/rtp/239.121.4.180:9064
 中国教育1,http://61.159.135.108:18000/rtp/238.255.2.105:5999
-中国教育1,http://106.116.241.180:9999/rtp/239.254.200.225:6259
+中国教育1,http://112.66.87.3:8188/rtp/239.253.64.169:5140
+中国教育1,http://223.167.245.20:8001/rtp/239.45.1.125:5140
+中国教育1,http://60.172.82.115:8686/rtp/238.1.78.158:7136
 中国教育1,http://1.58.246.115:4000/rtp/229.58.190.57:5000
+中国教育1,http://106.116.241.180:9999/rtp/239.254.200.225:6259
 中国教育1,http://112.66.73.108:8188/rtp/239.253.64.169:5140
-中国教育2,http://223.198.242.211:4000/rtp/239.253.64.128:5140
-中国教育2,http://27.191.202.62:19999/rtp/239.254.200.226:6260
-中国教育2,http://106.59.3.203:55555/rtp/239.200.201.121:8780
-中国教育2,http://114.254.38.200:18888/rtp/239.3.1.54:4120
-中国教育2,http://115.171.80.57:1688/rtp/225.1.8.193:4120
-中国教育2,http://1.58.246.115:4001/rtp/229.58.190.59:5000
 中国教育2,http://116.235.57.69:4022/rtp/239.45.1.52:5140
-中国教育2,http://223.167.245.20:8001/rtp/239.45.1.52:5140
-中国教育2,http://112.66.87.3:8188/rtp/239.253.64.128:5140
+中国教育2,http://223.198.242.211:4000/rtp/239.253.64.128:5140
+中国教育2,http://114.254.38.200:18888/rtp/239.3.1.54:4120
+中国教育2,http://1.58.246.115:4001/rtp/229.58.190.59:5000
+中国教育2,http://106.59.3.203:55555/rtp/239.200.201.121:8780
+中国教育2,http://115.171.80.57:1688/rtp/225.1.8.193:4120
+中国教育2,http://27.191.202.62:19999/rtp/239.254.200.226:6260
 中国教育2,http://61.159.135.108:18000/rtp/238.255.2.221:5999
-中国教育2,http://106.116.241.180:9999/rtp/239.254.200.226:6260
-中国教育2,http://106.120.13.134:4022/rtp/225.1.8.193:4120
+中国教育2,http://112.66.87.3:8188/rtp/239.253.64.128:5140
+中国教育2,http://223.167.245.20:8001/rtp/239.45.1.52:5140
 中国教育2,http://1.58.246.115:4000/rtp/229.58.190.59:5000
+中国教育2,http://106.116.241.180:9999/rtp/239.254.200.226:6260
 中国教育2,http://112.66.73.108:8188/rtp/239.253.64.128:5140
 中国教育2,http://115.171.216.120:4000/rtp/225.1.8.193:4120
-中国教育4,http://223.198.242.211:4000/rtp/239.253.64.139:5140
-中国教育4,http://27.191.202.62:19999/rtp/239.254.200.227:6261
-中国教育4,http://106.59.3.203:55555/rtp/239.200.201.122:8784
-中国教育4,http://114.254.38.200:18888/rtp/239.3.1.56:4120
-中国教育4,http://115.171.80.57:1688/rtp/225.1.8.195:4120
-中国教育4,http://1.58.246.115:4001/rtp/229.58.190.66:5000
-中国教育4,http://111.113.88.198:2000/rtp/239.121.4.199:9178
 中国教育4,http://116.235.57.69:4022/rtp/239.45.1.50:5140
-中国教育4,http://223.167.245.20:8001/rtp/239.45.1.50:5140
-中国教育4,http://112.66.87.3:8188/rtp/239.253.64.139:5140
+中国教育4,http://223.198.242.211:4000/rtp/239.253.64.139:5140
+中国教育4,http://114.254.38.200:18888/rtp/239.3.1.56:4120
+中国教育4,http://1.58.246.115:4001/rtp/229.58.190.66:5000
+中国教育4,http://106.59.3.203:55555/rtp/239.200.201.122:8784
+中国教育4,http://115.171.80.57:1688/rtp/225.1.8.195:4120
+中国教育4,http://27.191.202.62:19999/rtp/239.254.200.227:6261
+中国教育4,http://111.113.88.198:2000/rtp/239.121.4.199:9178
 中国教育4,http://61.159.135.108:18000/rtp/238.255.2.222:5999
-中国教育4,http://106.116.241.180:9999/rtp/239.254.200.227:6261
-中国教育4,http://106.120.13.134:4022/rtp/225.1.8.195:4120
+中国教育4,http://112.66.87.3:8188/rtp/239.253.64.139:5140
+中国教育4,http://223.167.245.20:8001/rtp/239.45.1.50:5140
 中国教育4,http://1.58.246.115:4000/rtp/229.58.190.66:5000
+中国教育4,http://106.116.241.180:9999/rtp/239.254.200.227:6261
 中国教育4,http://112.66.73.108:8188/rtp/239.253.64.139:5140
 中国教育4,http://115.171.216.120:4000/rtp/225.1.8.195:4120
-早期教育,http://27.191.202.62:19999/rtp/239.254.201.230:7253
 早期教育,http://111.162.206.238:8686/rtp/225.1.2.207:5002
+早期教育,http://27.191.202.62:19999/rtp/239.254.201.230:7253
 早期教育,http://106.116.241.180:9999/rtp/239.254.201.230:7253
 淘剧场,http://114.254.38.200:18888/rtp/239.3.1.95:8001
 淘剧场,http://115.171.80.57:1688/rtp/225.1.8.37:8002
-淘剧场,http://106.120.13.134:4022/rtp/225.1.8.37:8002
 淘剧场,http://115.171.216.120:4000/rtp/225.1.8.37:8002
 淘4K,http://114.254.38.200:18888/rtp/239.3.1.249:8001
 淘4K,http://115.171.80.57:1688/rtp/225.1.8.211:8002
-淘4K,http://106.120.13.134:4022/rtp/225.1.8.211:8002
 淘4K,http://115.171.216.120:4000/rtp/225.1.8.211:8002
 淘娱乐,http://114.254.38.200:18888/rtp/239.3.1.100:8001
 淘娱乐,http://115.171.80.57:1688/rtp/225.1.8.61:8002
-淘娱乐,http://106.120.13.134:4022/rtp/225.1.8.61:8002
 淘娱乐,http://115.171.216.120:4000/rtp/225.1.8.61:8002
 淘BABY,http://114.254.38.200:18888/rtp/239.3.1.238:8001
 淘BABY,http://115.171.80.57:1688/rtp/225.1.8.36:8002
-淘BABY,http://106.120.13.134:4022/rtp/225.1.8.36:8002
 淘BABY,http://115.171.216.120:4000/rtp/225.1.8.36:8002
 淘萌宠,http://114.254.38.200:18888/rtp/239.3.1.102:8001
 淘萌宠,http://115.171.80.57:1688/rtp/225.1.8.63:8002
-淘萌宠,http://106.120.13.134:4022/rtp/225.1.8.63:8002
 淘萌宠,http://115.171.216.120:4000/rtp/225.1.8.63:8002
 凤凰卫视中文,http://27.191.202.62:19999/rtp/239.254.201.2:5226
 凤凰卫视中文,http://106.116.241.180:9999/rtp/239.254.201.2:5226
@@ -193,50 +186,49 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 凤凰卫视电影,http://106.116.241.180:9999/rtp/239.254.201.1:5214
 睛彩青少,http://114.254.38.200:18888/rtp/239.3.1.127:8001
 睛彩广场舞,http://114.254.38.200:18888/rtp/239.3.1.128:8001
-茶,http://27.191.202.62:19999/rtp/239.254.200.228:6258
-茶,http://106.59.3.203:55555/rtp/239.200.201.36:8404
 茶,http://114.254.38.200:18888/rtp/239.3.1.165:8001
-茶,http://115.171.80.57:1688/rtp/225.1.8.72:8002
 茶,http://1.58.246.115:4001/rtp/229.58.190.111:5000
+茶,http://106.59.3.203:55555/rtp/239.200.201.36:8404
+茶,http://115.171.80.57:1688/rtp/225.1.8.72:8002
 茶,http://111.162.206.238:8686/rtp/225.1.2.19:5002
+茶,http://27.191.202.62:19999/rtp/239.254.200.228:6258
 茶,http://171.113.214.167:4022/rtp/239.69.1.144:10500
 茶,http://60.172.82.115:8686/rtp/238.1.79.30:4352
-茶,http://106.116.241.180:9999/rtp/239.254.200.228:6258
-茶,http://106.120.13.134:4022/rtp/225.1.8.72:8002
 茶,http://1.58.246.115:4000/rtp/229.58.190.111:5000
+茶,http://106.116.241.180:9999/rtp/239.254.200.228:6258
 茶,http://115.171.216.120:4000/rtp/225.1.8.72:8002
 先锋乒羽,http://106.59.3.203:55555/rtp/239.200.201.33:4120
 汽摩,http://106.59.3.203:55555/rtp/239.200.200.98:8052
 汽摩,http://111.162.206.238:8686/rtp/225.1.1.205:5002
 汽摩,http://61.159.135.108:18000/rtp/238.255.2.148:5999
-文物宝库,http://27.191.202.62:19999/rtp/239.254.201.227:7230
-文物宝库,http://106.59.3.203:55555/rtp/239.200.200.96:8112
 文物宝库,http://1.58.246.115:4001/rtp/229.58.190.167:5000
+文物宝库,http://106.59.3.203:55555/rtp/239.200.200.96:8112
 文物宝库,http://111.162.206.238:8686/rtp/225.1.2.105:5002
-文物宝库,http://106.116.241.180:9999/rtp/239.254.201.227:7230
+文物宝库,http://27.191.202.62:19999/rtp/239.254.201.227:7230
 文物宝库,http://1.58.246.115:4000/rtp/229.58.190.167:5000
-武术世界,http://27.191.202.62:19999/rtp/239.254.201.224:7229
+文物宝库,http://106.116.241.180:9999/rtp/239.254.201.227:7230
 武术世界,http://106.59.3.203:55555/rtp/239.200.200.90:8064
 武术世界,http://111.162.206.238:8686/rtp/225.1.2.129:5002
+武术世界,http://27.191.202.62:19999/rtp/239.254.201.224:7229
 武术世界,http://171.113.214.167:4022/rtp/239.69.1.47:9922
 武术世界,http://106.116.241.180:9999/rtp/239.254.201.224:7229
-乐游,http://27.191.202.62:19999/rtp/239.254.201.200:6356
-乐游,http://111.162.206.238:8686/rtp/225.1.1.145:5002
 乐游,http://116.235.57.69:4022/rtp/239.45.3.135:5140
+乐游,http://111.162.206.238:8686/rtp/225.1.1.145:5002
+乐游,http://27.191.202.62:19999/rtp/239.254.201.200:6356
 乐游,http://223.167.245.20:8001/rtp/239.45.3.135:5140
 乐游,http://60.172.82.115:8686/rtp/238.1.78.151:7080
 乐游,http://106.116.241.180:9999/rtp/239.254.201.200:6356
-金色学堂,http://27.191.202.62:19999/rtp/239.254.201.182:7227
+金色学堂,http://116.235.57.69:4022/rtp/239.45.0.9:5140
 金色学堂,http://1.58.246.115:4001/rtp/229.58.190.77:5000
 金色学堂,http://111.162.206.238:8686/rtp/225.1.1.236:5002
-金色学堂,http://116.235.57.69:4022/rtp/239.45.0.9:5140
+金色学堂,http://27.191.202.62:19999/rtp/239.254.201.182:7227
 金色学堂,http://223.167.245.20:8001/rtp/239.45.0.9:5140
 金色学堂,http://60.172.82.115:8686/rtp/238.1.78.76:6480
-金色学堂,http://106.116.241.180:9999/rtp/239.254.201.182:7227
 金色学堂,http://1.58.246.115:4000/rtp/229.58.190.77:5000
-中国交通,http://27.191.202.62:19999/rtp/239.254.201.110:5181
+金色学堂,http://106.116.241.180:9999/rtp/239.254.201.182:7227
 中国交通,http://114.254.38.200:18888/rtp/239.3.1.188:8001
 中国交通,http://111.162.206.238:8686/rtp/225.1.2.57:5002
+中国交通,http://27.191.202.62:19999/rtp/239.254.201.110:5181
 中国交通,http://106.116.241.180:9999/rtp/239.254.201.110:5181
 中国天气,http://223.198.242.211:4000/rtp/239.253.64.79:5140
 中国天气,http://111.113.88.198:2000/rtp/239.121.4.112:8654
@@ -244,59 +236,50 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 中国天气,http://112.66.73.108:8188/rtp/239.253.64.79:5140
 华数4K,http://114.254.38.200:18888/rtp/239.3.1.236:2000
 华数4K,http://115.171.80.57:1688/rtp/225.1.8.80:2000
-华数4K,http://106.120.13.134:4022/rtp/225.1.8.80:2000
 华数4K,http://115.171.216.120:4000/rtp/225.1.8.80:2000
 华数星影,http://114.254.38.200:18888/rtp/239.3.1.94:4120
 华数星影,http://115.171.80.57:1688/rtp/225.1.8.254:4120
-华数星影,http://106.120.13.134:4022/rtp/225.1.8.254:4120
 华数星影,http://115.171.216.120:4000/rtp/225.1.8.254:4120
 华数动作影院,http://223.198.242.211:4000/rtp/239.253.64.220:5140
 华数动作影院,http://114.254.38.200:18888/rtp/239.3.1.92:4120
 华数动作影院,http://115.171.80.57:1688/rtp/225.1.8.252:4120
 华数动作影院,http://112.66.87.3:8188/rtp/239.253.64.220:5140
-华数动作影院,http://106.120.13.134:4022/rtp/225.1.8.252:4120
 华数动作影院,http://112.66.73.108:8188/rtp/239.253.64.220:5140
 华数动作影院,http://115.171.216.120:4000/rtp/225.1.8.252:4120
 华数喜剧影院,http://223.198.242.211:4000/rtp/239.253.64.233:5140
 华数喜剧影院,http://114.254.38.200:18888/rtp/239.3.1.91:4120
 华数喜剧影院,http://115.171.80.57:1688/rtp/225.1.8.251:4120
 华数喜剧影院,http://112.66.87.3:8188/rtp/239.253.64.233:5140
-华数喜剧影院,http://106.120.13.134:4022/rtp/225.1.8.251:4120
 华数喜剧影院,http://112.66.73.108:8188/rtp/239.253.64.233:5140
 华数喜剧影院,http://115.171.216.120:4000/rtp/225.1.8.251:4120
 华数家庭影院,http://223.198.242.211:4000/rtp/239.253.64.225:5140
 华数家庭影院,http://114.254.38.200:18888/rtp/239.3.1.93:4120
 华数家庭影院,http://115.171.80.57:1688/rtp/225.1.8.253:4120
 华数家庭影院,http://112.66.87.3:8188/rtp/239.253.64.225:5140
-华数家庭影院,http://106.120.13.134:4022/rtp/225.1.8.253:4120
 华数家庭影院,http://112.66.73.108:8188/rtp/239.253.64.225:5140
 华数家庭影院,http://115.171.216.120:4000/rtp/225.1.8.253:4120
 华数经典电影,http://223.198.242.211:4000/rtp/239.253.64.227:5140
 华数经典电影,http://114.254.38.200:18888/rtp/239.3.1.195:9024
 华数经典电影,http://115.171.80.57:1688/rtp/225.1.8.203:9024
 华数经典电影,http://112.66.87.3:8188/rtp/239.253.64.227:5140
-华数经典电影,http://106.120.13.134:4022/rtp/225.1.8.203:9024
 华数经典电影,http://112.66.73.108:8188/rtp/239.253.64.227:5140
 华数经典电影,http://115.171.216.120:4000/rtp/225.1.8.203:9024
 华数热播剧场,http://223.198.242.211:4000/rtp/239.253.64.211:5140
 华数热播剧场,http://114.254.38.200:18888/rtp/239.3.1.194:9020
 华数热播剧场,http://115.171.80.57:1688/rtp/225.1.8.202:9020
 华数热播剧场,http://112.66.87.3:8188/rtp/239.253.64.211:5140
-华数热播剧场,http://106.120.13.134:4022/rtp/225.1.8.202:9020
 华数热播剧场,http://112.66.73.108:8188/rtp/239.253.64.211:5140
 华数热播剧场,http://115.171.216.120:4000/rtp/225.1.8.202:9020
 华数军旅剧场,http://223.198.242.211:4000/rtp/239.253.64.228:5140
 华数军旅剧场,http://114.254.38.200:18888/rtp/239.3.1.68:4120
 华数军旅剧场,http://115.171.80.57:1688/rtp/225.1.8.228:4120
 华数军旅剧场,http://112.66.87.3:8188/rtp/239.253.64.228:5140
-华数军旅剧场,http://106.120.13.134:4022/rtp/225.1.8.228:4120
 华数军旅剧场,http://112.66.73.108:8188/rtp/239.253.64.228:5140
 华数军旅剧场,http://115.171.216.120:4000/rtp/225.1.8.228:4120
 华数城市剧场,http://223.198.242.211:4000/rtp/239.253.64.218:5140
 华数城市剧场,http://114.254.38.200:18888/rtp/239.3.1.67:4120
 华数城市剧场,http://115.171.80.57:1688/rtp/225.1.8.227:4120
 华数城市剧场,http://112.66.87.3:8188/rtp/239.253.64.218:5140
-华数城市剧场,http://106.120.13.134:4022/rtp/225.1.8.227:4120
 华数城市剧场,http://112.66.73.108:8188/rtp/239.253.64.218:5140
 华数城市剧场,http://115.171.216.120:4000/rtp/225.1.8.227:4120
 华数武侠剧场,http://223.198.242.211:4000/rtp/239.253.64.254:5140
@@ -306,14 +289,12 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 华数古装剧场,http://223.198.242.211:4000/rtp/239.253.64.221:5140
 华数古装剧场,http://115.171.80.57:1688/rtp/225.1.8.229:4120
 华数古装剧场,http://112.66.87.3:8188/rtp/239.253.64.221:5140
-华数古装剧场,http://106.120.13.134:4022/rtp/225.1.8.229:4120
 华数古装剧场,http://112.66.73.108:8188/rtp/239.253.64.221:5140
 华数古装剧场,http://115.171.216.120:4000/rtp/225.1.8.229:4120
 华数魅力时尚,http://223.198.242.211:4000/rtp/239.253.64.231:5140
 华数魅力时尚,http://114.254.38.200:18888/rtp/239.3.1.196:9012
 华数魅力时尚,http://115.171.80.57:1688/rtp/225.1.8.204:9012
 华数魅力时尚,http://112.66.87.3:8188/rtp/239.253.64.231:5140
-华数魅力时尚,http://106.120.13.134:4022/rtp/225.1.8.204:9012
 华数魅力时尚,http://112.66.73.108:8188/rtp/239.253.64.231:5140
 华数魅力时尚,http://115.171.216.120:4000/rtp/225.1.8.204:9012
 华数少儿动画,http://223.198.242.211:4000/rtp/239.253.64.232:5140
@@ -321,14 +302,12 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 华数少儿动画,http://115.171.80.57:1688/rtp/225.1.8.207:9000
 华数少儿动画,http://223.198.242.211:4000/rtp/239.253.64.163:5140
 华数少儿动画,http://112.66.87.3:8188/rtp/239.253.64.232:5140
-华数少儿动画,http://106.120.13.134:4022/rtp/225.1.8.207:9000
 华数少儿动画,http://112.66.87.3:8188/rtp/239.253.64.163:5140
 华数少儿动画,http://112.66.73.108:8188/rtp/239.253.64.232:5140
 华数少儿动画,http://115.171.216.120:4000/rtp/225.1.8.207:9000
 华数少儿动画,http://112.66.73.108:8188/rtp/239.253.64.163:5140
 华数动画,http://114.254.38.200:18888/rtp/239.3.1.80:4120
 华数动画,http://115.171.80.57:1688/rtp/225.1.8.240:4120
-华数动画,http://106.120.13.134:4022/rtp/225.1.8.240:4120
 华数动画,http://115.171.216.120:4000/rtp/225.1.8.240:4120
 
 
@@ -432,7 +411,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []charity tv,https://stream1.freetv.fun/charity-tv-1.m3u8
 [SD]citytv,https://stream1.freetv.fun/citytv-1.m3u8
 []fnx,https://stream1.freetv.fun/fnx-3.m3u8
-[]fx *s,https://stream1.freetv.fun/fx--s-1.m3u8
 []fx ==,https://stream1.freetv.fun/fx-10.ctv
 []ช่อง fox sports racing,https://stream1.freetv.fun/ch-ng-fox-sports-racing-1.m3u8
 []global tv,https://stream1.freetv.fun/global-tv-2.m3u8
@@ -451,12 +429,12 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []ช่อง cbs sports network,https://stream1.freetv.fun/ch-ng-cbs-sports-network-2.m3u8
 [SD]us root sports network,https://stream1.freetv.fun/us-root-sports-network-1.ctv
 []fanduel sports network,https://stream1.freetv.fun/fanduel-sports-network-1.m3u8
-[SD]fanduel sports network socal,https://stream1.freetv.fun/fanduel-sports-network-socal-1.m3u8
-[SD]fanduel sports network detroit,https://stream1.freetv.fun/fanduel-sports-network-detroit-1.m3u8
+[]fanduel sports network socal,https://stream1.freetv.fun/fanduel-sports-network-socal-1.m3u8
+[]fanduel sports network detroit,https://stream1.freetv.fun/fanduel-sports-network-detroit-1.m3u8
 []fanduel sports network florida,https://stream1.freetv.fun/fanduel-sports-network-florida-1.m3u8
-[SD]fanduel sports network sun,https://stream1.freetv.fun/fanduel-sports-network-sun-1.m3u8
-[SD]fanduel sports network ohio,https://stream1.freetv.fun/fanduel-sports-network-ohio-1.m3u8
-[SD]fanduel sports network north,https://stream1.freetv.fun/fanduel-sports-network-north-1.m3u8
+[]fanduel sports network sun,https://stream1.freetv.fun/fanduel-sports-network-sun-1.m3u8
+[]fanduel sports network ohio,https://stream1.freetv.fun/fanduel-sports-network-ohio-1.m3u8
+[]fanduel sports network north,https://stream1.freetv.fun/fanduel-sports-network-north-1.m3u8
 []fanduel sports network detroit,https://stream1.freetv.fun/fanduel-sports-network-detroit-2.m3u8
 []ช่อง sportsnet one,https://stream1.freetv.fun/ch-ng-sportsnet-one-1.m3u8
 []ช่อง sportsnet,https://stream1.freetv.fun/ch-ng-sportsnet-1.m3u8
@@ -883,7 +861,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [SD]兵团卫视,https://stream1.freetv.fun/bing-tuan-wei-shi-42.m3u8
 [SD]兵团卫视,https://stream1.freetv.fun/bing-tuan-wei-shi-31.m3u8
 []兵团卫视,https://stream1.freetv.fun/bing-tuan-wei-shi-4.m3u8
-[]刘德华,https://stream1.freetv.fun/liu-de-hua-3.m3u8
+[SD]刘德华,https://stream1.freetv.fun/liu-de-hua-3.m3u8
 [SD]刘德华,https://stream1.freetv.fun/liu-de-hua-2.m3u8
 []劲爆体育,https://stream1.freetv.fun/jing-bao-ti-yu-5.m3u8
 []动漫秀场,https://stream1.freetv.fun/dong-man-xiu-chang-7.m3u8
@@ -1918,11 +1896,12 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []trace urban,https://stream1.freetv.fun/trace-urban-5.m3u8
 []trace urban ⓖ,https://stream1.freetv.fun/trace-urban-g-1.m3u8
 []trace urban,https://stream1.freetv.fun/trace-urban-9.m3u8
-[SD]star trek,https://stream1.freetv.fun/star-trek-1.m3u8
+[]star trek,https://stream1.freetv.fun/star-trek-1.m3u8
 []lale,https://stream1.freetv.fun/lale-1.m3u8
 []formula,https://stream1.freetv.fun/formula-2.m3u8
 []formula,https://stream1.freetv.fun/formula-1.m3u8
 []fortuna tv,https://stream1.freetv.fun/fortuna-tv-1.m3u8
+[SD]fortuna tv,https://stream1.freetv.fun/fortuna-tv-2.m3u8
 []imedi tv,https://stream1.freetv.fun/imedi-tv-1.m3u8
 []tv8,https://stream1.freetv.fun/tv8-4.m3u8
 []biz tv,https://stream1.freetv.fun/biz-tv-4.m3u8
@@ -1968,7 +1947,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []telebarn,https://stream1.freetv.fun/telebarn-2.m3u8
 []vox1,https://stream1.freetv.fun/vox1-1.m3u8
 []wdr,https://stream1.freetv.fun/wdr-2.ctv
-[]euronews,https://stream1.freetv.fun/euronews-25.m3u8
 []mega,https://stream1.freetv.fun/mega-2.m3u8
 []mega,https://stream1.freetv.fun/mega-1.m3u8
 []sbc,https://stream1.freetv.fun/sbc-1.m3u8
@@ -2013,6 +1991,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []movie music,https://stream1.freetv.fun/movie-music-1.m3u8
 []now新闻,https://stream1.freetv.fun/nowxin-wen-4.m3u8
 []rthk31,https://stream1.freetv.fun/rthk31-6.ctv
+[]rthk-32,https://stream1.freetv.fun/rthk-32-3.ctv
 []rthk32 *wj,https://stream1.freetv.fun/rthk32--wj-2.m3u8
 []rthk32 *wj,https://stream1.freetv.fun/rthk32--wj-1.m3u8
 []ช่อง sky sports plus,https://stream1.freetv.fun/ch-ng-sky-sports-plus-1.m3u8
@@ -2043,6 +2022,8 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []viutv,https://stream1.freetv.fun/viutv-3.ctv
 []viutv,https://stream1.freetv.fun/viutv-10.m3u8
 []viutv6,https://stream1.freetv.fun/viutv6-1.m3u8
+[]viu6tv,https://stream1.freetv.fun/viu6tv-1.ctv
+[]viu6tv,https://stream1.freetv.fun/viu6tv-2.ctv
 []viutv,https://stream1.freetv.fun/viutv-4.m3u8
 []viutv,https://stream1.freetv.fun/viutv-12.ctv
 []viutv,https://stream1.freetv.fun/viutv-1.ctv
@@ -2344,7 +2325,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []super tv,https://stream1.freetv.fun/super-tv-4.m3u8
 []tele arena,https://stream1.freetv.fun/tele-arena-1.m3u8
 [VGA]telenorte,https://stream1.freetv.fun/telenorte-3.m3u8
-[]telenorte,https://stream1.freetv.fun/telenorte-1.m3u8
 []telepace 3,https://stream1.freetv.fun/telepace-3-1.m3u8
 []telepace 2,https://stream1.freetv.fun/telepace-2-1.m3u8
 []telepace 4,https://stream1.freetv.fun/telepace-4-1.m3u8
@@ -2671,7 +2651,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []dunya news,https://stream1.freetv.fun/dunya-news-4.m3u8
 []dunya news,https://stream1.freetv.fun/dunya-news-1.m3u8
 []dntv,https://stream1.freetv.fun/dntv-1.m3u8
-[]iipc tv (480p) [geo-blocked],https://stream1.freetv.fun/iipc-tv-2.m3u8
 []eko tv,https://stream1.freetv.fun/eko-tv-2.ctv
 []eko tv,https://stream1.freetv.fun/eko-tv-3.ctv
 []canal ipe ᴴᴰ,https://stream1.freetv.fun/canal-ipe-hd-1.m3u8
@@ -2763,9 +2742,8 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []kanal d drama,https://stream1.freetv.fun/kanal-d-drama-1.m3u8
 []kanal d,https://stream1.freetv.fun/kanal-d-12.m3u8
 []kanal z,https://stream1.freetv.fun/kanal-z-1.m3u8
-[VGA]kanal 0,https://stream1.freetv.fun/kanal-0-1.m3u8
+[SD]kanal 0,https://stream1.freetv.fun/kanal-0-1.m3u8
 []bi 1! kanal,https://stream1.freetv.fun/bi-1--kanal-1.m3u8
-[SD]kanal d,https://stream1.freetv.fun/kanal-d-7.m3u8
 []kanal 15,https://stream1.freetv.fun/kanal-15-1.m3u8
 []magic tv,https://stream1.freetv.fun/magic-tv-2.m3u8
 []magic tv,https://stream1.freetv.fun/magic-tv-5.m3u8
@@ -2779,9 +2757,9 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []national geographics,https://stream1.freetv.fun/national-geographics-1.ctv
 []ca national geographic wild,https://stream1.freetv.fun/ca-national-geographic-wild-2.ctv
 []us national geographic,https://stream1.freetv.fun/us-national-geographic-1.ctv
-[VGA]national geographic ==,https://stream1.freetv.fun/national-geographic-11.ctv
+[]national geographic ==,https://stream1.freetv.fun/national-geographic-11.ctv
 []national geographic--,https://stream1.freetv.fun/national-geographic-2.ctv
-[VGA]national geographic =,https://stream1.freetv.fun/national-geographic-5.ctv
+[]national geographic =,https://stream1.freetv.fun/national-geographic-5.ctv
 []national geographic-,https://stream1.freetv.fun/national-geographic-8.ctv
 [VGA]national geographic wild east,https://stream1.freetv.fun/national-geographic-wild-east-2.ctv
 [VGA]national geographic east,https://stream1.freetv.fun/national-geographic-east-1.ctv
@@ -2808,7 +2786,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [SD]9 волна,https://stream1.freetv.fun/9-volna-2.m3u8
 []amedia premium,https://stream1.freetv.fun/amedia-premium-3.ctv
 [SD]zee bollywood,https://stream1.freetv.fun/zee-bollywood-2.ctv
-[]bridge tv deluxe,https://stream1.freetv.fun/bridge-tv-deluxe-1.m3u8
 []bridge deluxe,https://stream1.freetv.fun/bridge-deluxe-1.m3u8
 [SD]bridge tv,https://stream1.freetv.fun/bridge-tv-2.m3u8
 [SD]bridge tv rock,https://stream1.freetv.fun/bridge-tv-rock-2.m3u8
@@ -2816,6 +2793,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [SD]bride tv (576p),https://stream1.freetv.fun/bride-tv-2.m3u8
 [SD]bridge tv фрэш,https://stream1.freetv.fun/bridge-tv-fresh-1.m3u8
 [SD]bridge tv шлягер,https://stream1.freetv.fun/bridge-tv-shliager-1.m3u8
+[]bridge tv deluxe,https://stream1.freetv.fun/bridge-tv-deluxe-1.m3u8
 [SD]bridge tv rock,https://stream1.freetv.fun/bridge-tv-rock-1.m3u8
 [SD]bridge hits,https://stream1.freetv.fun/bridge-hits-1.m3u8
 [SD]feniks plus kino,https://stream1.freetv.fun/feniks-plus-kino-1.m3u8
@@ -3068,7 +3046,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []4music,https://stream1.freetv.fun/4music-1.m3u8
 []4music,https://stream1.freetv.fun/4music-2.m3u8
 []qmusic,https://stream1.freetv.fun/qmusic-2.m3u8
-[]ca ctv comedy channel,https://stream1.freetv.fun/ca-ctv-comedy-channel-1.ctv
+[SD]ca ctv comedy channel,https://stream1.freetv.fun/ca-ctv-comedy-channel-1.ctv
 []ca ctv drama channel,https://stream1.freetv.fun/ca-ctv-drama-channel-1.ctv
 []dazn1,rtmp://f13h.mine.nu/sat/tv731
 []dazn ringside,https://stream1.freetv.fun/dazn-ringside-2.m3u8
@@ -3078,7 +3056,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []asharq discovery,https://stream1.freetv.fun/asharq-discovery-4.m3u8
 []cctv-4k,https://stream1.freetv.fun/cctv-4k-1.ctv
 []delta tv,https://stream1.freetv.fun/delta-tv-2.m3u8
-[]eye tv戏剧 *wj,https://stream1.freetv.fun/eye-tvxi-ju---wj-1.m3u8
 []eye tv戏剧 *wj,https://stream1.freetv.fun/eye-tvxi-ju---wj-2.m3u8
 [SD]bflix movies,https://stream1.freetv.fun/bflix-movies-1.m3u8
 []food network,https://stream1.freetv.fun/food-network-8.m3u8
@@ -3158,6 +3135,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []民视,rtmp://f13h.mine.nu/sat/tv051
 []民视,rtmp://f13h.mine.nu:1935/sat/tv051
 []民视新闻,https://stream1.freetv.fun/min-shi-xin-wen-17.m3u8
+[]民视综艺,https://stream1.freetv.fun/min-shi-zong-yi-2.ctv
 []纬来日本,rtmp://f13h.mine.nu/sat/tv771
 []纬来精彩,https://stream1.freetv.fun/wei-lai-jing-cai-1.m3u8
 []纬来育乐,https://stream1.freetv.fun/wei-lai-yu-le-2.ctv
@@ -3170,6 +3148,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []华视,rtmp://f13h.mine.nu:1935/sat/tv111
 []华视,rtmp://f13h.mine.nu/sat/tv111
 []华视,https://stream1.freetv.fun/hua-shi-5.ctv
+[]靖天电影,https://stream1.freetv.fun/jing-tian-dian-ying-1.ctv
 [SD]big tv,https://stream1.freetv.fun/big-tv-1.m3u8
 []eurosport2,https://stream1.freetv.fun/eurosport2-1.m3u8
 []motorvision tv,https://stream1.freetv.fun/motorvision-tv-6.m3u8
@@ -3197,7 +3176,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []brtv,https://stream1.freetv.fun/brtv-1.m3u8
 []best tv,https://stream1.freetv.fun/best-tv-2.m3u8
 [VGA]beyaz tv,https://stream1.freetv.fun/beyaz-tv-3.m3u8
-[]bloomberg ht,https://stream1.freetv.fun/bloomberg-ht-7.m3u8
+[VGA]bloomberg ht,https://stream1.freetv.fun/bloomberg-ht-7.m3u8
 []cnbc-e,https://stream1.freetv.fun/cnbc-e-1.m3u8
 []cinebox,https://stream1.freetv.fun/cinebox-6.ctv
 []cinebox,https://stream1.freetv.fun/cinebox-1.ctv
@@ -3243,7 +3222,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []channel news asia,https://stream1.freetv.fun/channel-news-asia-2.m3u8
 []channelnewsasia,https://stream1.freetv.fun/channelnewsasia-1.m3u8
 []ช่อง black news channel,https://stream1.freetv.fun/ch-ng-black-news-channel-1.m3u8
-[VGA]one channel ⓖ,https://stream1.freetv.fun/one-channel-g-1.m3u8
+[]one channel ⓖ,https://stream1.freetv.fun/one-channel-g-1.m3u8
 []dltv 10 (1080p),https://stream1.freetv.fun/dltv-10-1.m3u8
 [SD]zagros,https://stream1.freetv.fun/zagros-2.m3u8
 []samuel goldwyn films,https://stream1.freetv.fun/samuel-goldwyn-films-1.m3u8
@@ -3328,8 +3307,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []saga music,https://stream1.freetv.fun/saga-music-2.m3u8
 []saga music,https://stream1.freetv.fun/saga-music-1.m3u8
 []al dafrah tv,https://stream1.freetv.fun/al-dafrah-tv-1.m3u8
-[SD]4more uk =,https://stream1.freetv.fun/4more-uk-3.ctv
-[SD]4more uk ==,https://stream1.freetv.fun/4more-uk-2.ctv
 []alb uk,https://stream1.freetv.fun/alb-uk-1.m3u8
 []cbbc bbc 4 uhd *m,https://stream1.freetv.fun/cbbc-bbc-4-uhd--m-1.ctv
 []bbc america,https://stream1.freetv.fun/bbc-america-4.m3u8
@@ -3358,7 +3335,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []discovery channel,https://stream1.freetv.fun/discovery-channel-4.ctv
 []discovery history *m,https://stream1.freetv.fun/discovery-history--m-1.ctv
 []discovery turbo,https://stream1.freetv.fun/discovery-turbo-3.ctv
-[]disney channel ===,https://stream1.freetv.fun/disney-channel-7.ctv
+[VGA]disney channel ===,https://stream1.freetv.fun/disney-channel-7.ctv
 []euronews english (720p),https://stream1.freetv.fun/euronews-english-2.m3u8
 [SD]euronews *m,https://stream1.freetv.fun/euronews--m-1.ctv
 []film4 uk ==,https://stream1.freetv.fun/film4-uk-3.ctv
@@ -3382,9 +3359,9 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [SD]nickelodeon,https://stream1.freetv.fun/nickelodeon-26.m3u8
 []nickelodeon,https://stream1.freetv.fun/nickelodeon-15.m3u8
 []ช่อง nickelodeon,https://stream1.freetv.fun/ch-ng-nickelodeon-2.m3u8
-[]us nickelodeon east,https://stream1.freetv.fun/us-nickelodeon-east-1.ctv
-[]nickelodeon (uk) ==,https://stream1.freetv.fun/nickelodeon-1.ctv
-[]nickelodeon (uk) =,https://stream1.freetv.fun/nickelodeon-17.ctv
+[SD]us nickelodeon east,https://stream1.freetv.fun/us-nickelodeon-east-1.ctv
+[SD]nickelodeon (uk) ==,https://stream1.freetv.fun/nickelodeon-1.ctv
+[SD]nickelodeon (uk) =,https://stream1.freetv.fun/nickelodeon-17.ctv
 [SD]pop *m,https://stream1.freetv.fun/pop--m-1.ctv
 [SD]pop uk=,https://stream1.freetv.fun/pop-uk-1.ctv
 [SD]pop uk ==,https://stream1.freetv.fun/pop-uk-2.ctv
@@ -3428,8 +3405,8 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [VGA]cartoon classics,https://stream1.freetv.fun/cartoon-classics-2.m3u8
 [SD]black classics,https://stream1.freetv.fun/black-classics-2.m3u8
 []cinevault classics,https://stream1.freetv.fun/cinevault-classics-2.m3u8
-[SD]sky comedy=,https://stream1.freetv.fun/sky-comedy-1.ctv
-[SD]sky comedy ==,https://stream1.freetv.fun/sky-comedy-3.ctv
+[]sky comedy=,https://stream1.freetv.fun/sky-comedy-1.ctv
+[]sky comedy ==,https://stream1.freetv.fun/sky-comedy-3.ctv
 []sky comedy *s,https://stream1.freetv.fun/sky-comedy--s-1.m3u8
 []sky cinema hits *m,https://stream1.freetv.fun/sky-cinema-hits--m-1.ctv
 []sky cinema drama romantic *m,https://stream1.freetv.fun/sky-cinema-drama-romantic--m-1.ctv
@@ -3473,9 +3450,9 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [SD]beverly hills 90210,https://stream1.freetv.fun/beverly-hills-90210-1.m3u8
 []ช่อง a e,https://stream1.freetv.fun/ch-ng-a-e-1.m3u8
 [VGA]a e east (720p),https://stream1.freetv.fun/a-e-east-3.ctv
-[]us a e,https://stream1.freetv.fun/us-a-e-1.ctv
-[]a e =,https://stream1.freetv.fun/a-e-3.ctv
-[]a e ==,https://stream1.freetv.fun/a-e-1.ctv
+[SD]us a e,https://stream1.freetv.fun/us-a-e-1.ctv
+[SD]a e =,https://stream1.freetv.fun/a-e-3.ctv
+[SD]a e ==,https://stream1.freetv.fun/a-e-1.ctv
 []abc,https://stream1.freetv.fun/abc-2.m3u8
 [SD]miami,https://stream1.freetv.fun/miami-1.m3u8
 []abc news,https://stream1.freetv.fun/abc-news-6.m3u8
@@ -3554,7 +3531,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []beverly hills television 35 (720p),https://stream1.freetv.fun/beverly-hills-television-35-1.m3u8
 []beverly hills television 10 (720p),https://stream1.freetv.fun/beverly-hills-television-10-1.m3u8
 [SD]television caribbean (1080p),https://stream1.freetv.fun/television-caribbean-2.m3u8
-[VGA]manatee schools television mstv (manatee county fl) (1080p),https://stream1.freetv.fun/manatee-schools-television-mstv-1.m3u8
+[]manatee schools television mstv (manatee county fl) (1080p),https://stream1.freetv.fun/manatee-schools-television-mstv-1.m3u8
 []radio roma television,https://stream1.freetv.fun/radio-roma-television-1.m3u8
 [VGA]tln media chicago,https://stream1.freetv.fun/tln-media-chicago-1.m3u8
 []yes network,https://stream1.freetv.fun/yes-network-3.m3u8
@@ -3570,7 +3547,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []cbs news *wj,https://stream1.freetv.fun/cbs-news--wj-1.m3u8
 []cbs sports network ==,https://stream1.freetv.fun/cbs-sports-network-3.ctv
 []cbs sports network =,https://stream1.freetv.fun/cbs-sports-network-1.ctv
-[]classica,https://stream1.freetv.fun/classica-2.m3u8
+[SD]classica,https://stream1.freetv.fun/classica-2.m3u8
 [SD]cnt,https://stream1.freetv.fun/cnt-1.m3u8
 []cnbc mgl,https://stream1.freetv.fun/cnbc-mgl-1.m3u8
 []us cnbc,https://stream1.freetv.fun/us-cnbc-1.ctv
@@ -3651,7 +3628,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []disney xd(mas) =,https://stream1.freetv.fun/disney-xd-6.ctv
 []disney ==,https://stream1.freetv.fun/disney-2.ctv
 []usa-disney jr,https://stream1.freetv.fun/usa-disney-jr-1.ctv
-[]disney channel ==,https://stream1.freetv.fun/disney-channel-26.ctv
+[VGA]disney channel ==,https://stream1.freetv.fun/disney-channel-26.ctv
 []disney junior(asia) ==,https://stream1.freetv.fun/disney-junior-24.ctv
 []disney junior(asia)=,https://stream1.freetv.fun/disney-junior-21.ctv
 []ช่อง dove channel,https://stream1.freetv.fun/ch-ng-dove-channel-1.m3u8
@@ -3659,9 +3636,9 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []ช่อง e! entertainment,https://stream1.freetv.fun/ch-ng-e--entertainment-2.m3u8
 []espn brasil 3,https://stream1.freetv.fun/espn-brasil-3-1.ctv
 []espn ==,https://stream1.freetv.fun/espn-6.ctv
-[]espn ---,https://stream1.freetv.fun/espn-5.ctv
+[VGA]espn ---,https://stream1.freetv.fun/espn-5.ctv
 []espn =,https://stream1.freetv.fun/espn-8.ctv
-[]espn --,https://stream1.freetv.fun/espn-7.ctv
+[VGA]espn --,https://stream1.freetv.fun/espn-7.ctv
 []ช่อง espn,https://stream1.freetv.fun/ch-ng-espn-1.m3u8
 []espn,https://stream1.freetv.fun/espn-2.ctv
 []us espn news,https://stream1.freetv.fun/us-espn-news-1.ctv
@@ -3680,7 +3657,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [SD]abc 7 los angeles ca (kabc-tv) (720p),https://stream1.freetv.fun/abc-7-los-angeles-ca-1.m3u8
 []fox sports,https://stream1.freetv.fun/fox-sports-3.m3u8
 []fox sports,https://stream1.freetv.fun/fox-sports-1.m3u8
-[SD]fox sports =,https://stream1.freetv.fun/fox-sports-4.ctv
+[]fox sports =,https://stream1.freetv.fun/fox-sports-4.ctv
 [SD]fox sports ==,https://stream1.freetv.fun/fox-sports-6.ctv
 [SD]fox sports ===,https://stream1.freetv.fun/fox-sports-8.ctv
 []fox sports,https://stream1.freetv.fun/fox-sports-2.m3u8
@@ -3721,24 +3698,24 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []hbo signature *m,https://stream1.freetv.fun/hbo-signature--m-1.ctv
 []hbo signature(usa) ==,https://stream1.freetv.fun/hbo-signature-16.ctv
 []hbo signature(usa) ===,https://stream1.freetv.fun/hbo-signature-19.ctv
-[]hbo ====,https://stream1.freetv.fun/hbo-4.ctv
+[SD]hbo ====,https://stream1.freetv.fun/hbo-4.ctv
 [SD]hbo ===,https://stream1.freetv.fun/hbo-14.ctv
-[]hbo ===,https://stream1.freetv.fun/hbo-11.ctv
+[SD]hbo usa *s,https://stream1.freetv.fun/hbo-usa--s-1.m3u8
+[SD]hbo ===,https://stream1.freetv.fun/hbo-11.ctv
 []hbo zone *m,https://stream1.freetv.fun/hbo-zone--m-1.ctv
 [SD]hbo zone ==,https://stream1.freetv.fun/hbo-zone-1.ctv
 [SD]hbo zone *s,https://stream1.freetv.fun/hbo-zone--s-1.m3u8
 [SD]hbo zone =,https://stream1.freetv.fun/hbo-zone-8.ctv
 [SD]hbo zone,https://stream1.freetv.fun/hbo-zone-7.m3u8
 [SD]hbo-,https://stream1.freetv.fun/hbo-8.ctv
-[]hbo(tw) *s,https://stream1.freetv.fun/hbo--s-1.m3u8
 []hbo,https://stream1.freetv.fun/hbo-16.m3u8
 []hbo 1,https://stream1.freetv.fun/hbo-1-2.m3u8
 []hgtv *m,https://stream1.freetv.fun/hgtv--m-3.ctv
-[SD]hgtv *m,https://stream1.freetv.fun/hgtv--m-1.ctv
 []hgtv ==,https://stream1.freetv.fun/hgtv-7.ctv
 []hgtv ===,https://stream1.freetv.fun/hgtv-3.ctv
 []us hallmark channel,https://stream1.freetv.fun/us-hallmark-channel-1.ctv
 []hallmark channel east,https://stream1.freetv.fun/hallmark-channel-east-2.m3u8
+[]hallmark movies *s,https://stream1.freetv.fun/hallmark-movies--s-1.m3u8
 []hallmark movies mysteries east,https://stream1.freetv.fun/hallmark-movies-mysteries-east-2.m3u8
 [SD]hallmark movies more,https://stream1.freetv.fun/hallmark-movies-more-3.m3u8
 [SD]hallmark movies more,https://stream1.freetv.fun/hallmark-movies-more-2.m3u8
@@ -3769,11 +3746,10 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [SD]investigation discovery *m,https://stream1.freetv.fun/investigation-discovery--m-3.ctv
 []id *m,https://stream1.freetv.fun/id--m-1.ctv
 [SD]id investigation discovery европа,https://stream1.freetv.fun/id-investigation-discovery-evropa-1.m3u8
-[VGA]investigation discovery *s,https://stream1.freetv.fun/investigation-discovery--s-1.m3u8
 []kajou tv,https://stream1.freetv.fun/kajou-tv-2.m3u8
 []cbs news los angeles (720p),https://stream1.freetv.fun/cbs-news-los-angeles-1.m3u8
 [SD]biznet lifestyle,https://stream1.freetv.fun/biznet-lifestyle-1.m3u8
-[]biznet lifestyle,https://stream1.freetv.fun/biznet-lifestyle-2.m3u8
+[SD]biznet lifestyle,https://stream1.freetv.fun/biznet-lifestyle-2.m3u8
 []lifetime *m,https://stream1.freetv.fun/lifetime--m-1.ctv
 []lifetime ===,https://stream1.freetv.fun/lifetime-13.ctv
 []lifetime ==,https://stream1.freetv.fun/lifetime-3.ctv
@@ -3788,7 +3764,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []msnbc,https://stream1.freetv.fun/msnbc-2.m3u8
 []msnbc,https://stream1.freetv.fun/msnbc-6.m3u8
 [SD]yo! mtv,https://stream1.freetv.fun/yo--mtv-1.m3u8
-[]mdtv,https://stream1.freetv.fun/mdtv-1.m3u8
 [SD]mtv (korea)=,https://stream1.freetv.fun/mtv-15.ctv
 [SD]mtv 2=,https://stream1.freetv.fun/mtv-2-1.ctv
 [SD]mtv live ==,https://stream1.freetv.fun/mtv-live-10.ctv
@@ -3825,7 +3800,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [VGA]nfl redzone,https://stream1.freetv.fun/nfl-redzone-1.ctv
 []pll network,https://stream1.freetv.fun/pll-network-1.m3u8
 []nfl network,https://stream1.freetv.fun/nfl-network-3.m3u8
-[]news12 brooklyn,https://stream1.freetv.fun/news12-brooklyn-1.m3u8
 []news nation,https://stream1.freetv.fun/news-nation-1.m3u8
 []newsmaxtv,https://stream1.freetv.fun/newsmaxtv-3.m3u8
 []newsmax tv,https://stream1.freetv.fun/newsmax-tv-3.m3u8
@@ -3848,7 +3822,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []inside outside,https://stream1.freetv.fun/inside-outside-2.m3u8
 []oxygen east,https://stream1.freetv.fun/oxygen-east-2.m3u8
 []us oxygen,https://stream1.freetv.fun/us-oxygen-1.ctv
-[]us oxygen,https://stream1.freetv.fun/us-oxygen-2.ctv
+[SD]us oxygen,https://stream1.freetv.fun/us-oxygen-2.ctv
 []paramount plus picks,https://stream1.freetv.fun/paramount-plus-picks-1.m3u8
 []paramount,https://stream1.freetv.fun/paramount-4.m3u8
 []paramount network *m,https://stream1.freetv.fun/paramount-network--m-1.ctv
@@ -3868,7 +3842,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []paramount network =,https://stream1.freetv.fun/paramount-network-2.ctv
 []tna wrestling,https://stream1.freetv.fun/tna-wrestling-4.m3u8
 [SD]pluto tv retro kid,https://stream1.freetv.fun/pluto-tv-retro-kid-1.m3u8
-[]rete oro tv,https://stream1.freetv.fun/rete-oro-tv-1.m3u8
 [SD]garfield and friends,https://stream1.freetv.fun/garfield-and-friends-1.m3u8
 [SD]garfield and friends,https://stream1.freetv.fun/garfield-and-friends-2.m3u8
 []scream in,https://stream1.freetv.fun/scream-in-1.m3u8
@@ -3950,7 +3923,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []the design network,https://stream1.freetv.fun/the-design-network-1.m3u8
 [SD]the design network (1080p),https://stream1.freetv.fun/the-design-network-2.m3u8
 []the design network,https://stream1.freetv.fun/the-design-network-3.m3u8
-[VGA]show,https://stream1.freetv.fun/show-2.m3u8
+[]show,https://stream1.freetv.fun/show-2.m3u8
 []wbtv at the movies,https://stream1.freetv.fun/wbtv-at-the-movies-2.m3u8
 []moviesphere *y,https://stream1.freetv.fun/moviesphere--y-1.m3u8
 []the retro channel,https://stream1.freetv.fun/the-retro-channel-1.m3u8
@@ -3967,8 +3940,8 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []ช่อง usa network,https://stream1.freetv.fun/ch-ng-usa-network-1.m3u8
 []us usa network,https://stream1.freetv.fun/us-usa-network-1.ctv
 []usa network,https://stream1.freetv.fun/usa-network-2.m3u8
-[SD]usa network ==,https://stream1.freetv.fun/usa-network-3.ctv
-[SD]usa network =,https://stream1.freetv.fun/usa-network-1.ctv
+[]usa network ==,https://stream1.freetv.fun/usa-network-3.ctv
+[]usa network =,https://stream1.freetv.fun/usa-network-1.ctv
 []usa network,https://stream1.freetv.fun/usa-network-5.m3u8
 []vevo pop,https://stream1.freetv.fun/vevo-pop-2.m3u8
 []vevo pop,https://stream1.freetv.fun/vevo-pop-5.m3u8
