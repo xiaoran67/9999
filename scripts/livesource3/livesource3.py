@@ -997,10 +997,10 @@ all_lines_custom = ["🌐央视频道,#genre#"] + sort_data(ys_dictionary, corre
     #  输出文件路径 #
     # =========#
 
-    new_output_file = "output/livesource3/full.txt"
-    new_output_file_lite = "output/livesource3/lite.txt"
-    new_output_file_custom = "output/livesource3/custom.txt"
-    others_file = "output/livesource3/others.txt"
+new_output_file = "output/livesource3/full.txt"
+new_output_file_lite = "output/livesource3/lite.txt"
+new_output_file_custom = "output/livesource3/custom.txt"
+others_file = "output/livesource3/others.txt"
 
 # ====================
 # 将合并后的文本写入文件
@@ -1009,9 +1009,9 @@ all_lines_custom = ["🌐央视频道,#genre#"] + sort_data(ys_dictionary, corre
 #others_file = "output/others.txt"
 
 # 将NEW合并后的文本写入文件
-#new_output_file = "output/full.txt"
-#new_output_file_simple = "output/simple.txt"
-new_output_file_custom = "output/custom.txt"
+#new_output_file = "output/livesource3/full.txt"
+#new_output_file_simple = "output/livesource3/lite.txt"
+new_output_file_custom = "output/livesource3/custom.txt"
 # ====================
 
 # 将合并后的文本写入文件
