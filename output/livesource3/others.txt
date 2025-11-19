@@ -426,7 +426,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []sampit tv,https://stream1.freetv.fun/sampit-tv-1.m3u8
 []ช่อง cp 24,https://stream1.freetv.fun/ch-ng-cp-24-2.m3u8
 []ช่อง ctv drama channel,https://stream1.freetv.fun/ch-ng-ctv-drama-channel-1.m3u8
-[]ctv news channel,https://stream1.freetv.fun/ctv-news-channel-1.ctv
+[SD]ctv news channel,https://stream1.freetv.fun/ctv-news-channel-1.ctv
 []ช่อง ctv news channel,https://stream1.freetv.fun/ch-ng-ctv-news-channel-1.m3u8
 []cbn news channel,https://stream1.freetv.fun/cbn-news-channel-1.m3u8
 []charity tv,https://stream1.freetv.fun/charity-tv-1.m3u8
@@ -1353,7 +1353,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [SD]河北卫视,https://stream1.freetv.fun/he-bei-wei-shi-47.ctv
 []河北卫视,https://stream1.freetv.fun/he-bei-wei-shi-49.m3u8
 []河北卫视,https://stream1.freetv.fun/he-bei-wei-shi-9.m3u8
-[]河北卫视,https://stream1.freetv.fun/he-bei-wei-shi-19.m3u8
 []河北卫视,https://stream1.freetv.fun/he-bei-wei-shi-67.m3u8
 []河北卫视 8m1080,https://stream1.freetv.fun/he-bei-wei-shi--8m1080-1.m3u8
 []河北农民,https://stream1.freetv.fun/he-bei-nong-min-17.m3u8
@@ -1596,7 +1595,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []新闻综合,https://stream1.freetv.fun/xin-wen-zong-he-10.m3u8
 []黄山新闻综合,https://stream1.freetv.fun/huang-shan-xin-wen-zong-he-14.m3u8
 []文山新闻综合,https://stream1.freetv.fun/wen-shan-xin-wen-zong-he-1.m3u8
-[]白山新闻综合,https://stream1.freetv.fun/bai-shan-xin-wen-zong-he-2.m3u8
+[SD]白山新闻综合,https://stream1.freetv.fun/bai-shan-xin-wen-zong-he-2.m3u8
 []荆门新闻综合,https://stream1.freetv.fun/jing-men-xin-wen-zong-he-4.m3u8
 []荆门新闻综合,https://stream1.freetv.fun/jing-men-xin-wen-zong-he-5.m3u8
 []荆门新闻综合,https://stream1.freetv.fun/jing-men-xin-wen-zong-he-3.m3u8
@@ -1839,6 +1838,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []bfm business,https://stream1.freetv.fun/bfm-business-3.m3u8
 [SD]bfm tv,https://stream1.freetv.fun/bfm-tv-7.m3u8
 []dbm tv,https://stream1.freetv.fun/dbm-tv-1.m3u8
+[SD]boomerang (fr) *s,https://stream1.freetv.fun/boomerang---s-1.m3u8
 []ช่อง boomerang thai,https://stream1.freetv.fun/ch-ng-boomerang-thai-1.m3u8
 []uk-boomerang,https://stream1.freetv.fun/uk-boomerang-1.ctv
 [VGA]canal savoir,https://stream1.freetv.fun/canal-savoir-1.m3u8
@@ -2019,7 +2019,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []tvb plus,https://stream1.freetv.fun/tvb-plus-6.ctv
 []tvb plus,https://stream1.freetv.fun/tvb-plus-4.ctv
 []tvbplus,https://stream1.freetv.fun/tvbplus-3.ctv
-[]etv plus,https://stream1.freetv.fun/etv-plus-2.m3u8
+[VGA]etv plus,https://stream1.freetv.fun/etv-plus-2.m3u8
 []tvbplus,https://stream1.freetv.fun/tvbplus-6.ctv
 []tvbplus,https://stream1.freetv.fun/tvbplus-5.m3u8
 []tvbs亚洲,https://stream1.freetv.fun/tvbsya-zhou-15.m3u8
@@ -2550,7 +2550,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []arvan tv,https://stream1.freetv.fun/arvan-tv-1.m3u8
 []premier sports 1,https://stream1.freetv.fun/premier-sports-1-2.m3u8
 []premier sports 4,https://stream1.freetv.fun/premier-sports-4-2.m3u8
-[VGA]premier sports 5,https://stream1.freetv.fun/premier-sports-5-2.m3u8
+[]premier sports 5,https://stream1.freetv.fun/premier-sports-5-2.m3u8
 []ช่อง premier sports 1,https://stream1.freetv.fun/ch-ng-premier-sports-1-1.m3u8
 []premier sports 1,https://stream1.freetv.fun/premier-sports-1-3.m3u8
 []premier sports 2,https://stream1.freetv.fun/premier-sports-2-3.m3u8
@@ -2733,8 +2733,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []al jazeera العربية,https://stream1.freetv.fun/al-jazeera-l-rby-1.m3u8
 []al jazeera,https://stream1.freetv.fun/al-jazeera-6.m3u8
 []al jazeera news,https://stream1.freetv.fun/al-jazeera-news-3.m3u8
-[]ช่อง al jazeera,https://stream1.freetv.fun/ch-ng-al-jazeera-1.m3u8
-[]ช่อง al jazeera english,https://stream1.freetv.fun/ch-ng-al-jazeera-english-1.m3u8
 []al jazeera,https://stream1.freetv.fun/al-jazeera-10.m3u8
 []al jazeera,https://stream1.freetv.fun/al-jazeera-7.m3u8
 []al jazeera mubasher,https://stream1.freetv.fun/al-jazeera-mubasher-2.m3u8
@@ -3084,6 +3082,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []eye tv戏剧 *wj,https://stream1.freetv.fun/eye-tvxi-ju---wj-2.m3u8
 [SD]bflix movies,https://stream1.freetv.fun/bflix-movies-1.m3u8
 []food network,https://stream1.freetv.fun/food-network-8.m3u8
+[]food network(tw) *s,https://stream1.freetv.fun/food-network--s-1.m3u8
 []ช่อง food network,https://stream1.freetv.fun/ch-ng-food-network-3.m3u8
 [SD]food network *m,https://stream1.freetv.fun/food-network--m-1.ctv
 []global trekker *wj,https://stream1.freetv.fun/global-trekker--wj-1.m3u8
@@ -3472,7 +3471,6 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [VGA]wild earth,https://stream1.freetv.fun/wild-earth-2.m3u8
 []wild earth *y,https://stream1.freetv.fun/wild-earth--y-1.m3u8
 [SD]beverly hills 90210,https://stream1.freetv.fun/beverly-hills-90210-1.m3u8
-[VGA]5 star max usa *s,https://stream1.freetv.fun/5-star-max-usa--s-1.m3u8
 []ช่อง a e,https://stream1.freetv.fun/ch-ng-a-e-1.m3u8
 [VGA]a e east (720p),https://stream1.freetv.fun/a-e-east-3.ctv
 []us a e,https://stream1.freetv.fun/us-a-e-1.ctv
@@ -3637,11 +3635,11 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []crime plus investigation,https://stream1.freetv.fun/crime-plus-investigation-2.m3u8
 [SD]discovery science *m,https://stream1.freetv.fun/discovery-science--m-2.ctv
 [SD]discovery science *m,https://stream1.freetv.fun/discovery-science--m-3.ctv
-[SD]diy network *m,https://stream1.freetv.fun/diy-network--m-1.ctv
+[]diy network *m,https://stream1.freetv.fun/diy-network--m-1.ctv
 [SD]diy network ==,https://stream1.freetv.fun/diy-network-1.ctv
 [SD]diy network =,https://stream1.freetv.fun/diy-network-4.ctv
 []jin tv,https://stream1.freetv.fun/jin-tv-1.m3u8
-[SD]discovery family *m,https://stream1.freetv.fun/discovery-family--m-1.ctv
+[]discovery family *m,https://stream1.freetv.fun/discovery-family--m-1.ctv
 [SD]discovery *m,https://stream1.freetv.fun/discovery--m-2.ctv
 []discovery *m,https://stream1.freetv.fun/discovery--m-1.ctv
 []discovery *m,https://stream1.freetv.fun/discovery--m-3.ctv
@@ -3767,8 +3765,8 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 [SD]history2(usa) *s,https://stream1.freetv.fun/history2--s-1.m3u8
 []hollywire,https://stream1.freetv.fun/hollywire-3.m3u8
 []ช่อง infowars,https://stream1.freetv.fun/ch-ng-infowars-1.m3u8
-[]investigation discovery *m,https://stream1.freetv.fun/investigation-discovery--m-2.ctv
-[]investigation discovery *m,https://stream1.freetv.fun/investigation-discovery--m-3.ctv
+[SD]investigation discovery *m,https://stream1.freetv.fun/investigation-discovery--m-2.ctv
+[SD]investigation discovery *m,https://stream1.freetv.fun/investigation-discovery--m-3.ctv
 []id *m,https://stream1.freetv.fun/id--m-1.ctv
 [SD]id investigation discovery европа,https://stream1.freetv.fun/id-investigation-discovery-evropa-1.m3u8
 [VGA]investigation discovery *s,https://stream1.freetv.fun/investigation-discovery--s-1.m3u8
@@ -3789,7 +3787,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []msnbc =,https://stream1.freetv.fun/msnbc-1.ctv
 []msnbc,https://stream1.freetv.fun/msnbc-2.m3u8
 []msnbc,https://stream1.freetv.fun/msnbc-6.m3u8
-[]yo! mtv,https://stream1.freetv.fun/yo--mtv-1.m3u8
+[SD]yo! mtv,https://stream1.freetv.fun/yo--mtv-1.m3u8
 []mdtv,https://stream1.freetv.fun/mdtv-1.m3u8
 [SD]mtv (korea)=,https://stream1.freetv.fun/mtv-15.ctv
 [SD]mtv 2=,https://stream1.freetv.fun/mtv-2-1.ctv
@@ -3957,8 +3955,8 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []moviesphere *y,https://stream1.freetv.fun/moviesphere--y-1.m3u8
 []the retro channel,https://stream1.freetv.fun/the-retro-channel-1.m3u8
 [SD]the retro channel (1080p),https://stream1.freetv.fun/the-retro-channel-2.m3u8
-[VGA]tom and jerry (720p),https://stream1.freetv.fun/tom-and-jerry-1.m3u8
-[SD]toon google,https://stream1.freetv.fun/toon-google-1.m3u8
+[]tom and jerry (720p),https://stream1.freetv.fun/tom-and-jerry-1.m3u8
+[]toon google,https://stream1.freetv.fun/toon-google-1.m3u8
 []toongoggles,https://stream1.freetv.fun/toongoggles-1.m3u8
 []travel channel *m,https://stream1.freetv.fun/travel-channel--m-1.ctv
 []tutv,https://stream1.freetv.fun/tutv-2.m3u8
@@ -3988,7 +3986,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []ช่อง vevo '90s,https://stream1.freetv.fun/ch-ng-vevo--90s-1.m3u8
 []ช่อง vevo 2k,https://stream1.freetv.fun/ch-ng-vevo-2k-1.m3u8
 []ช่อง vevo '70s,https://stream1.freetv.fun/ch-ng-vevo--70s-1.m3u8
-[VGA]ช่อง vevo pop,https://stream1.freetv.fun/ch-ng-vevo-pop-1.m3u8
+[]ช่อง vevo pop,https://stream1.freetv.fun/ch-ng-vevo-pop-1.m3u8
 [SD]vevo '70s,https://stream1.freetv.fun/vevo--70s-1.m3u8
 [SD]vevo '90s,https://stream1.freetv.fun/vevo--90s-2.m3u8
 [SD]vevo country,https://stream1.freetv.fun/vevo-country-2.m3u8
@@ -4009,7 +4007,7 @@ CETV4,http://gslbmgsplive.miguvideo.com/migu/kailu/cetv4/51/20240709/index.m3u8?
 []us vh1,https://stream1.freetv.fun/us-vh1-1.ctv
 []hype visual radio (1080p),https://stream1.freetv.fun/hype-visual-radio-1.m3u8
 []wnbc-dt1,https://stream1.freetv.fun/wnbc-dt1-2.m3u8
-[]powernation tv,https://stream1.freetv.fun/powernation-tv-1.m3u8
+[VGA]powernation tv,https://stream1.freetv.fun/powernation-tv-1.m3u8
 []weathernation new york,https://stream1.freetv.fun/weathernation-new-york-1.m3u8
 []wild 'n out,https://stream1.freetv.fun/wild--n-out-2.m3u8
 [SD]wild 'n out,https://stream1.freetv.fun/wild--n-out-3.m3u8
