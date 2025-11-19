@@ -69,36 +69,36 @@ combined_blacklist = set(blacklist_auto + blacklist_manual)
 
 ys_lines = [] #CCTV
 ws_lines = [] #卫视频道
-sh_lines = [] #地方台-上海频道
-zj_lines = [] #地方台-浙江频道
-jsu_lines = [] #地方台-江苏频道
-gd_lines = [] #地方台-广东频道
-hn_lines = [] #地方台-湖南频道
-ah_lines = [] #地方台-安徽频道
-hain_lines = [] #地方台-海南频道
-nm_lines = [] #地方台-内蒙频道
-hb_lines = [] #地方台-湖北频道
-ln_lines = [] #地方台-辽宁频道
-sx_lines = [] #地方台-陕西频道
-shanxi_lines = [] #地方台-山西频道
-shandong_lines = [] #地方台-山东频道
-yunnan_lines = [] #地方台-云南频道
-bj_lines = [] #地方台-北京频道
-cq_lines = [] #地方台-重庆频道
-fj_lines = [] #地方台-福建频道
-gs_lines = [] #地方台-甘肃频道
-gx_lines = [] #地方台-广西频道
-gz_lines = [] #地方台-贵州频道
-heb_lines = [] #地方台-河北频道
-hen_lines = [] #地方台-河南频道
-hlj_lines = [] #地方台-黑龙江频道
-jl_lines = [] #地方台-吉林频道
-jx_lines = [] #地方台-江西频道
-nx_lines = [] #地方台-宁夏频道
-qh_lines = [] #地方台-青海频道
-sc_lines = [] #地方台-四川频道
-tj_lines = [] #地方台-天津频道
-xj_lines = [] #地方台-新疆频道
+sh_lines = [] #scripts/livesource3/地方台-上海频道
+zj_lines = [] #scripts/livesource3/地方台-浙江频道
+jsu_lines = [] #scripts/livesource3/地方台-江苏频道
+gd_lines = [] #scripts/livesource3/地方台-广东频道
+hn_lines = [] #scripts/livesource3/地方台-湖南频道
+ah_lines = [] #scripts/livesource3/地方台-安徽频道
+hain_lines = [] #scripts/livesource3/地方台-海南频道
+nm_lines = [] #scripts/livesource3/地方台-内蒙频道
+hb_lines = [] #scripts/livesource3/地方台-湖北频道
+ln_lines = [] #scripts/livesource3/地方台-辽宁频道
+sx_lines = [] #scripts/livesource3/地方台-陕西频道
+shanxi_lines = [] #scripts/livesource3/地方台-山西频道
+shandong_lines = [] #scripts/livesource3/地方台-山东频道
+yunnan_lines = [] #scripts/livesource3/地方台-云南频道
+bj_lines = [] #scripts/livesource3/地方台-北京频道
+cq_lines = [] #scripts/livesource3/地方台-重庆频道
+fj_lines = [] #scripts/livesource3/地方台-福建频道
+gs_lines = [] #scripts/livesource3/地方台-甘肃频道
+gx_lines = [] #scripts/livesource3/地方台-广西频道
+gz_lines = [] #scripts/livesource3/地方台-贵州频道
+heb_lines = [] #scripts/livesource3/地方台-河北频道
+hen_lines = [] #scripts/livesource3/地方台-河南频道
+hlj_lines = [] #scripts/livesource3/地方台-黑龙江频道
+jl_lines = [] #scripts/livesource3/地方台-吉林频道
+jx_lines = [] #scripts/livesource3/地方台-江西频道
+nx_lines = [] #scripts/livesource3/地方台-宁夏频道
+qh_lines = [] #scripts/livesource3/地方台-青海频道
+sc_lines = [] #scripts/livesource3/地方台-四川频道
+tj_lines = [] #scripts/livesource3/地方台-天津频道
+xj_lines = [] #scripts/livesource3/地方台-新疆频道
 
 ty_lines = [] #体育频道
 tyss_lines = [] #体育赛事
@@ -275,65 +275,65 @@ def process_channel_line(line):
                 ys_lines.append(process_name_string(line.strip()))
             elif channel_name in ws_dictionary and check_url_existence(ws_lines, channel_address): #卫视频道
                 ws_lines.append(process_name_string(line.strip()))
-            elif channel_name in zj_dictionary and check_url_existence(zj_lines, channel_address):  #地方台-浙江频道
+            elif channel_name in zj_dictionary and check_url_existence(zj_lines, channel_address):  #scripts/livesource3/地方台-浙江频道
                 zj_lines.append(process_name_string(line.strip()))
-            elif channel_name in jsu_dictionary and check_url_existence(jsu_lines, channel_address):  #地方台-江苏频道
+            elif channel_name in jsu_dictionary and check_url_existence(jsu_lines, channel_address):  #scripts/livesource3/地方台-江苏频道
                 jsu_lines.append(process_name_string(line.strip()))
-            elif channel_name in gd_dictionary and check_url_existence(gd_lines, channel_address):  #地方台-广东频道
+            elif channel_name in gd_dictionary and check_url_existence(gd_lines, channel_address):  #scripts/livesource3/地方台-广东频道
                 gd_lines.append(process_name_string(line.strip()))
-            elif channel_name in hn_dictionary and check_url_existence(hn_lines, channel_address):  #地方台-湖南频道
+            elif channel_name in hn_dictionary and check_url_existence(hn_lines, channel_address):  #scripts/livesource3/地方台-湖南频道
                 hn_lines.append(process_name_string(line.strip()))
-            elif channel_name in hb_dictionary and check_url_existence(hb_lines, channel_address):  #地方台-湖北频道
+            elif channel_name in hb_dictionary and check_url_existence(hb_lines, channel_address):  #scripts/livesource3/地方台-湖北频道
                 hb_lines.append(process_name_string(line.strip()))
-            elif channel_name in ah_dictionary and check_url_existence(ah_lines, channel_address):  #地方台-安徽频道
+            elif channel_name in ah_dictionary and check_url_existence(ah_lines, channel_address):  #scripts/livesource3/地方台-安徽频道
                 ah_lines.append(process_name_string(line.strip()))
-            elif channel_name in hain_dictionary and check_url_existence(hain_lines, channel_address):  #地方台-海南频道
+            elif channel_name in hain_dictionary and check_url_existence(hain_lines, channel_address):  #scripts/livesource3/地方台-海南频道
                 hain_lines.append(process_name_string(line.strip()))
-            elif channel_name in nm_dictionary and check_url_existence(nm_lines, channel_address):  #地方台-内蒙频道
+            elif channel_name in nm_dictionary and check_url_existence(nm_lines, channel_address):  #scripts/livesource3/地方台-内蒙频道
                 nm_lines.append(process_name_string(line.strip()))
-            elif channel_name in ln_dictionary and check_url_existence(ln_lines, channel_address):  #地方台-辽宁频道
+            elif channel_name in ln_dictionary and check_url_existence(ln_lines, channel_address):  #scripts/livesource3/地方台-辽宁频道
                 ln_lines.append(process_name_string(line.strip()))
-            elif channel_name in sx_dictionary and check_url_existence(sx_lines, channel_address):  #地方台-陕西频道
+            elif channel_name in sx_dictionary and check_url_existence(sx_lines, channel_address):  #scripts/livesource3/地方台-陕西频道
                 sx_lines.append(process_name_string(line.strip()))
-            elif channel_name in shanxi_dictionary and check_url_existence(shanxi_lines, channel_address):  #地方台-山西频道
+            elif channel_name in shanxi_dictionary and check_url_existence(shanxi_lines, channel_address):  #scripts/livesource3/地方台-山西频道
                 shanxi_lines.append(process_name_string(line.strip()))
-            elif channel_name in shandong_dictionary and check_url_existence(shandong_lines, channel_address):  #地方台-山东频道
+            elif channel_name in shandong_dictionary and check_url_existence(shandong_lines, channel_address):  #scripts/livesource3/地方台-山东频道
                 shandong_lines.append(process_name_string(line.strip()))
-            elif channel_name in yunnan_dictionary and check_url_existence(yunnan_lines, channel_address):  #地方台-云南频道
+            elif channel_name in yunnan_dictionary and check_url_existence(yunnan_lines, channel_address):  #scripts/livesource3/地方台-云南频道
                 yunnan_lines.append(process_name_string(line.strip()))
-            elif channel_name in bj_dictionary and check_url_existence(bj_lines, channel_address):  #地方台-北京频道
+            elif channel_name in bj_dictionary and check_url_existence(bj_lines, channel_address):  #scripts/livesource3/地方台-北京频道
                 bj_lines.append(process_name_string(line.strip()))
-            elif channel_name in cq_dictionary and check_url_existence(cq_lines, channel_address):  #地方台-重庆频道
+            elif channel_name in cq_dictionary and check_url_existence(cq_lines, channel_address):  #scripts/livesource3/地方台-重庆频道
                 cq_lines.append(process_name_string(line.strip()))
-            elif channel_name in fj_dictionary and check_url_existence(fj_lines, channel_address):  #地方台-福建频道
+            elif channel_name in fj_dictionary and check_url_existence(fj_lines, channel_address):  #scripts/livesource3/地方台-福建频道
                             fj_lines.append(process_name_string(line.strip()))
-            elif channel_name in gs_dictionary and check_url_existence(gs_lines, channel_address):  #地方台-甘肃频道
+            elif channel_name in gs_dictionary and check_url_existence(gs_lines, channel_address):  #scripts/livesource3/地方台-甘肃频道
                 gs_lines.append(process_name_string(line.strip()))
-            elif channel_name in gx_dictionary and check_url_existence(gx_lines, channel_address):  #地方台-广西频道
+            elif channel_name in gx_dictionary and check_url_existence(gx_lines, channel_address):  #scripts/livesource3/地方台-广西频道
                 gx_lines.append(process_name_string(line.strip()))
-            elif channel_name in gz_dictionary and check_url_existence(gz_lines, channel_address):  #地方台-贵州频道
+            elif channel_name in gz_dictionary and check_url_existence(gz_lines, channel_address):  #scripts/livesource3/地方台-贵州频道
                 gz_lines.append(process_name_string(line.strip()))
-            elif channel_name in heb_dictionary and check_url_existence(heb_lines, channel_address):  #地方台-河北频道
+            elif channel_name in heb_dictionary and check_url_existence(heb_lines, channel_address):  #scripts/livesource3/地方台-河北频道
                 heb_lines.append(process_name_string(line.strip()))
-            elif channel_name in hen_dictionary and check_url_existence(hen_lines, channel_address):  #地方台-河南频道
+            elif channel_name in hen_dictionary and check_url_existence(hen_lines, channel_address):  #scripts/livesource3/地方台-河南频道
                 hen_lines.append(process_name_string(line.strip()))
-            elif channel_name in hlj_dictionary and check_url_existence(hlj_lines, channel_address):  #地方台-黑龙江频道
+            elif channel_name in hlj_dictionary and check_url_existence(hlj_lines, channel_address):  #scripts/livesource3/地方台-黑龙江频道
                 hlj_lines.append(process_name_string(line.strip()))
-            elif channel_name in jl_dictionary and check_url_existence(jl_lines, channel_address):  #地方台-吉林频道
+            elif channel_name in jl_dictionary and check_url_existence(jl_lines, channel_address):  #scripts/livesource3/地方台-吉林频道
                 jl_lines.append(process_name_string(line.strip()))
-            elif channel_name in nx_dictionary and check_url_existence(nx_lines, channel_address):  #地方台-宁夏频道
+            elif channel_name in nx_dictionary and check_url_existence(nx_lines, channel_address):  #scripts/livesource3/地方台-宁夏频道
                 nx_lines.append(process_name_string(line.strip()))
-            elif channel_name in jx_dictionary and check_url_existence(jx_lines, channel_address):  #地方台-江西频道
+            elif channel_name in jx_dictionary and check_url_existence(jx_lines, channel_address):  #scripts/livesource3/地方台-江西频道
                 jx_lines.append(process_name_string(line.strip()))
-            elif channel_name in qh_dictionary and check_url_existence(qh_lines, channel_address):  #地方台-青海频道
+            elif channel_name in qh_dictionary and check_url_existence(qh_lines, channel_address):  #scripts/livesource3/地方台-青海频道
                 qh_lines.append(process_name_string(line.strip()))
-            elif channel_name in sc_dictionary and check_url_existence(sc_lines, channel_address):  #地方台-四川频道
+            elif channel_name in sc_dictionary and check_url_existence(sc_lines, channel_address):  #scripts/livesource3/地方台-四川频道
                 sc_lines.append(process_name_string(line.strip()))
-            elif channel_name in sh_dictionary and check_url_existence(sh_lines, channel_address):  #地方台-上海频道
+            elif channel_name in sh_dictionary and check_url_existence(sh_lines, channel_address):  #scripts/livesource3/地方台-上海频道
                 sh_lines.append(process_name_string(line.strip()))
-            elif channel_name in tj_dictionary and check_url_existence(tj_lines, channel_address):  #地方台-天津频道
+            elif channel_name in tj_dictionary and check_url_existence(tj_lines, channel_address):  #scripts/livesource3/地方台-天津频道
                 tj_lines.append(process_name_string(line.strip()))
-            elif channel_name in xj_dictionary and check_url_existence(xj_lines, channel_address):  #地方台-新疆频道 ADD【2025-07-21 13:14:15】
+            elif channel_name in xj_dictionary and check_url_existence(xj_lines, channel_address):  #scripts/livesource3/地方台-新疆频道 ADD【2025-07-21 13:14:15】
                 xj_lines.append(process_name_string(line.strip()))
             elif channel_name in sz_dictionary and check_url_existence(sz_lines, channel_address):  #数字频道
                 sz_lines.append(process_name_string(line.strip()))
@@ -452,36 +452,36 @@ current_directory = os.getcwd()  #准备读取txt
 #读取字典文本
 ys_dictionary=read_txt_to_array('scripts/livesource3/主频道/CCTV.txt') #仅排序用
 ws_dictionary=read_txt_to_array('scripts/livesource3/主频道/卫视频道.txt') #过滤+排序
-zj_dictionary=read_txt_to_array('地方台/浙江频道.txt') #过滤+排序
-jsu_dictionary=read_txt_to_array('地方台/江苏频道.txt') #过滤+排序
-gd_dictionary=read_txt_to_array('地方台/广东频道.txt') #过滤+排序
-gx_dictionary=read_txt_to_array('地方台/广西频道.txt') #过滤+排序
-jx_dictionary=read_txt_to_array('地方台/江西频道.txt') #过滤+排序
-hb_dictionary=read_txt_to_array('地方台/湖北频道.txt') #过滤+排序
-hn_dictionary=read_txt_to_array('地方台/湖南频道.txt') #过滤+排序
-ah_dictionary=read_txt_to_array('地方台/安徽频道.txt') #过滤+排序
-hain_dictionary=read_txt_to_array('地方台/海南频道.txt') #过滤+排序
-nm_dictionary=read_txt_to_array('地方台/内蒙频道.txt') #过滤+排序
-ln_dictionary=read_txt_to_array('地方台/辽宁频道.txt') #过滤+排序
-sx_dictionary=read_txt_to_array('地方台/陕西频道.txt') #过滤+排序
-shandong_dictionary=read_txt_to_array('地方台/山东频道.txt') #过滤+排序
-shanxi_dictionary=read_txt_to_array('地方台/山西频道.txt') #过滤+排序
-hen_dictionary=read_txt_to_array('地方台/河南频道.txt') #过滤+排序
-heb_dictionary=read_txt_to_array('地方台/河北频道.txt') #过滤+排序
-yunnan_dictionary=read_txt_to_array('地方台/云南频道.txt') #过滤+排序
-gz_dictionary=read_txt_to_array('地方台/贵州频道.txt') #过滤+排序
-sc_dictionary=read_txt_to_array('地方台/四川频道.txt') #过滤+排序
-fj_dictionary=read_txt_to_array('地方台/福建频道.txt') #过滤+排序
-gs_dictionary=read_txt_to_array('地方台/甘肃频道.txt') #过滤+排序
-hlj_dictionary=read_txt_to_array('地方台/黑龙江频道.txt') #过滤+排序
-jl_dictionary=read_txt_to_array('地方台/吉林频道.txt') #过滤+排序
-nx_dictionary=read_txt_to_array('地方台/宁夏频道.txt') #过滤+排序
-qh_dictionary=read_txt_to_array('地方台/青海频道.txt') #过滤+排序
-xj_dictionary=read_txt_to_array('地方台/新疆频道.txt') #过滤+排序
-bj_dictionary=read_txt_to_array('地方台/北京频道.txt') #过滤+排序
-sh_dictionary=read_txt_to_array('地方台/上海频道.txt') #过滤+排序
-tj_dictionary=read_txt_to_array('地方台/天津频道.txt') #过滤+排序
-cq_dictionary=read_txt_to_array('地方台/重庆频道.txt') #过滤+排序
+zj_dictionary=read_txt_to_array('scripts/livesource3/地方台/浙江频道.txt') #过滤+排序
+jsu_dictionary=read_txt_to_array('scripts/livesource3/地方台/江苏频道.txt') #过滤+排序
+gd_dictionary=read_txt_to_array('scripts/livesource3/地方台/广东频道.txt') #过滤+排序
+gx_dictionary=read_txt_to_array('scripts/livesource3/地方台/广西频道.txt') #过滤+排序
+jx_dictionary=read_txt_to_array('scripts/livesource3/地方台/江西频道.txt') #过滤+排序
+hb_dictionary=read_txt_to_array('scripts/livesource3/地方台/湖北频道.txt') #过滤+排序
+hn_dictionary=read_txt_to_array('scripts/livesource3/地方台/湖南频道.txt') #过滤+排序
+ah_dictionary=read_txt_to_array('scripts/livesource3/地方台/安徽频道.txt') #过滤+排序
+hain_dictionary=read_txt_to_array('scripts/livesource3/地方台/海南频道.txt') #过滤+排序
+nm_dictionary=read_txt_to_array('scripts/livesource3/地方台/内蒙频道.txt') #过滤+排序
+ln_dictionary=read_txt_to_array('scripts/livesource3/地方台/辽宁频道.txt') #过滤+排序
+sx_dictionary=read_txt_to_array('scripts/livesource3/地方台/陕西频道.txt') #过滤+排序
+shandong_dictionary=read_txt_to_array('scripts/livesource3/地方台/山东频道.txt') #过滤+排序
+shanxi_dictionary=read_txt_to_array('scripts/livesource3/地方台/山西频道.txt') #过滤+排序
+hen_dictionary=read_txt_to_array('scripts/livesource3/地方台/河南频道.txt') #过滤+排序
+heb_dictionary=read_txt_to_array('scripts/livesource3/地方台/河北频道.txt') #过滤+排序
+yunnan_dictionary=read_txt_to_array('scripts/livesource3/地方台/云南频道.txt') #过滤+排序
+gz_dictionary=read_txt_to_array('scripts/livesource3/地方台/贵州频道.txt') #过滤+排序
+sc_dictionary=read_txt_to_array('scripts/livesource3/地方台/四川频道.txt') #过滤+排序
+fj_dictionary=read_txt_to_array('scripts/livesource3/地方台/福建频道.txt') #过滤+排序
+gs_dictionary=read_txt_to_array('scripts/livesource3/地方台/甘肃频道.txt') #过滤+排序
+hlj_dictionary=read_txt_to_array('scripts/livesource3/地方台/黑龙江频道.txt') #过滤+排序
+jl_dictionary=read_txt_to_array('scripts/livesource3/地方台/吉林频道.txt') #过滤+排序
+nx_dictionary=read_txt_to_array('scripts/livesource3/地方台/宁夏频道.txt') #过滤+排序
+qh_dictionary=read_txt_to_array('scripts/livesource3/地方台/青海频道.txt') #过滤+排序
+xj_dictionary=read_txt_to_array('scripts/livesource3/地方台/新疆频道.txt') #过滤+排序
+bj_dictionary=read_txt_to_array('scripts/livesource3/地方台/北京频道.txt') #过滤+排序
+sh_dictionary=read_txt_to_array('scripts/livesource3/地方台/上海频道.txt') #过滤+排序
+tj_dictionary=read_txt_to_array('scripts/livesource3/地方台/天津频道.txt') #过滤+排序
+cq_dictionary=read_txt_to_array('scripts/livesource3/地方台/重庆频道.txt') #过滤+排序
 
 cw_dictionary=read_txt_to_array('scripts/livesource3/主频道/春晚.txt') #过滤+排序
 dy_dictionary=read_txt_to_array('scripts/livesource3/主频道/电影.txt') #过滤+排序
