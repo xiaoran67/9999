@@ -897,7 +897,7 @@ all_lines = ["🌐央视频道,#genre#"] + sort_data(ys_dictionary, correct_name
     ["🕒更新时间,#genre#"] + [version] + [about] + [daily_mtv] + [daily_mtv1] + [daily_mtv2] + [daily_mtv3] + [daily_mtv4] + read_txt_to_array('scripts/livesource3/手工区/about.txt') + ['\n']
 
 # 精简版
-all_lines_simple = ["央视频道,#genre#"] + sort_data(ys_dictionary, correct_name_data(corrections_name, ys_lines)) + ['\n'] + \
+all_lines_lite = ["央视频道,#genre#"] + sort_data(ys_dictionary, correct_name_data(corrections_name, ys_lines)) + ['\n'] + \
     ["卫视频道,#genre#"] + sort_data(ws_dictionary, correct_name_data(corrections_name, ws_lines)) + ['\n'] + \
     ["地方频道,#genre#"] + \
     sort_data(hb_dictionary, set(correct_name_data(corrections_name, hb_lines))) + \
@@ -1005,12 +1005,12 @@ others_file = "output/livesource3/others.txt"
 # ====================
 # 将合并后的文本写入文件
 #output_file = "merged_output.txt"
-#output_file_simple = "merged_output_simple.txt"
+#output_file_lite = "merged_output_lite.txt"
 #others_file = "output/others.txt"
 
 # 将NEW合并后的文本写入文件
 #new_output_file = "output/livesource3/full.txt"
-#new_output_file_simple = "output/livesource3/lite.txt"
+#new_output_file_lite = "output/livesource3/lite.txt"
 new_output_file_custom = "output/livesource3/custom.txt"
 # ====================
 
@@ -1018,8 +1018,8 @@ new_output_file_custom = "output/livesource3/custom.txt"
 
 try:
     # 写入精简版
-    with open(new_output_file_simple, 'w', encoding='utf-8') as f:
-        for line in all_lines_simple:
+    with open(new_output_file_lite, 'w', encoding='utf-8') as f:
+        for line in all_lines_lite:
             f.write(line + '\n')
     print(f"精简版已保存: {new_output_file_lite}")
 
@@ -1140,7 +1140,7 @@ def make_m3u(txt_file, m3u_file):
         print(f"发生错误: {e}")
 
 make_m3u(new_output_file, new_output_file.replace(".txt", ".m3u"))
-make_m3u(new_output_file_simple, new_output_file_simple.replace(".txt", ".m3u"))
+make_m3u(new_output_file_lite, new_output_file_lite.replace(".txt", ".m3u"))
 make_m3u(new_output_file_custom, new_output_file_custom.replace(".txt", ".m3u"))
 
 # 执行结束时间
